@@ -1,0 +1,59 @@
+.breadcrumbs {
+    display: none;
+
+    @include breakpoint(lg) {
+        display: block;
+        width: 33.333%;
+    }
+}
+
+.breadcrumbs__wrapper {
+    padding: 0;
+    width: 100%;
+    max-width: 1170px;
+    font-style: normal;
+    font-size: 10px;
+    line-height: 13px;
+    color: #4c4c4c;
+    border-bottom: none;
+    text-transform: capitalize;
+    clear: both;
+}
+
+.breadcrumb {
+    padding: 0;
+    display: inline-block;
+    width: auto;
+    vertical-align: top;
+    border: none;
+}
+
+.breadcrumb  li {
+    display: inline-block;
+    color: #676767;
+    line-height: normal;
+}
+
+.breadcrumb  li a,
+.breadcrumb  li span {
+    margin-right: 0;
+    position: relative;
+    font-size: 12px;
+    font-style: normal;
+    color: #676767;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.breadcrumb  li span {
+    cursor: default;
+}
+
+.breadcrumb  li a::after {
+    content: "—";
+    padding: 0 5px;
+    width: 10px;
+    height: 10px;
+    line-height: 10px;
+    opacity: 1;
+}

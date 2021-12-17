@@ -1,0 +1,32 @@
+mixin swiper(url, url2, price, title)
+    .swiper-slide
+        .slide-block
+            a.slide-link(href="#")
+                img.slide-image-first(src="assets/images/" + url, alt="image")
+                img.slide-image-second(src="assets/images/" + url2, alt="image")
+            .slide-item__attr
+                a(href="#")
+                ul.swatch-list
+                    li.swatch-size
+                        a(href="#") 36
+                    li.swatch-size
+                        a(href="#") 38
+                    li.swatch-size
+                        a(href="#") 40
+                    li.swatch-size
+                        a(href="#").not-available 42
+                    li.swatch-size
+                        a(href="#").not-available 44
+                ul.swatch-list
+                    li.swatch-color
+                        a
+                            img(src="assets/images/circle1.png", alt="icon")
+                    li.swatch-color
+                        a.selected
+                            img(src="assets/images/circle2.png", alt="icon")
+
+        a.slide-details(href="#")
+            .slide-info
+                span.slide-caption= title
+                .slide-price
+                    span= price + ' ₽'

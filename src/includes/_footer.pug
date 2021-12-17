@@ -1,0 +1,131 @@
+block footer
+    #footer
+        footer
+
+            if newsletter
+                .footer__newsletter
+                    h3 Подписка на рассылку
+                    span Будьте в курсе самых новых коллекций
+                    form#newsletter-form
+                        .form__container
+                            input#email(type="email" name="email" placeholder="E-mail" autocomplete="off" required)
+                            button(type="submit")
+                                i.fal.fa-long-arrow-right
+
+                .footer__reassurance
+                    .reassurance__block
+                        span
+                            i.fal.fa-lock-alt
+                        h4 Безопасные платежи
+                        span Visa, Mastercard, МИР
+
+                    .reassurance__block
+                        span
+                            i.fal.fa-truck-loading
+                        h4 Бесплатная доставка
+                        span При 100% оплате на сайте
+
+                    .reassurance__block
+                        span
+                            i.fal.fa-sync
+                        h4 Возврат в течении 14 дней
+                        span Бесплатный возврат в течение 14 календарных дней после доставки
+
+                    .reassurance__block
+                        span
+                            i.fal.fa-sync
+                        h4 Поддержка
+                        span +7(495)105-80-15<br>help@gerarddarel.ru
+
+            else if !cartPage
+                .footer__reassurance
+                    .reassurance__block
+                        span
+                            i.fal.fa-lock-alt
+                        h4 Безопасные платежи
+                        span Visa, Mastercard, МИР
+
+                    .reassurance__block
+                        span
+                            i.fal.fa-truck-loading
+                        h4 Бесплатная доставка
+                        span При 100% оплате на сайте
+
+                    .reassurance__block
+                        span
+                            i.fal.fa-sync
+                        h4 Возврат в течении 14 дней
+                        span Бесплатный возврат в течение 14 календарных дней после доставки
+
+                    .reassurance__block
+                        span
+                            i.fal.fa-sync
+                        h4 Поддержка
+                        span +7(495)105-80-15<br>help@gerarddarel.ru
+
+            if !cartPage
+                .footer__container
+                    .footer__menu
+                        ul.menu__list
+
+                            li.menu__item.has-sub-menu
+                                h4 Навигация
+                                ul.footer__submenu
+                                    li
+                                        a(href="#") О бренде
+                                    li
+                                        a(href="#") Магазины
+                                    li
+                                        a(href="#") Обратная связь
+                                    li
+                                        a(href="#") Консультация
+                                    li
+                                        a(href="#") Контакты
+
+                            li.menu__item.has-sub-menu
+                                h4 Информация
+                                ul.footer__submenu
+                                    li
+                                        a(href="#") Доставка
+                                    li
+                                        a(href="#") Оплата
+                                    li
+                                        a(href="#") Условия обмена и возврата
+                                    li
+                                        a(href="#") Оферта
+                                    li
+                                        a(href="#") Политика конфиденциальности
+                                    li
+                                        a(href="#") Таблица размеров
+
+                            li.menu__item
+                                h4 Подписаться на наши новости
+                                span Будьте в курсе наших новостей<br> и спецпредложений
+                                form
+                                    .footer__subscribe
+                                        input(type="email", name="email" placeholder="Введите ваш E-mail" autocomplete="off" required)
+                                        button(type="submit")
+                                            i.fal.fa-long-arrow-right
+
+                        .footer__socials
+                                a(href="#")
+                                    i.fab.fa-facebook-f
+                                a(href="#")
+                                    i.fab.fa-instagram
+
+            else
+                .footer__logo
+                    a(href="/")
+                        img.black(src="assets/images/Logo_GERARD_DAREL_HD_2016.png", alt="GERARD DAREL")
+
+                .footer__socials
+                    a(href="#")
+                        i.fab.fa-facebook-f
+                    a(href="#")
+                        i.fab.fa-instagram
+
+                if !cartPage
+                    .footer__copyright
+                        p © 2021 Джерард Дарел в России
+                    .footer__cookies
+                        a(href="#") Настройка Cookies

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+    <title>Корзина | Gerard Darel</title>
+    <!-- Styles-->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+  </head>
+  <body class="cart-page">
+    <div id="page">
+      <!-- Header::Start-->
+      <div id="header">
+        <div class="header__top"><a href="#">
+            <p>Ограниченный выпуск</p>
+            <p>Бесплатная доставка</p>
+            <p>Супер акции и скидки!</p>
+            <p>Бесплатная доставка</p></a></div>
+        <header>
+          <div class="header__main">
+            <div class="header__locale">
+              <div class="select__locale">
+                <select>
+                  <option value="rub">₽ - Ru</option>
+                </select>
+              </div><i class="fal fa-map-marker-alt"></i>
+            </div><a class="header__menu-btn" title="Menu"><span class="line line-1"></span><span class="line line-2"></span><span class="line line-3"></span></a><a class="top-mobile-return" href="javascript:history.go(-1)"><span>Продолжить покупки</span></a>
+            <div class="header__logo header__logo--mobile"><a href="/"><img class="black" src="assets/images/Logo_GERARD_DAREL_HD_2016.png" alt="GERARD DAREL"></a></div>
+            <div class="header__right">
+              <ul class="header__info">
+                <li class="header__search">
+                  <form id="search-form">
+                    <div class="search__wrap">
+                      <input type="search" placeholder="поиск" autocomplete="off" required>
+                      <button type="submit"><i class="fal fa-search"></i></button>
+                    </div>
+                  </form>
+                </li>
+                <li class="header__login"><a href="javasscript.void(0)" title="Login"><i class="fal fa-user"></i></a>
+                  <div class="login__content">
+                    <div class="close__content"></div>
+                    <div class="login__container">
+                      <div class="login__title">Аккаунт</div>
+                    </div>
+                    <form id="login-form">
+                      <input type="email" placeholder="Ваш адрес электронной почты" required>
+                      <input type="password" placeholder="Ваш пароль" required><a href="#">Забыли пароль?</a>
+                      <button class="login-btn">Войти</button>
+                    </form>
+                    <div class="register-sec">
+                      <h3>Нет аккаунта?</h3><a class="register-link button-style" href="/register.html">Зарегистрироваться</a>
+                    </div>
+                  </div>
+                </li>
+                <li class="header__cart"><a href="javasscript.void(0)" title="Cart"><i class="fal fa-shopping-bag"></i><span>2</span></a>
+                  <div class="cart__wrapper">
+                    <div class="cart__head">
+                      <div class="cart-icon"><i class="fal fa-shopping-bag"></i><span>2</span></div>
+                      <div class="cart-title">Ваша корзина <span>(2)</span></div>
+                      <button class="close__content"></button>
+                    </div>
+                    <div class="cart__content">
+                      <div class="cart__item"><a class="cart-image"><img src="assets/images/img342.jpg" alt="image"></a>
+                        <div class="cart__item-info">
+                          <h6><a href="#">Объемный шерстяной свитер</a></h6>
+                          <div class="cart__item-props">
+                            <div class="cart-props">
+                              <div class="props-size"><span class="text-gray">Размер</span><span>M</span></div>
+                              <div class="props-quantity"><span class="text-gray">Количество</span>
+                                <div class="props-count">
+                                  <button>−</button>
+                                  <input type="number" placeholde="0" min="1" value="1">
+                                  <button>+</button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="props-price"><span class="text-gray">Стоимость</span><span>40 000₽</span></div>
+                          </div>
+                          <div class="cart__item-remove"><a href="#">Удалить</a></div>
+                        </div>
+                      </div>
+                      <div class="cart__item"><a class="cart-image"><img src="assets/images/img342.jpg" alt="image"></a>
+                        <div class="cart__item-info">
+                          <h6><a href="#">Объемный шерстяной свитер</a></h6>
+                          <div class="cart__item-props">
+                            <div class="cart-props">
+                              <div class="props-size"><span class="text-gray">Размер</span><span>M</span></div>
+                              <div class="props-quantity"><span class="text-gray">Количество</span>
+                                <div class="props-count">
+                                  <button>−</button>
+                                  <input type="number" placeholde="0" min="1" value="1">
+                                  <button>+</button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="props-price"><span class="text-gray">Стоимость</span><span>40 000₽</span></div>
+                          </div>
+                          <div class="cart__item-remove"><a href="#">Удалить</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart__footer-btn">
+                      <div class="cart-total-sec"><span>Итого:</span><span>40 000 ₽</span></div>
+                      <button>Оформить заказ</button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <nav id="navbar">
+            <div class="header__logo"><a href="/"><img class="black" src="assets/images/Logo_GERARD_DAREL_HD_2016.png" alt="GERARD DAREL"></a></div>
+            <ul class="navbar__menu">
+              <li class="item__menu has-submenu"><a class="item__menu-link" href="catalog.html">New in</a>
+                <div class="submenu__wrap">
+                  <div class="submenu__main">
+                    <div class="submenu__expand-col">
+                      <div class="submenu__col-list">
+                        <div class="submenu__item"><span class="submenu__title">Категории</span>
+                          <ul>
+                            <li class="submenu__col-item">
+                              <h3><a>Категория 1</a></h3>
+                            </li>
+                            <li class="submenu__col-item">
+                              <h3><a>Категория 2</a></h3>
+                            </li>
+                            <li class="submenu__col-item">
+                              <h3><a>Категория 3</a></h3>
+                            </li>
+                            <li class="submenu__col-item">
+                              <h3><a>Категория 4</a></h3>
+                            </li>
+                            <li class="submenu__col-item">
+                              <h3><a>Категория 5</a></h3>
+                            </li>
+                            <li class="submenu__col-item">
+                              <h3><a>Категория 6</a></h3>
+                            </li>
+                            <li class="submenu__col-item">
+                              <h3><a>Категория 7</a></h3>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="submenu__item"><span class="submenu__title">Темы</span>
+                          <ul>
+                            <li class="submenu__col-item">
+                              <h3><a>Хеллоуин</a></h3>
+                            </li>
+                            <li class="submenu__col-item">
+                              <h3><a>Домашняя одежда</a></h3>
+                            </li>
+                            <li class="submenu__col-item">
+                              <h3><a>Лукбук</a></h3>
+                            </li>
+                            <li class="submenu__col-item">
+                              <h3><a>24 часа</a></h3>
+                            </li>
+                            <li class="submenu__col-item">
+                              <h3><a>Леди</a></h3>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="submenu__image"><a class="zoom-on-content"><span><img src="assets/images/img-header-menu.jpg" alt="image"></span></a></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="item__menu"><a class="item__menu-link" href="#">Одежда</a></li>
+              <li class="item__menu"><a class="item__menu-link" href="#">Обувь и аксессуары</a></li>
+              <li class="item__menu"><a class="item__menu-link" href="#">Pablo</a></li>
+            </ul>
+            <ul class="navbar__extra">
+              <li class="extra__menu"><a class="extra__menu-link" href="#">Нужна помощь?</a></li>
+              <li class="extra__menu"><a class="extra__menu-link" href="#">Список желаний</a></li>
+              <li class="extra__menu"><a class="extra__menu-link" href="#">Связаться с нами</a></li>
+              <li class="extra__menu"><a class="extra__menu-link" href="#">Найти магазин</a></li>
+              <li class="extra__menu"><a class="extra__menu-link extra__menu-link--account button-style" href="#">Аккаунт</a></li>
+            </ul>
+          </nav>
+        </header>
+        <div class="right__layer"></div>
+      </div>
+      <!-- Header::End-->
+      <!-- Main::Start-->
+      <main id="main" role="main">
+        <div class="cart-features"><a><i class="fal fa-truck-loading"></i><span>Быстрая доставка</span></a><a><i class="fal fa-tshirt"></i><span>Бесплатная примерка</span></a><a><i class="fal fa-truck"></i><span>Бесплатный возврат</span></a><a><i class="fal fa-phone-alt"></i><span>Служба поддержки<br>8 800 888 88 88</span></a></div>
+        <div id="cart">
+          <h1>Корзина</h1>
+          <div class="cart-container">
+            <div class="cart-list">
+              <div class="cart-item"><a class="cart-img"><img src="assets/images/img342.jpg" alt="image"></a>
+                <div class="cart-item-details"><a href="#">
+                    <h6>Объемный шерстяной свитер</h6></a>
+                  <div class="cart-item-wrapper">
+                    <div class="cart-attributes">
+                      <div class="cart-item-size"><span class="text-gray">Размер</span><span>M</span></div>
+                      <div class="cart-item-color"><span class="text-gray">Цвет</span><img src="assets/images/black.jpg" alt="color"></div>
+                      <div><span class="text-gray">Количество</span>
+                        <div class="cart-item-quantity">
+                          <button>−</button>
+                          <input type="number" placeholde="0" min="1" value="1">
+                          <button>+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart-item-price"><span class="text-gray">Стоимость</span><span>40 000₽</span></div>
+                  </div>
+                  <div class="cart-item-remove"><a href="#">Удалить</a></div>
+                </div>
+              </div>
+              <div class="cart-item"><a class="cart-img"><img src="assets/images/001.jpg" alt="image"></a>
+                <div class="cart-item-details"><a href="#">
+                    <h6>Пальто из шерсти альпаки</h6></a>
+                  <div class="cart-item-wrapper">
+                    <div class="cart-attributes">
+                      <div class="cart-item-size"><span class="text-gray">Размер</span><span>L</span></div>
+                      <div class="cart-item-color"><span class="text-gray">Цвет</span><img src="assets/images/black.jpg" alt="color"></div>
+                      <div><span class="text-gray">Количество</span>
+                        <div class="cart-item-quantity">
+                          <button>−</button>
+                          <input type="number" placeholde="0" min="1" value="1">
+                          <button>+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart-item-price"><span class="text-gray">Стоимость</span><span>18 225₽</span></div>
+                  </div>
+                  <div class="cart-item-remove"><a href="#">Удалить</a></div>
+                </div>
+              </div>
+              <div class="cart-item"><a class="cart-img"><img src="assets/images/002.jpg" alt="image"></a>
+                <div class="cart-item-details"><a href="#">
+                    <h6>Струящаяся блуза с цветочным принтом</h6></a>
+                  <div class="cart-item-wrapper">
+                    <div class="cart-attributes">
+                      <div class="cart-item-size"><span class="text-gray">Размер</span><span>M</span></div>
+                      <div class="cart-item-color"><span class="text-gray">Цвет</span><img src="assets/images/black.jpg" alt="color"></div>
+                      <div><span class="text-gray">Количество</span>
+                        <div class="cart-item-quantity">
+                          <button>−</button>
+                          <input type="number" placeholde="0" min="1" value="1">
+                          <button>+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart-item-price"><span class="text-gray">Стоимость</span><span>22 000₽</span></div>
+                  </div>
+                  <div class="cart-item-remove"><a href="#">Удалить</a></div>
+                </div>
+              </div>
+              <div class="cart-item"><a class="cart-img"><img src="assets/images/004.jpg" alt="image"></a>
+                <div class="cart-item-details"><a href="#">
+                    <h6>Струящаяся шелковая блуза</h6></a>
+                  <div class="cart-item-wrapper">
+                    <div class="cart-attributes">
+                      <div class="cart-item-size"><span class="text-gray">Размер</span><span>38</span></div>
+                      <div class="cart-item-color"><span class="text-gray">Цвет</span><img src="assets/images/black.jpg" alt="color"></div>
+                      <div><span class="text-gray">Количество</span>
+                        <div class="cart-item-quantity">
+                          <button>−</button>
+                          <input type="number" placeholde="0" min="1" value="1">
+                          <button>+</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cart-item-price"><span class="text-gray">Стоимость</span><span>10 000₽</span></div>
+                  </div>
+                  <div class="cart-item-remove"><a href="#">Удалить</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="cart-total-price"><span>Итого:</span><span>76 650₽</span></div>
+          </div>
+          <div class="checkout-container">
+            <div class="checkout-title">
+              <h2>Оформление заказа</h2><a href="#">Уже зарегистрированы?</a>
+            </div>
+            <form id="cart-form">
+              <div class="form-header">
+                <h3>Личные данные</h3><span>* обязательные поля</span>
+              </div>
+              <div class="form-row">
+                <label for="input-name" data-required>Ваше имя</label>
+                <div class="c-input">
+                  <input id="input-name" type="text" placeholder="Введите ваше имя" data-error-message="Введите ваше имя" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <label for="input-lastname" data-required>Ваша фамилия</label>
+                <div class="c-input">
+                  <input id="input-lastname" type="text" placeholder="Введите вашу фамилию" data-error-message="Введите вашу фамилию" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <label for="input-phone" data-required>Телефон</label>
+                <div class="c-input">
+                  <input id="input-phone" placeholder="+7 (xxx) xxx-xx-xx" data-error-message="Введите номер телефона" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <label for="input-email" data-required>E-mail</label>
+                <div class="c-input">
+                  <input id="input-email" type="email" placeholder="Ваша электронная почта" data-error-message="Введите email" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <label for="input-city" data-required>Город</label>
+                <div class="c-input">
+                  <input id="input-city" type="text" placeholder="..." data-error-message="Укажите город" required>
+                  <div class="suggestions-wrapper">
+                    <div class="suggestions">
+                      <div class="suggestion"><span class="suggestion-value"><strong>Москва</strong>, Россия</span></div>
+                      <div class="suggestion"><span class="suggestion-value"><strong>Санкт-Петербург</strong>, Россия</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-section">
+                <h3>Доставка</h3>
+                <div class="shipping-text"><span>Чтобы выбрать доставку заполните, пожалуйста, поле "Город"</span></div>
+                <div class="shipping-section">
+                  <div class="shipping-wrapper">
+                    <div class="shipping-type">
+                      <input id="radio-shipping" type="radio" name="shipping" checked>
+                      <div>
+                        <label for="radio-shipping"></label><span>Курьером</span><span>346<b>₽</b></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-address">
+                    <div class="form-row">
+                      <label for="input-email" data-required>Улица</label>
+                      <div class="c-input">
+                        <input id="address-address-1" type="text" placeholder="Улица" data-error-message="Выберите улицу" required>
+                      </div>
+                    </div>
+                    <div class="c-input-row">
+                      <div class="c-input">
+                        <input id="input-address-2" type="text" placeholder="Дом" data-error-message="Выберите дом" required>
+                      </div>
+                      <div class="c-input">
+                        <input id="input-address-3" type="text" placeholder="Корпус">
+                      </div>
+                      <div class="c-input">
+                        <input id="input-address-4" type="text" placeholder="Кв.">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-section">
+                <h3>Оплата</h3>
+                <div class="payment-section">
+                  <div>
+                    <div class="payment-type">
+                      <input id="radio-payment-1" type="radio" name="pay-system" checked>
+                      <div>
+                        <label for="radio-payment-1"></label><span>Оплата при получении</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="payment-type">
+                      <input id="radio-payment-2" type="radio" name="pay-system">
+                      <div>
+                        <label for="radio-payment-2"></label><span>Оплата онлайн</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="delivery-date">
+                  <div class="delivery-date-select">
+                    <input type="hidden">
+                    <div class="date-selected"><span>Выберите дату доставки</span></div>
+                    <div class="date-select">
+                      <div class="date-select-item">18.12.2021</div>
+                      <div class="date-select-item">19.12.2021</div>
+                      <div class="date-select-item">20.12.2021</div>
+                    </div>
+                  </div>
+                  <div class="delivery-date-select">
+                    <input type="hidden">
+                    <div class="date-selected"><span>Выберите время доставки</span></div>
+                    <div class="date-select">
+                      <div class="date-select-item">c 10:00 до 15:00</div>
+                      <div class="date-select-item">c 9:00 до 18:00</div>
+                      <div class="date-select-item">c 15:00 до 20:00</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="checkbox-block">
+                  <div class="checkbox">
+                    <input id="checkbox-call" type="checkbox">
+                    <label for="checkbox-call">Перезвоните мне для подтверждения заказа</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <label for="textarea-comment">Комментарий</label>
+                <div class="textarea-input">
+                  <textarea id="textarea-comment" placeholder="Комментарий к заказу"></textarea>
+                </div>
+              </div>
+              <div class="form-section form-section--final">
+                <div class="form-wrapper">
+                  <div class="promo-wrap">
+                    <div class="promo-input">
+                      <input type="text" placeholder="Промо-код">
+                    </div>
+                    <button><span>Применить</span></button>
+                  </div>
+                  <div class="checkout-final">
+                    <div class="final-price">
+                      <p>Товары</p><span>58 590₽</span>
+                    </div>
+                    <div class="final-price">
+                      <p>Доставка</p><span>0₽</span>
+                    </div>
+                    <div class="final-price">
+                      <p>Всего</p><span>58 590₽</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-submit">
+                  <div class="checkbox-block">
+                    <div class="checkbox">
+                      <input id="checkbox-rules" type="checkbox" checked>
+                      <label for="checkbox-rules"><span>Согласен с <a href="#popup-info-rules">правилами обработки информации</a></span></label>
+                    </div>
+                    <div class="checkbox">
+                      <input id="checkbox-feed" type="checkbox">
+                      <label for="checkbox-feed">Подписаться на рассылку</label>
+                    </div>
+                  </div>
+                  <button type="submit">Оформить заказ</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+      <!-- Main::End-->
+      <!-- Footer::Start-->
+      <div id="footer">
+        <footer>
+          <div class="footer__logo"><a href="/"><img class="black" src="assets/images/Logo_GERARD_DAREL_HD_2016.png" alt="GERARD DAREL"></a></div>
+          <div class="footer__socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div>
+        </footer>
+      </div>
+      <!-- Footer::End-->
+    </div>
+    <!-- Scripts::Start-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/slider.js"></script>
+    <script src="assets/js/jquery.mousewheel.js"></script>
+    <script src="assets/js/jquery.jscrollpane.min.js"></script>
+    <script src="assets/js/inputmask.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- Scripts::End-->
+  </body>
+</html>

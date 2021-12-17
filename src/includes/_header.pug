@@ -1,0 +1,214 @@
+block header
+    #header
+        .header__top
+            a(href="#")
+                p Ограниченный выпуск
+                p Бесплатная доставка
+                p Супер акции и скидки!
+                p Бесплатная доставка
+        header
+
+            .header__main
+                .header__locale
+                    .select__locale
+                        select
+                            option(value="rub") ₽ - Ru
+                    i.fal.fa-map-marker-alt
+
+                a.header__menu-btn(title="Menu")
+                    span.line.line-1
+                    span.line.line-2
+                    span.line.line-3
+
+                a.top-mobile-return(href="javascript:history.go(-1)")
+
+                    if cartPage
+                        span Продолжить покупки
+
+                .header__logo.header__logo--mobile
+                    a(href="/")
+                        img.black(src="assets/images/Logo_GERARD_DAREL_HD_2016.png", alt="GERARD DAREL")
+
+                .header__right
+
+                    ul.header__info
+
+                        li.header__search
+                            form#search-form
+                                .search__wrap
+                                    input(type="search" placeholder="поиск" autocomplete="off" required)
+                                    button(type="submit")
+                                        i.fal.fa-search
+
+                        li.header__login
+                            a(href="javasscript.void(0)" title="Login")
+                                i.fal.fa-user
+                            .login__content
+                                .close__content
+                                .login__container
+                                    .login__title Аккаунт
+                                form#login-form
+                                    input(type="email" placeholder="Ваш адрес электронной почты" required)
+                                    input(type="password" placeholder="Ваш пароль" required)
+                                    a(href="#") Забыли пароль?
+                                    button.login-btn Войти
+                                .register-sec
+                                    h3 Нет аккаунта?
+                                    a.register-link.button-style(href="/register.html") Зарегистрироваться
+
+
+                        li.header__cart
+                            a(href="javasscript.void(0)" title="Cart")
+                                i.fal.fa-shopping-bag
+                                span 2
+
+                            .cart__wrapper
+
+                                .cart__head
+                                    .cart-icon
+                                        i.fal.fa-shopping-bag
+                                        span 2
+                                    .cart-title Ваша корзина <span>(2)</span>
+                                    button.close__content
+
+                                .cart__content
+
+                                    .cart__item
+                                        a.cart-image
+                                            img(src="assets/images/img342.jpg", alt="image")
+                                        .cart__item-info
+                                            h6
+                                                a(href="#") Объемный шерстяной свитер
+                                            .cart__item-props
+                                                .cart-props
+                                                    .props-size
+                                                        span.text-gray Размер
+                                                        span M
+                                                    .props-quantity
+                                                        span.text-gray Количество
+                                                        .props-count
+                                                            button −
+                                                            input(type="number" placeholde="0" min="1" value="1")
+                                                            button +
+                                                .props-price
+                                                    span.text-gray Стоимость
+                                                    span 40 000₽
+                                            .cart__item-remove
+                                                a(href="#") Удалить
+
+                                    .cart__item
+                                        a.cart-image
+                                            img(src="assets/images/img342.jpg", alt="image")
+                                        .cart__item-info
+                                            h6
+                                                a(href="#") Объемный шерстяной свитер
+                                            .cart__item-props
+                                                .cart-props
+                                                    .props-size
+                                                        span.text-gray Размер
+                                                        span M
+                                                    .props-quantity
+                                                        span.text-gray Количество
+                                                        .props-count
+                                                            button −
+                                                            input(type="number" placeholde="0" min="1" value="1")
+                                                            button +
+                                                .props-price
+                                                    span.text-gray Стоимость
+                                                    span 40 000₽
+                                            .cart__item-remove
+                                                a(href="#") Удалить
+
+
+
+                                .cart__footer-btn
+                                    .cart-total-sec
+                                        span Итого:
+                                        span 40 000 ₽
+                                    button Оформить заказ
+
+            nav#navbar
+                .header__logo
+                    a(href="/")
+                        img.black(src="assets/images/Logo_GERARD_DAREL_HD_2016.png", alt="GERARD DAREL")
+
+                ul.navbar__menu
+
+                    li.item__menu.has-submenu(class= active ? active : '')
+                        a.item__menu-link(href="catalog.html") New in
+                        .submenu__wrap
+                            .submenu__main
+                                .submenu__expand-col
+
+                                    .submenu__col-list
+
+                                        .submenu__item
+                                            span.submenu__title Категории
+                                            ul
+                                                li.submenu__col-item
+                                                    h3
+                                                        a Категория 1
+                                                li.submenu__col-item
+                                                    h3
+                                                        a Категория 2
+                                                li.submenu__col-item
+                                                    h3
+                                                        a Категория 3
+                                                li.submenu__col-item
+                                                    h3
+                                                        a Категория 4
+                                                li.submenu__col-item
+                                                    h3
+                                                        a Категория 5
+                                                li.submenu__col-item
+                                                    h3
+                                                        a Категория 6
+                                                li.submenu__col-item
+                                                    h3
+                                                        a Категория 7
+
+                                        .submenu__item
+                                            span.submenu__title Темы
+                                            ul
+                                                li.submenu__col-item
+                                                    h3
+                                                        a Хеллоуин
+                                                li.submenu__col-item
+                                                    h3
+                                                        a Домашняя одежда
+                                                li.submenu__col-item
+                                                    h3
+                                                        a Лукбук
+                                                li.submenu__col-item
+                                                    h3
+                                                        a 24 часа
+                                                li.submenu__col-item
+                                                    h3
+                                                        a Леди
+
+                                    .submenu__image
+                                            a.zoom-on-content
+                                                span
+                                                    img(src="assets/images/img-header-menu.jpg", alt="image")
+
+                    li.item__menu
+                        a.item__menu-link(href="#") Одежда
+                    li.item__menu
+                        a.item__menu-link(href="#") Обувь и аксессуары
+                    li.item__menu
+                        a.item__menu-link(href="#") Pablo
+
+                ul.navbar__extra
+                    li.extra__menu
+                        a.extra__menu-link(href="#") Нужна помощь?
+                    li.extra__menu
+                        a.extra__menu-link(href="#") Список желаний
+                    li.extra__menu
+                        a.extra__menu-link(href="#") Связаться с нами
+                    li.extra__menu
+                        a.extra__menu-link(href="#") Найти магазин
+                    li.extra__menu
+                        a.extra__menu-link.extra__menu-link--account.button-style(href="#") Аккаунт
+
+
+        .right__layer

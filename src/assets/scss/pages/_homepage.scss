@@ -1,0 +1,384 @@
+.hero__container {
+
+    @include breakpoint(xl) {
+        position: relative;
+        height: 600px;
+        overflow: hidden;
+    }
+}
+
+.hero__container .slick-prev {
+    left: 20px;
+}
+
+.hero__container .slick-next {
+    right: 20px;
+}
+
+.hero__container .slick-prev::before,
+.hero__container .slick-next::before {
+    font-weight: 700;
+    font-size: 30px;
+    color: #fff;
+}
+
+.hero__container .slick-dots {
+    padding: 0 24px;
+    bottom: 20px;
+}
+
+.hero__container .slick-dots li {
+    width: unset;
+    height: unset;
+}
+
+.hero__container .slick-dots li button {
+    padding: 0;
+    background: #fff;
+    background-clip: content-box;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+}
+
+.hero__container .slick-dots li.slick-active button {
+    background: 0 0;
+    border-color: #fff;
+}
+
+.hero__container .slick-dots li button::before {
+    content: none;
+}
+
+.hero__banner {
+    height: 500px;
+
+    @include breakpoint(md) {
+        height: 600px;
+    }
+}
+
+.hero__banner img {
+    height: 500px;
+    object-fit: cover;
+
+    @include breakpoint(md) {
+        height: 600px;
+    }
+}
+
+.hero__action {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    @include breakpoint(md) {
+        position: absolute;
+        left: 100px;
+        top: 45%;
+        display: initial;
+    }
+}
+
+.hero__action h2 {
+    font-family: 'Vollkorn', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 16px;
+    color: #fff;
+
+    @include breakpoint(md) {
+        font-size: 48px;
+    }
+}
+
+.hero__action button {
+    margin: 20px auto 0;
+    background: #fff;
+    max-width: 128px;
+    font-size: 13px;
+    line-height: 16px;
+    color: #000;
+    transition: transform 0.3s ease;
+
+    @include breakpoint(md) {
+        margin: 50px 0 0;
+    }
+}
+
+.hero__action button:hover {
+    transform: scale(1.1);
+}
+
+.styles__cat {
+    display: flex;
+    flex-direction: column;
+    max-height: 670px;
+    overflow: hidden;
+
+    @include breakpoint(md) {
+        flex-direction: row;
+    }
+}
+
+.styles__block {
+    margin-bottom: 35px;
+    position: relative;
+    cursor: pointer;
+
+    @include breakpoint(md) {
+        margin-bottom: 0;
+    }
+}
+
+[class*='image__block'] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 300px;
+    max-height: 670px;
+    transition: background-size 0.5s ease-in-out;
+
+    @include breakpoint(md) {
+        display: block;
+        width: calc(100vw / 2);
+        height: calc(100vw / 3);
+    }
+}
+
+.image__block-1 {
+    background: url('../images/img42.jpg') no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+}
+
+.image__block-2 {
+    background: url('../images/img214.jpg') no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+}
+
+.styles__block:hover [class*='image__block'] {
+
+    @include breakpoint(xl) {
+        background-size: 110%;
+    }
+}
+
+.action__block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.action__block h3 {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    color: #fff;
+}
+
+.action__block button {
+    margin: 20px auto 0;
+    background: #fff;
+    max-width: 128px;
+    font-size: 13px;
+    line-height: 16px;
+    color: #000;
+
+    @include breakpoint(xl) {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease-in-out;
+
+        .styles__block:hover & {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.article__container {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(md) {
+        flex-direction: row;
+    }
+}
+
+.article__container > div {
+    flex: 1 0 50%;
+}
+
+.article__wrapper {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.article__wrapper h3 {
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 34px;
+
+    @include breakpoint(md) {
+        margin-top: 0;
+    }
+
+    @include breakpoint(lg) {
+        font-size: 27px;
+    }
+}
+
+.article__wrapper h3::after {
+    content: '';
+    margin: 10px auto 0;
+    background: #000;
+    display: block;
+    width: 36px;
+    height: 2px;
+
+    @include breakpoint(lg) {
+        margin: 20px auto 0;
+    }
+}
+
+.article__wrapper p {
+    margin-top: 10px;
+    max-width: 560px;
+    font-size: 13px;
+    line-height: 23px;
+
+    @include breakpoint(lg) {
+        margin-top: 40px;
+        font-size: 15px;
+    }
+}
+
+.article__wrapper button {
+    margin-top: 20px;
+    padding: 15px 40px;
+    max-width: 175px;
+
+    @include breakpoint(lg) {
+        margin-top: 80px;
+    }
+}
+
+//////////////////
+///INSTAGRAM FEED
+/////////////////
+
+.instagram-section {
+    padding: 30px 0;
+}
+
+.instagram-header {
+    margin: 20px 0;
+    padding: 0 20px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1;
+    color: #606060;
+    text-align: center;
+
+    @include breakpoint(md) {
+        margin-bottom: 60px;
+        padding: 0;
+        font-size: 27px;
+    }
+}
+
+.instagram-feed {
+    overflow: hidden;
+    clear: both;
+}
+
+.instagram-feed__list {
+    padding: 20px 0;
+    overflow: visible;
+}
+
+.instagram-media {
+    position: relative;
+    display: block;
+    max-width: 400px;
+    overflow: hidden;
+    vertical-align: top;
+    white-space: normal;
+    scroll-snap-align: center;
+}
+
+.instagram-media.slick-slide {
+    margin: 0 10px;
+}
+
+.instagram-media::before {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
+}
+
+.instagram-media-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    vertical-align: top;
+}
+
+.instagram-media__overlay {
+    padding: 14px 20px;
+    background: rgba(0, 0, 0, 0.65);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.instagram-media:hover .instagram-media__overlay {
+    opacity: 1;
+}
+
+.instagram-media__caption {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-height: 21px;
+    overflow: hidden;
+}
+
+.instagram-media__date {
+    margin-top: auto;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}

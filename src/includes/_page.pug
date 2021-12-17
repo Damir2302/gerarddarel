@@ -1,0 +1,36 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+        link(rel="shortcut icon", href="assets/images/favicon.png")
+        title= title || 'Page name'
+
+        // Styles
+        include _loadCss
+
+    body(class= bodyClass ? bodyClass : '')
+
+        #page
+
+            // Header::Start
+            block header
+                include _header
+            // Header::End
+
+            // Main::Start
+            main#main(role="main")
+                block main
+            // Main::End
+
+            // Footer::Start
+            if !noFooter
+                block footer
+                    include _footer
+            // Footer::End
+
+        // Scripts::Start
+        include _loadScripts
+        // Scripts::End

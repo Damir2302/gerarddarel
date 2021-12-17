@@ -1,0 +1,42 @@
+mixin card(url, url2, price, title)
+    .product__tile
+
+        .product__image
+
+            .image__wrapper
+                a.product__link(href="card.html")
+                    img.first-image(src="assets/images/" + url, alt="image")
+                    img.second-image(src="assets/images/" + url2, alt="image")
+
+            .product__attr
+
+                .product__sizes
+                    ul.swatch__list
+                        li.swatch__size
+                            a(href="#") T1
+                        li.swatch__size
+                            a(href="#") T2
+                        li.swatch__size
+                            a(href="#") T3
+                        li.swatch__size.not-available
+                            a(href="#") T4
+
+                .product__colors
+                    ul.swatch__list
+                        li.swatch__color.selected
+                            a(href="#" title="СИНИЙ" style="background: url('assets/images/D002.jpg')")
+                                span СИНИЙ
+                        li.swatch__color
+                            a(href="#" title="ПУРПУРНЫЙ" style="background: url('assets/images/F015.jpg')")
+                                span ПУРПУРНЫЙ
+
+        .quick__actions
+            span пожалуйста, выберите размер
+            button.add-to-cart.button-style Добавить в корзину
+
+        .card__info
+
+            .card__detail
+                h2= title
+                .card__pricing
+                    span= price + ' ₽'

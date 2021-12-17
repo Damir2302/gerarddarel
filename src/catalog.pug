@@ -1,0 +1,367 @@
+---
+title: Gerard Darel | Каталог
+newsletter: false
+active: active
+---
+
+extends includes/_page
+
+block main
+
+    #catalog
+
+        h1.catalog__title New In
+        .catalog__head
+            // Breadcrumbs::Start
+            .breacrumbs
+                .breadcrumbs__wrapper
+                        ol.breadcrumb
+                            li.breadcrumb__item
+                                a.breadcrumb__elem Главная
+                            li.breadcrumb__item
+                                span.breadcrumb__elem New In (210)
+            // Breadcrumbs::End
+
+            // Filters::Start
+            .filters
+                .filter__button--mobile Фильтр
+                .filters__wrapper
+
+                    .color__filter
+                        a.filter__btn.button-style Цвет
+                        .filter__color-container
+
+                            .filter__colors
+                                span.color-value.selected(style="background-color: rgb(229, 205, 170)")
+                                span.color-value.selected(style="background-color: black")
+                                span.color-value.selected(style="background-color: blue")
+                                span.color-value(style="background-color: rgb(88, 41, 0)")
+                                span.color-value(style="background-color: yellow")
+                                span.color-value(style="background-color: green")
+                                span.color-value(style="background-color: rgb(128, 128, 128)")
+                                span.color-value(style="background-color: brown")
+                                span.color-value(style="background-color: rgb(255, 172, 200)")
+                                span.color-value(style="background-color: rgb(255, 0, 0)")
+
+                    .size__filter
+                        a.filter__btn.button-style Талия
+                        .filter__size-container
+
+                            .filter__sizes
+
+                                .size-value
+                                    .size-checkbox.checked
+                                        span
+                                    span.size-label 34
+
+                                .size-value
+                                    .size-checkbox.checked
+                                        span
+                                    span.size-label 36
+
+                                .size-value
+                                    .size-checkbox.checked
+                                        span
+                                    span.size-label 38
+
+                                .size-value
+                                    .size-checkbox
+                                        span
+                                    span.size-label 40
+
+                                .size-value
+                                    .size-checkbox
+                                        span
+                                    span.size-label 42
+
+                                .size-value
+                                    .size-checkbox
+                                        span
+                                    span.size-label 44
+
+                                .size-value
+                                    .size-checkbox
+                                        span
+                                    span.size-label 46
+
+                                .size-value
+                                    .size-checkbox
+                                        span
+                                    span.size-label T2
+
+            // Filters::End
+
+            // Filters-mobile::Start
+            .filters--mobile
+
+                .filters-container
+                    .filter-close
+                    .filter-wrapper.has-filter
+                        .filter-header
+                            h2 Фильтры
+                            a.filter-clear-btn Очистить всё
+                        .filter-body
+
+                            .filter-cat(data-path="category")
+                                span Категория
+
+                            .filter-cat(data-path="color")
+                                span Цвет
+                                .dimmed
+                                    span Бежевый
+                                    span Черный
+                                    span Синий
+
+                            .filter-cat(data-path="size")
+                                span Талия
+                                .dimmed
+                                    span 34
+                                    span 36
+                                    span 38
+
+                        .filter-footer
+                            button Продолжить
+
+                .filters-mob-container.category
+                    .filter-close
+                    .filter-wrapper
+                        .filter-header
+                            h2.inner-header Категория
+                            a.filter-clear-btn Очистить
+                        .filter-body
+
+                            .filter-attr
+                                a(href="#")
+                                    span Рубашки и блузки
+
+                            .filter-attr
+                                a(href="#")
+                                    span Кожа и шкуры
+
+                            .filter-attr
+                                a(href="#")
+                                    span Юбки
+
+                            .filter-attr
+                                a(href="#")
+                                    span Сетка
+
+                            .filter-attr
+                                a(href="#")
+                                    span Пальто и тренчи
+
+                            .filter-attr
+                                a(href="#")
+                                    span Брюки и джинсы
+
+                            .filter-attr
+                                a(href="#")
+                                    span Платья
+
+                            .filter-attr
+                                a(href="#")
+                                    span Топы и кофты
+
+                            .filter-attr
+                                a(href="#")
+                                    span Платья
+
+                        .filter-footer
+                            button Продолжить
+
+                .filters-mob-container.color
+                    .filter-close
+                    .filter-wrapper.has-filter
+                        .filter-header
+                            h2.inner-header Цвет
+                            a.filter-clear-btn Очистить
+                        .filter-body
+
+                            .filter-attr.selected
+                                span.color-value-mobile(style="background-color: rgb(229, 205, 170)")
+                                span.color-label-mobile Бежевый
+                            .filter-attr.selected
+                                span.color-value-mobile(style="background-color: black")
+                                span.color-label-mobile Черный
+                            .filter-attr.selected
+                                span.color-value-mobile(style="background-color: blue")
+                                span.color-label-mobile Синий
+                            .filter-attr
+                                span.color-value-mobile(style="background-color: rgb(88, 41, 0)")
+                                span.color-label-mobile Коричневый
+                            .filter-attr
+                                span.color-value-mobile(style="background-color: yellow")
+                                span.color-label-mobile Желтый
+                            .filter-attr
+                                span.color-value-mobile(style="background-color: green")
+                                span.color-label-mobile Зеленый
+                            .filter-attr
+                                span.color-value-mobile(style="background-color: rgb(128, 128, 128)")
+                                span.color-label-mobile Серый
+                            .filter-attr
+                                span.color-value-mobile(style="background-color: brown")
+                                span.color-label-mobile Бордовый
+                            .filter-attr
+                                span.color-value-mobile(style="background-color: rgb(255, 172, 200)")
+                                span.color-label-mobile Розовый
+                            .filter-attr
+                                span.color-value-mobile(style="background-color: rgb(255, 0, 0)")
+                                span.color-label-mobile Красный
+
+                        .filter-footer
+                            button Продолжить
+
+                .filters-mob-container.size
+                    .filter-close
+                    .filter-wrapper.has-filter
+                        .filter-header
+                            h2.inner-header Талия
+                            a.filter-clear-btn Очистить
+                        .filter-body
+
+                            .filter-attr.selected
+                                span 34
+
+                            .filter-attr.selected
+                                span 36
+
+                            .filter-attr.selected
+                                span 38
+
+                            .filter-attr
+                                span 40
+
+                            .filter-attr
+                                span 42
+
+                            .filter-attr
+                                span 44
+
+                            .filter-attr
+                                span 46
+
+                            .filter-attr
+                                span T2
+
+                        .filter-footer
+                            button Продолжить
+            // Filters-mobile::End
+
+            .sorting
+
+                .sorting__wrapper
+                    select.sortby
+                        option Новинки
+                        option По дате
+                        option Рейтинг
+                        option Просмотр
+
+                .sorting__columns
+                    .sorting__col-4.active
+                        i
+                    .sorting__col-2
+                        i
+
+        .selected__filters
+                .refineby__body
+
+                    .refineby__item
+                        span.refineby-btn Черный
+                        span.refineby-remove
+
+                    .refineby__item
+                        span.refineby-btn Синий
+                        span.refineby-remove
+
+                    .refineby__item
+                        span.refineby-btn Бежевый
+                        span.refineby-remove
+
+                    .refineby__item
+                        span.refineby-btn 34
+                        span.refineby-remove
+
+                    .refineby__item
+                        span.refineby-btn 36
+                        span.refineby-remove
+
+                    .refineby__item
+                        span.refineby-btn 38
+                        span.refineby-remove
+
+                a.clear-filters Очистить
+
+        .catalog__cards
+            .catalog__container
+
+                include includes/_catalog-cards
+                +card("001.jpg", "004.jpg", '18 225', 'STEFANY - Пальто из шерсти альпаки')
+                +card("002.jpg", "005.jpg", '22 000', 'CLOANE - Струящаяся блуза с цветочным принтом')
+                +card("003.jpg", "006.jpg", '14 500', 'LARA - Gilet oversize avec poches plaquées')
+                +card("004.jpg", "007.jpg", '10 000', 'CALLIE - Струящаяся шелковая блуза')
+                +card("005.jpg", "008.jpg", '10 000', 'JANE - Кожаная сумка')
+                +card("006.jpg", "009.jpg", '10 000', 'LUCIEN - Объёмный шерстяной свитер с V-образным вырезом')
+                +card("007.jpg", "010.jpg", '10 000', 'LUCIE - Сумка с тиснением под крокодила')
+                +card("008.jpg", "011.jpg", '10 000', 'DALIE - Двубортное пальто с узором')
+                +card("009.jpg", "012.jpg", '10 000', 'JANE - Кожаная сумка')
+                +card("010.jpg", "001.jpg", '10 000', 'LUCIEN - Объёмный шерстяной свитер с V-образным вырезом')
+                +card("011.jpg", "002.jpg", '10 000', 'LUCIE - Сумка с тиснением под крокодила')
+                +card("012.jpg", "003.jpg", '10 000', 'DALIE - Двубортное пальто с узором')
+                +card("001.jpg", "004.jpg", '18 225', 'STEFANY - Пальто из шерсти альпаки')
+                +card("002.jpg", "005.jpg", '22 000', 'CLOANE - Струящаяся блуза с цветочным принтом')
+                +card("003.jpg", "006.jpg", '14 500', 'LARA - Gilet oversize avec poches plaquées')
+                +card("004.jpg", "007.jpg", '10 000', 'CALLIE - Струящаяся шелковая блуза')
+                +card("005.jpg", "008.jpg", '10 000', 'JANE - Кожаная сумка')
+                +card("006.jpg", "009.jpg", '10 000', 'LUCIEN - Объёмный шерстяной свитер с V-образным вырезом')
+                +card("007.jpg", "010.jpg", '10 000', 'LUCIE - Сумка с тиснением под крокодила')
+                +card("008.jpg", "011.jpg", '10 000', 'DALIE - Двубортное пальто с узором')
+                +card("009.jpg", "012.jpg", '10 000', 'JANE - Кожаная сумка')
+                +card("010.jpg", "001.jpg", '10 000', 'LUCIEN - Объёмный шерстяной свитер с V-образным вырезом')
+                +card("011.jpg", "002.jpg", '10 000', 'LUCIE - Сумка с тиснением под крокодила')
+                +card("012.jpg", "003.jpg", '10 000', 'DALIE - Двубортное пальто с узором')
+
+            .catalog__progressbar
+                span.progress-info Вы просмотрели 40 из 151 товаров
+                .line-maxrange
+                    span.line-status
+
+            .show-more-btn
+                a.button-style(href="#")
+                    span Показать еще
+
+            a#scrollTop.show(href="#")
+
+
+        // Slider-section::Start
+        section.slider-section
+            h2.section-title Популярное из коллекций
+            .slider-container
+
+                .swiper-wrapper
+
+                    include includes/_swiper-slider
+                    +swiper('img001.jpg', 'img003.jpg', '27 600', 'JENA - Robe chemise en soie')
+                    +swiper('img002.jpg', 'img004.jpg', '22 000', 'Bottes en cuir de veau souple')
+                    +swiper('img003.jpg', 'img001.jpg', '23 600', 'LARA - Gilet oversize avec poches plaquées')
+                    +swiper('img004.jpg', 'img001.jpg', '23 600', 'LARA - Gilet oversize avec poches plaquées')
+                    +swiper('img001.jpg', 'img003.jpg', '27 600', 'JENA - Robe chemise en soie')
+                    +swiper('img002.jpg', 'img004.jpg', '22 000', 'Bottes en cuir de veau souple')
+                    +swiper('img003.jpg', 'img001.jpg', '23 600', 'LARA - Gilet oversize avec poches plaquées')
+                    +swiper('img004.jpg', 'img001.jpg', '23 600', 'LARA - Gilet oversize avec poches plaquées')
+                    +swiper('img001.jpg', 'img003.jpg', '27 600', 'JENA - Robe chemise en soie')
+                    +swiper('img002.jpg', 'img004.jpg', '22 000', 'Bottes en cuir de veau souple')
+                    +swiper('img003.jpg', 'img001.jpg', '23 600', 'LARA - Gilet oversize avec poches plaquées')
+                    +swiper('img004.jpg', 'img001.jpg', '23 600', 'LARA - Gilet oversize avec poches plaquées')
+
+                .slider-scrollbar
+
+            a(href="#").slider-button-prev
+                    svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24")
+                        path(d="M0-.25H24v24H0Z" transform="translate(0 0.25)" style="fill:none")
+                        polyline(points="14.4 7.03 9 12.43 14.4 17.83" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-miterlimit:8;stroke-width:3px")
+
+            a(href="#").slider-button-next
+                svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24")
+                        path(d="M0-.25H24v24H0Z" transform="translate(0 0.25)" style="fill:none")
+                        polyline(points="10 17.83 15.4 12.43 10 7.03" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-miterlimit:8;stroke-width:3px")
+        // Slider-section::End

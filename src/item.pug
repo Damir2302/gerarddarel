@@ -1,0 +1,189 @@
+---
+title: Gerard Darel | STEFANY - Пальто из шерсти альпаки
+newsletter: false
+bodyClass: item-page
+---
+
+extends includes/_page
+
+block main
+
+    #item
+        // Breadcrumbs::Start
+        .breacrumbs
+            .breadcrumbs__wrapper
+                    ol.breadcrumb
+                        li.breadcrumb__item
+                            a.breadcrumb__elem Главная
+                        li.breadcrumb__item
+                            a.breadcrumb__elem Одежда
+                        li.breadcrumb__item
+                            a.breadcrumb__elem Верхняя одежда
+                        li.breadcrumb__item
+                            span.breadcrumb__elem STEFANY - Пальто из шерсти альпаки
+        // Breadcrumbs::End
+
+        .item__wrap
+
+            .item__slider
+
+                .item__image--main
+                    picture
+                        img(src="assets/images/item1.jpg", alt="image")
+
+                .item__image.item__video
+                    video(playsinline='playsinline' autoplay='true' mute='true' loop='true')
+                        source(src='assets/images/shopyfy.mp4' type='video/mp4')
+
+                .item__image
+                    picture
+                        img(src="assets/images/item3.jpg", alt="image")
+
+                .item__image
+                    picture
+                        img(src="assets/images/item4.jpg", alt="image")
+
+                .item__image
+                    picture
+                        img(src="assets/images/item5.jpg", alt="image")
+
+            .item__info
+                .info__wrapper
+                    h1.item__title STEFANY - Пальто из шерсти альпаки
+                    span.item__price 66 900 ₽
+
+                    span.item__color Цвет
+                    ul.item__color-list
+                        li.selected
+                            a(href="#" title="СИНИЙ" style="background: url('assets/images/D002.jpg')")
+                                span СИНИЙ
+                        li
+                            a(href="#" title="ПУРПУРНЫЙ" style="background: url('assets/images/F015.jpg')")
+                                span ПУРПУРНЫЙ
+
+                    span.item__size Размер
+                    ul.item__size-list
+                        li
+                            a(href="#") 36
+                        li
+                            a(href="#") 38
+                        li
+                            a(href="#") 40
+                        li.not-available
+                            a(href="#") 42
+                        li.not-available
+                            a(href="#") 44
+                        li
+                            a(href="#") 46
+
+                    .size-table
+                        div
+                            i.fal.fa-female
+                            i.far.fa-female
+                            a Таблица размеров
+
+                        div
+                            span Переключить на <a>Int размер</a>
+
+                    .item__action
+                        button.addToCart__btn(disabled) Добавить в корзину
+                        span пожалуйста, выберите размер
+                        button.bookNow__btn Забронировать в магазине
+
+                    .item__details
+                        .item__accordion.opened
+                            h3 Описание
+                            div
+                                p Оверсайз пальто из шерсти альпаки с контрастной двубортной застежкой на пуговицы.<br><br>
+
+                                | - Свободный крой<br>
+                                | - Отложной воротник<br>
+                                | - Застежка на две пуговицы<br>
+                                | - 2 накладных кармана на талии<br>
+                                | - Спущенные проймы<br><br>
+
+                                | арт. DRM83R039
+
+                        .item__accordion
+                            h3 Состав и уход
+                            div
+
+                        .item__accordion
+                            h3 Бесплатный возврат
+                            div
+
+                    .item__socials
+                        a(href="#")
+                            i.fab.fa-facebook-f
+                        a(href="#")
+                            i.fab.fa-instagram
+
+
+        // Slider-section::Start
+        section.slider-section
+            h2.section-title Дополните образ
+            .slider-container
+
+                .swiper-wrapper
+
+                    include includes/_swiper-slider
+                    +swiper('img001.jpg', 'img003.jpg', '27 600', 'JENA - Robe chemise en soie')
+                    +swiper('img002.jpg', 'img004.jpg', '22 000', 'Bottes en cuir de veau souple')
+                    +swiper('img003.jpg', 'img001.jpg', '23 600', 'LARA - Gilet oversize avec poches plaquées')
+                    +swiper('img004.jpg', 'img001.jpg', '23 600', 'LARA - Gilet oversize avec poches plaquées')
+                    +swiper('img001.jpg', 'img003.jpg', '27 600', 'JENA - Robe chemise en soie')
+                    +swiper('img002.jpg', 'img004.jpg', '22 000', 'Bottes en cuir de veau souple')
+                    +swiper('img003.jpg', 'img001.jpg', '23 600', 'LARA - Gilet oversize avec poches plaquées')
+                    +swiper('img004.jpg', 'img001.jpg', '23 600', 'LARA - Gilet oversize avec poches plaquées')
+                    +swiper('img001.jpg', 'img003.jpg', '27 600', 'JENA - Robe chemise en soie')
+                    +swiper('img002.jpg', 'img004.jpg', '22 000', 'Bottes en cuir de veau souple')
+                    +swiper('img003.jpg', 'img001.jpg', '23 600', 'LARA - Gilet oversize avec poches plaquées')
+                    +swiper('img004.jpg', 'img001.jpg', '23 600', 'LARA - Gilet oversize avec poches plaquées')
+
+                .slider-scrollbar
+
+            a(href="#").slider-button-prev
+                    svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24")
+                        path(d="M0-.25H24v24H0Z" transform="translate(0 0.25)" style="fill:none")
+                        polyline(points="14.4 7.03 9 12.43 14.4 17.83" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-miterlimit:8;stroke-width:3px")
+
+            a(href="#").slider-button-next
+                svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24")
+                        path(d="M0-.25H24v24H0Z" transform="translate(0 0.25)" style="fill:none")
+                        polyline(points="10 17.83 15.4 12.43 10 7.03" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-miterlimit:8;stroke-width:3px")
+        // Slider-section::End
+
+
+        // Slider-section::Start
+        section.slider-section
+            h2.section-title Вы просматривали
+            .slider-container
+
+                .swiper-wrapper
+
+                    include includes/_swiper-slider
+                    +swiper('img001.jpg', 'img003.jpg', '27 600', 'JENA - Robe chemise en soie')
+                    +swiper('img002.jpg', 'img004.jpg', '22 000', 'Bottes en cuir de veau souple')
+                    +swiper('img003.jpg', 'img001.jpg', '23 600', 'LARA - Gilet oversize avec poches plaquées')
+                    +swiper('img004.jpg', 'img001.jpg', '23 600', 'LARA - Gilet oversize avec poches plaquées')
+                    +swiper('img001.jpg', 'img003.jpg', '27 600', 'JENA - Robe chemise en soie')
+                    +swiper('img002.jpg', 'img004.jpg', '22 000', 'Bottes en cuir de veau souple')
+                    +swiper('img003.jpg', 'img001.jpg', '23 600', 'LARA - Gilet oversize avec poches plaquées')
+                    +swiper('img004.jpg', 'img001.jpg', '23 600', 'LARA - Gilet oversize avec poches plaquées')
+                    +swiper('img001.jpg', 'img003.jpg', '27 600', 'JENA - Robe chemise en soie')
+                    +swiper('img002.jpg', 'img004.jpg', '22 000', 'Bottes en cuir de veau souple')
+                    +swiper('img003.jpg', 'img001.jpg', '23 600', 'LARA - Gilet oversize avec poches plaquées')
+                    +swiper('img004.jpg', 'img001.jpg', '23 600', 'LARA - Gilet oversize avec poches plaquées')
+
+                .slider-scrollbar
+
+            a(href="#").slider-button-prev
+                    svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24")
+                        path(d="M0-.25H24v24H0Z" transform="translate(0 0.25)" style="fill:none")
+                        polyline(points="14.4 7.03 9 12.43 14.4 17.83" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-miterlimit:8;stroke-width:3px")
+
+            a(href="#").slider-button-next
+                svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24")
+                        path(d="M0-.25H24v24H0Z" transform="translate(0 0.25)" style="fill:none")
+                        polyline(points="10 17.83 15.4 12.43 10 7.03" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-miterlimit:8;stroke-width:3px")
+        // Slider-section::End
