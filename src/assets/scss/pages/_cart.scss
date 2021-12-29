@@ -793,7 +793,7 @@ body.cart-page .footer__socials a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 14px;
+    padding: 10px 14px;
     border: 1px solid black;
     position: relative;
     font-size: 14px;
@@ -862,10 +862,18 @@ body.cart-page .footer__socials a {
 
 .date-select-item {
     font-size: 14px;
-    padding: 16px 14px;
+    padding: 10px 14px;
+    border-bottom: 1px solid #e2e2e2;
     transition: 0.2s linear background-color;
-}
 
+    &:last-child {
+        border-bottom: none;
+    }
+
+    &:hover {
+        background: #f2f2f2;
+    }
+}
 
 .textarea-input {
     border: thin solid #dadada;

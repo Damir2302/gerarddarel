@@ -222,7 +222,7 @@ $(document).ready(function() {
     });
 
     // SELECT PRODUCTS ATTRIBUTES
-    $('.swatch__size, .item__size-list').on('click', function(e) {
+    $('.item__size-list li').on('click', function(e) {
         e.preventDefault();
         if (!$(this).hasClass('not-available')) {
             $(this).siblings().removeClass('selected');
@@ -333,5 +333,11 @@ $(document).ready(function() {
 
     $('.date-select-item').on('click', function(e) {
         $(this).parent().parent().find('span').html($(this).html())
+    });
+
+    $('html').click(function(e) {
+        if (!$(e.target).closest('.delivery-date-select').length) {
+            $('.delivery-date-select').removeClass('active');
+          }
     });
 });

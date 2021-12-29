@@ -1,0 +1,1077 @@
+@font-face {
+    font-family: 'symbolcrpregular';
+    src: url('/assets/fonts/symbolcrp.woff');
+    font-weight: normal;
+    font-style: normal
+}
+
+body.booking-popup {
+    overflow: hidden;
+}
+
+.b-error {
+    display: none;
+    color: red!important;
+    margin: 5px 0 0;
+    font-size: 13px;
+}
+
+.booking-bg-layer {
+    background: #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 1000%;
+    opacity: 0.5;
+    z-index: 100;
+}
+
+.booking-container {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    @include breakpoint(md) {
+        align-items: center;
+    }
+}
+
+.booking-popup-area {
+    margin: 0 auto;
+    background: #fff;
+    width: 100%;
+    max-width: 830px;
+    height: 100%;
+    overflow: auto;
+
+    @include breakpoint(md) {
+        height: auto;
+    }
+}
+
+.booking-popup-area::-webkit-scrollbar {
+    width: 0;
+}
+
+.booking-popup-area *[class~=hide] {
+    display: none;
+}
+
+.booking-title {
+    background: #fff;
+    position: relative;
+}
+
+.booking-title h1 {
+    display: none;
+    font-weight: bold;
+    font-size: 15px;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    @include breakpoint(md) {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 60px;
+        margin: 0;
+        padding-left: 20px;
+        line-height: 60px;
+        letter-spacing: 1.5px;
+    }
+}
+
+.booking-title h1.mobile {
+    display: block;
+    height: auto;
+    padding: 15px 20px;
+    font-size: 13px;
+
+    @include breakpoint(md) {
+        display: none;
+    }
+}
+
+a.close-icon {
+    position: absolute;
+    top: 11px;
+    right: 19px;
+    width: 22px;
+    height: 22px;
+    overflow: hidden;
+    text-decoration: none;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+a.close-icon:before {
+    content: '\0070';
+    font-size: 26px;
+    color: #0c0c0c;
+    text-indent: 0;
+    display: block;
+    float: left;
+    font-family: 'symbolcrpregular', sans-serif;
+}
+
+.booking-navigation {
+    background: #f5f5f5;
+}
+
+.navigation-menu {
+    display: none;
+
+    @include breakpoint(md) {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        height: 60px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+}
+
+.navigation-menu li {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    pointer-events: none;
+    user-select: none;
+}
+
+.navigation-menu li.nav-visited {
+    pointer-events: initial;
+    cursor: pointer;
+}
+
+.navigation-menu li.nav-current {
+    background: #000;
+    color: #fff;
+    pointer-events: none;
+    user-select: none;
+}
+
+.nav-mobile {
+    padding-left: 20px;
+    background: #000;
+    height: 40px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 40px;
+
+    @include breakpoint(md) {
+        display: none;
+    }
+}
+
+.nav-mobile span {
+    margin: 0 5px;
+}
+
+.booking-body {
+    padding: 20px;
+    background: #fff;
+    height: 100%;
+
+    @include breakpoint(md) {
+        height: 540px;
+    }
+}
+
+.step-product {
+    color: #686868;
+    text-align: center;
+    height: 100%;
+}
+
+.location-search {
+
+    @include breakpoint(md) {
+        margin-top: 100px;
+    }
+}
+
+.location-shops {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width: 400px;
+    flex-direction: column;
+}
+
+.location-shop {
+    width: 50%;
+    text-align: left;
+    padding-top: 8px;
+}
+
+.location-shop input {
+    display: none!important;
+}
+
+.location-shop input:not(:checked) + label:after {
+    opacity: 0;
+}
+
+.location-shop label {
+    margin-left: 25px;
+    padding: 0 5px;
+    position: relative;
+}
+
+.location-shop label::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #686868;
+    background: #fff;
+    border-radius: 7px;
+}
+
+.location-shop label::after {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 3px;
+    display: block;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #686868;
+    border-radius: 6px;
+    background-color: #686868;
+    color: #686868;
+    transition: all .2s;
+}
+
+.location-search button {
+    margin: 20px auto 0;
+    max-width: 360px;
+
+    @include breakpoint(md) {
+        max-width: 220px;
+    }
+}
+
+.product-block {
+    padding-bottom: 20px;
+
+    @include breakpoint(md) {
+        padding: 0;
+    }
+}
+
+.product-header {
+    margin-bottom: 15px;
+    color: #000;
+
+    @include breakpoint(md) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+}
+
+.product-header h2 {
+    padding: 0;
+}
+
+.location-reminder {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+
+    @include breakpoint(md) {
+        margin: 0;
+    }
+}
+
+.location-reminder a {
+    font-style: italic;
+    text-decoration: underline;
+
+    @include breakpoint(md) {
+        margin-left: 15px;
+    }
+}
+
+.step-title {
+    padding-bottom: 15px;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: left;
+}
+
+.product-column-left {
+    float: none;
+    width: 100%;
+    max-height: inherit;
+    margin: 0 0 15px;
+
+    @include breakpoint(md) {
+        margin: 0;
+        float: left;
+        position: relative;
+        width: 35.065%;
+        max-height: 415px;
+    }
+}
+
+.product-img {
+    margin: 0 0 15px;
+    position: relative;
+    padding: 22px 7.4% 10px;
+    border: 1px solid #ccc;
+    line-height: 18px;
+    color: #686868;
+
+    @include breakpoint(md) {
+        margin: 0;
+    }
+}
+
+.product-img img {
+    padding-bottom: 10px;
+    width: unset;
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.product-slider {
+    padding-top: 10px;
+    text-align: left;
+    border-top: 1px solid #d6d6d6;
+}
+
+.product-slider img {
+    max-height: 80px;
+}
+
+.product-column-right {
+    @include breakpoint(md) {
+        float: right;
+        position: relative;
+        height: auto;
+        max-height: 475px;
+        width: 61%;
+        line-height: 16px;
+        overflow: visible;
+    }
+}
+
+.product-column-right form {
+    text-align: left;
+}
+
+.product-column-right form label {
+    display: block;
+
+    @include breakpoint(md) {
+        margin-top: 30px;
+    }
+}
+
+[class^=select-block] {
+    position: relative;
+    width: 220px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+[class^=select-block]::after {
+    content: ' ';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    transform: rotate(45deg);
+    position: absolute;
+    left: 200px;
+    margin-top: -3px;
+}
+
+[class^=select-block] select {
+    width: 220px;
+    padding: 5px 30px 5px 10px;
+    border: 1px solid lightgray;
+    background: #fff;
+}
+
+.next-step {
+
+    @include breakpoint(md) {
+        text-align: left;
+    }
+}
+
+.next-step button {
+    margin: 20px auto 0;
+    max-width: 360px;
+    margin-bottom: 5px;
+
+    @include breakpoint(md) {
+        margin: 30px 0 5px;
+        max-width: 220px;
+    }
+}
+
+.product-sentence {
+    display: none;
+
+    @include breakpoint(md) {
+        display: block;
+        clear: both;
+        padding-top: 20px;
+        font-weight: bold;
+        color: #484848;
+        text-align: left;
+    }
+}
+
+.map-toggle {
+    margin: 5px 0;
+}
+
+.button-toggle {
+    display: inline;
+    user-select: none;
+}
+
+.store-list-container {
+    height: 100%;
+}
+
+.product-store-list {
+    margin: 0;
+    padding: 5px;
+    height: auto;
+    border: 1px solid #cfcfcf;
+    list-style: none;
+
+    @include breakpoint(md) {
+        height: 400px;
+        list-style: none;
+        overflow-y: scroll;
+        border: 1px solid #cfcfcf;
+    }
+}
+
+.product-store {
+    margin: 0 10px;
+    position: relative;
+    padding: 10px 0;
+    border-top: 2px solid #d6d6d6;
+    text-align: left;
+
+    @include breakpoint(md) {
+        padding: 10px 0;
+    }
+}
+
+.product-store:first-child {
+    border-top: 0;
+}
+
+.product-store::after {
+
+    @include breakpoint(md) {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.store-info {
+
+    @include breakpoint(md) {
+        float: left;
+        width: 60%;
+    }
+}
+
+.store-info h3 {
+    font-size: 13px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include breakpoint(md) {
+        text-align: left;
+    }
+}
+
+.store-info address {
+    padding: 5px 0;
+    font-style: normal;
+    text-transform: uppercase;
+    border-top: 1px dotted #484848;
+    border-bottom: 1px dotted #484848;
+}
+
+.store-info address span {
+    display: block;
+}
+
+.store-info address a {
+    margin-left: 5px;
+    display: inline;
+    text-transform: none;
+    text-decoration: underline;
+}
+
+.store-info p {
+    padding: 5px 0;
+}
+
+.other-info {
+
+    @include breakpoint(md) {
+        float: right;
+        width: 35.5%;
+    }
+}
+
+.other-info a {
+    text-align: center;
+
+    @include breakpoint(md) {
+        margin-left: auto;
+        max-width: 270px;
+    }
+}
+
+////////////////////////////////////////////////
+// YANDEX MAP
+////////////////////////////////////////////////
+
+#store-map {
+    filter: gray;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
+////////////////////////////////////////////////
+// YANDEX MAP BALOON
+////////////////////////////////////////////////
+
+.b-balloon-shop {
+    font-family: inherit;
+    color: #000;
+}
+
+.b-balloon-shop__content p, .b-balloon-shop__title {
+    font-size: 11px;
+    line-height: 15px;
+    margin: 0;
+}
+
+.b-balloon-shop__title {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.b-balloon-shop__content a {
+    text-align: center;
+}
+
+//////////////////////////////////////////////
+//////////////////////////////////////////////
+
+.user-content h2 {
+    display: none;
+
+    @include breakpoint(md) {
+        display: block;
+    }
+}
+
+.terms-data {
+    padding: 0 20px 20px;
+    position: relative;
+    border: 1px solid lightgrey;
+    height: 500px;
+}
+
+.terms-data .top-panel {
+    position: absolute;
+    background: white;
+    width: calc(100% - 20px);
+}
+
+.terms-data .top-panel h2 {
+    max-width: 230px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+
+    @include breakpoint(md) {
+        max-width: unset;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.terms-data .top-panel a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(5px);
+}
+
+.terms-data h2, .terms-data h3 {
+    color: black;
+    font-size: 15px;
+    font-weight: normal;
+    margin: 20px 0 10px;
+    padding: 0;
+}
+
+.terms-data h4 {
+    margin: 15px 0 5px;
+    font-weight: 600;
+    color: #484848;
+}
+
+.terms-data p, .terms-data li, .terms-data a {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.terms-data p {
+    margin-bottom: 8px;
+}
+
+.terms-data ul {
+    padding: 0 0 10px;
+}
+
+.terms-data li:before {
+    content: '-';
+    margin-right: 5px;
+}
+
+.terms-data a {
+    color: #ea4042;
+    text-decoration: underline;
+}
+
+.terms-data-content {
+    height: calc(100% - 60px);
+    overflow-y: scroll;
+    margin-top: 80px;
+    padding-right: 10px;
+
+    @include breakpoint(md) {
+        margin-top: 60px;
+    }
+}
+
+.column-left {
+    display: none;
+
+    @include breakpoint(md) {
+        display: block;
+        float: left;
+        position: relative;
+        width: 35.065%;
+        max-height: 415px;
+        padding: 15px;
+        border: 1px solid #ccc;
+    }
+}
+
+.user-store {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+
+.user-store > h3 {
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.user-store > a {
+    display: block;
+    color: #a8a8a8;
+    text-decoration: underline;
+}
+
+.user-products > h3 {
+    float: left;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 20px;
+}
+
+.user-products > a {
+    margin-bottom: 10px;
+    display: block;
+    float: right;
+    color: #a8a8a8;
+    line-height: 20px;
+    text-decoration: underline;
+}
+
+.user-product-item {
+    clear: both;
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-product-item > img {
+    margin-right: 10px;
+    max-width: 100px;
+}
+
+.product-details {
+    overflow: hidden;
+}
+
+.product-details span:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.product-details span {
+    display: block;
+    font-size: 13px;
+}
+
+.column-right {
+    position: relative;
+    line-height: 16px;
+    overflow: visible;
+
+    @include breakpoint(md) {
+        float: right;
+        width: 61%;
+        min-height: 415px;
+    }
+}
+
+.column-right form {
+
+    @include breakpoint(md) {
+        height: 330px;
+    }
+}
+
+.column-right > p {
+    font-size: 12px;
+    color: #a8a8a8;
+
+    @include breakpoint(md) {
+        text-align: left;
+    }
+}
+
+.col-row * {
+    font-size: 13px;
+    color: #686868;
+}
+
+.col-row [class^="col-float"] {
+    margin-bottom: 15px;
+    max-width: 320px;
+
+    @include breakpoint(md) {
+        width: 46.9%;
+    }
+}
+
+.col-float-left {
+
+    @include breakpoint(md) {
+        float: left;
+    }
+}
+
+.col-float-right {
+
+    @include breakpoint(md) {
+        float: right;
+    }
+}
+
+.col-row label {
+    display: block;
+    vertical-align: top;
+    margin: 0 0 5px;
+    line-height: 15px;
+}
+
+.col-row input[type="text"],
+.col-row input[type="email"]  {
+    border: 1px solid #d6d6d6;
+    width: 100%;
+    max-width: 320px;
+    height: 29px;
+    padding: 3px 4px;
+    font-size: 12px;
+    line-height: 23px;
+    color: #444;
+    outline: 0;
+    overflow: hidden;
+
+    @include breakpoint(md) {
+        max-width: 180px;
+    }
+}
+
+.col-row span > a,
+.col-row label > a {
+    display: inline;
+    text-decoration: underline;
+}
+
+.col-checkboxes {
+    padding-top: 10px;
+}
+
+.user-legal {
+    padding: 0;
+}
+
+.col-checkboxes > div {
+    display: inline-block;
+}
+
+.col-checkboxes input {
+    display: none!important;
+}
+
+.col-checkboxes label {
+    max-width: 80%;
+    position: relative;
+    margin-left: 16px;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+
+.col-checkboxes input ~ label::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 3px;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #686868;
+    background: #fff;
+}
+
+.col-checkboxes input:checked ~ label::after {
+    content: '\006f';
+    position: absolute;
+    left: -15px;
+    top: 1px;
+    display: block;
+    width: 8px;
+    height: 8px;
+    transition: all .2s;
+    font-family: 'symbolcrpregular', sans-serif;
+    font-size: 14px;
+}
+
+.col-checkboxes input:not(:checked) ~ label::after {
+    opacity: 0;
+}
+
+.step-actions {
+    padding-top: 20px;
+
+    @include breakpoint(md) {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+.step-actions button {
+    margin: 10px 0;
+    max-width: 360px;
+
+    @include breakpoint(md) {
+        margin-left: 30px;
+        max-width: 100px;
+    }
+}
+
+.confirmation-content {
+    border: 1px solid #ccc;
+    margin: 0 auto 10px;
+    padding: 15px;
+    max-width: 420px;
+    text-align: left;
+
+    @include breakpoint(md) {
+        max-width: unset;
+    }
+}
+
+.confirmation-content * {
+    font-size: 13px;
+}
+
+.validation-steps {
+    counter-reset: item;
+    border-bottom: 1px solid #ccc;
+}
+
+.validation-steps li {
+    counter-increment: item;
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+    & span::before {
+        margin-left: -8px;
+        font-family: 'symbolcrpregular', sans-serif;
+        font-size: 24px;
+        text-transform: lowercase;
+    }
+
+    &:first-child span::before {
+        content: '\0062';
+    }
+
+    &:last-child span::before {
+        content: '\0063';
+    }
+}
+
+.validation-steps li span {
+    margin: 15px auto 25px;
+    display: block;
+    width: 1px;
+    height: 1px;
+}
+
+.validation-steps li h4 {
+    margin: 0 0 5px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+
+    &::before {
+        content: counter(item) '. ';
+    }
+}
+
+.validation-steps li p {
+    margin: 0 0 8px;
+    text-align: center;
+}
+
+.validation-extra {
+    padding: 10px 0 0;
+
+    @include breakpoint(md) {
+        padding: 20px 0 0;
+    }
+}
+
+.validation-extra li h4 {
+    margin: 0 0 5px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+
+    @include breakpoint(md) {
+        margin: 0;
+        text-align: left;
+    }
+}
+
+.validation-extra li p {
+    margin: 0 0 8px;
+    text-align: center;
+    color: #484848;
+
+    @include breakpoint(md) {
+        text-align: left;
+    }
+}
+
+.validation-extra li {
+    counter-increment: item;
+    margin-bottom: 10px;
+
+    & h4::before {
+        font-family: 'symbolcrpregular', sans-serif;
+        font-size: 24px;
+        text-transform: lowercase;
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
+        line-height: 26px;
+
+        @include breakpoint(md) {
+            margin-right: 5px;
+            width: unset;
+            text-align: unset;
+            float: left;
+        }
+    }
+
+    &:first-child h4::before {
+        content: '\0064';
+    }
+
+    &:last-child h4::before {
+        content: '\0065';
+    }
+}
+
+.validation-extra li span {
+    margin: 15px auto 2.5rem;
+    display: block;
+    width: 1px;
+    height: 1px;
+}
+
+.step-confirmation .step-actions {
+    clear: both;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 360px;
+
+    @include breakpoint(md) {
+        margin: 0;
+        margin-left: auto;
+    }
+}
+
+.step-confirmation .step-actions button {
+
+    @include breakpoint(md) {
+        max-width: 160px;
+    }
+}
