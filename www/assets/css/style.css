@@ -20523,13 +20523,14 @@ header {
     }
 }
 
-.hero__action button {
+.hero__action a.button-style {
     margin: 20px auto 0;
     background: #fff;
     max-width: 128px;
     font-size: 13px;
     line-height: 16px;
     color: #000;
+    text-align: center;
     -webkit-transition: -webkit-transform 0.3s ease;
     transition: -webkit-transform 0.3s ease;
     transition: transform 0.3s ease;
@@ -20537,12 +20538,12 @@ header {
 }
 
 @media (min-width: 768px) {
-    .hero__action button {
+    .hero__action a.button-style {
         margin: 50px 0 0
     }
 }
 
-.hero__action button:hover {
+.hero__action a.button-style:hover {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1)
@@ -20648,24 +20649,25 @@ header {
     color: #fff
 }
 
-.action__block button {
+.action__block a.button-style {
     margin: 20px auto 0;
     background: #fff;
     max-width: 128px;
     font-size: 13px;
     line-height: 16px;
-    color: #000
+    color: #000;
+    text-align: center
 }
 
 @media (min-width: 1260px) {
-    .action__block button {
+    .action__block a.button-style {
         opacity: 0;
         visibility: hidden;
         -webkit-transition: opacity 0.5s ease-in-out;
         transition: opacity 0.5s ease-in-out
     }
 
-    .styles__block:hover .action__block button {
+    .styles__block:hover .action__block a.button-style {
         opacity: 1;
         visibility: visible
     }
@@ -23950,7 +23952,7 @@ body.cart-page .footer__socials a:last-child {
 }
 
 @font-face {
-    font-family:'symbolcrpregular';src:url("/assets/fonts/symbolcrp.woff");font-weight:normal;font-style:normal
+    font-family:'symbolcrpregular';src:url("../fonts/symbolcrp.woff");font-weight:normal;font-style:normal
 }
 
 body.booking-popup {
