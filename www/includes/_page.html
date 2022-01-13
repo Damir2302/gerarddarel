@@ -7,7 +7,8 @@
     <link rel="shortcut icon" href="assets/images/favicon.png">
     <title>Page name</title>
     <!-- Styles-->
-    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/css/style.min.css"><!-- Yandex.Map -->
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   </head>
   <body>
     <div id="page">
@@ -40,17 +41,28 @@
                 </li>
                 <li class="header__login"><a href="javasscript.void(0)" title="Login"><i class="fal fa-user"></i></a>
                   <div class="login__content">
-                    <div class="close__content"></div>
+                    <button class="close__content"></button>
                     <div class="login__container">
                       <div class="login__title">Аккаунт</div>
+                      <form id="login-form">
+                        <input type="email" placeholder="Ваш адрес электронной почты" required>
+                        <input type="password" placeholder="Ваш пароль" required><a href="#password-forgot" rel="nofollow">Забыли пароль?</a>
+                        <button class="login-btn">Войти</button>
+                      </form>
+                      <div class="register-sec">
+                        <h3>Нет аккаунта?</h3><a class="register-link button-style" href="/register.html">Зарегистрироваться</a>
+                      </div>
                     </div>
-                    <form id="login-form">
-                      <input type="email" placeholder="Ваш адрес электронной почты" required>
-                      <input type="password" placeholder="Ваш пароль" required><a href="#">Забыли пароль?</a>
-                      <button class="login-btn">Войти</button>
-                    </form>
-                    <div class="register-sec">
-                      <h3>Нет аккаунта?</h3><a class="register-link button-style" href="/register.html">Зарегистрироваться</a>
+                    <!-- LOGGED-->
+                    <div class="logged__container">
+                      <div class="logged__title">Мой аккаунт</div>
+                      <ul class="logged__menu">
+                        <li><a href="personal.html">Профиль</a></li>
+                        <li><a href="favorites.html">Избранное</a></li>
+                        <li><a href="orders.html">История заказов</a></li>
+                        <li><a href="return.html">Возврат товара</a></li>
+                        <li class="logout-account"><a href="#" rel="nofollow">Выход</a></li>
+                      </ul>
                     </div>
                   </div>
                 </li>
@@ -209,24 +221,23 @@
             <div class="footer__menu">
               <ul class="menu__list">
                 <li class="menu__item has-sub-menu">
-                  <h4>Навигация</h4>
+                  <h4>Категории</h4>
                   <ul class="footer__submenu">
-                    <li><a href="#">О бренде</a></li>
-                    <li><a href="#">Магазины</a></li>
-                    <li><a href="#">Обратная связь</a></li>
-                    <li><a href="#">Консультация</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#">Новая коллекция</a></li>
+                    <li><a href="#">Сумки</a></li>
+                    <li><a href="#">Акссесуары</a></li>
+                    <li><a href="#">Хаус</a></li>
+                    <li><a href="#">Лукбук FW21</a></li>
                   </ul>
                 </li>
                 <li class="menu__item has-sub-menu">
                   <h4>Информация</h4>
                   <ul class="footer__submenu">
-                    <li><a href="#">Доставка</a></li>
-                    <li><a href="#">Оплата</a></li>
-                    <li><a href="#">Условия обмена и возврата</a></li>
-                    <li><a href="#">Оферта</a></li>
-                    <li><a href="#">Политика конфиденциальности</a></li>
-                    <li><a href="#">Таблица размеров</a></li>
+                    <li><a href="account.html">Аккаунт</a></li>
+                    <li><a href="delivery-return.html">Возврат товара</a></li>
+                    <li><a href="faq.html">Часто задаваемые вопросы</a></li>
+                    <li><a href="stores.html">Наши магазины</a></li>
+                    <li><a href="contact-us.html">Связаться с нами</a></li>
                   </ul>
                 </li>
                 <li class="menu__item">
@@ -239,12 +250,43 @@
                   </form>
                 </li>
               </ul>
-              <div class="footer__socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div>
+              <div class="footer__right">
+                <div class="footer__logo"><a href="/"><img src="assets/images/Logo_GERARD_DAREL_HD_2016.png" alt="GERARD DAREL"></a></div>
+                <div class="footer__socials"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a></div>
+              </div>
+            </div>
+            <div class="footer__copyright">
+              <p>© 2022 Джерард Дарел в России</p>
+              <ul>
+                <li><a>Политика конфиденциальности</a></li>
+                <li><a>Политика возврата</a></li>
+                <li><a>Условия использования</a></li>
+                <li><a>Cookies</a></li>
+              </ul>
             </div>
           </div>
         </footer>
       </div>
       <!-- Footer::End-->
+    </div>
+    <!-- Password Popup-->
+    <div class="password-bg-layer"></div>
+    <div class="password-container">
+      <div class="password-popup-area">
+        <h2>Восстановление пароля</h2><a class="close-icon"></a>
+        <form id="forgot-form">
+          <div class="pass-form-row">
+            <label for="reset-password">E-mail для восстановления</label>
+            <input id="reset-password" type="email" name="reset-password" placeholder="Введите ваш e-mail" required><span class="p-error">Введите email</span>
+          </div>
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+      <!-- SUCCESS-->
+      <div class="password-popup-success">
+        <p>Ваши регистрационные данные были высланы на email.</p>
+        <button>Закрыть</button>
+      </div>
     </div>
     <!-- Scripts::Start-->
     <script src="assets/js/jquery.min.js"></script>
@@ -254,7 +296,13 @@
     <script src="assets/js/jquery.mousewheel.js"></script>
     <script src="assets/js/jquery.jscrollpane.min.js"></script>
     <script src="assets/js/inputmask.min.js"></script>
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/form.js"></script>
     <script src="assets/js/booking.js"></script>
+    <script src="assets/js/password.js"></script>
+    <script src="assets/js/personal.js"></script>
+    <script src="assets/js/stores-map.js"></script>
+    <script src="assets/js/stores.js"></script>
     <script src="assets/js/main.js"></script>
     <!-- Scripts::End-->
   </body>

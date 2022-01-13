@@ -62,3 +62,8 @@ fieldset {
     padding: 0;
     min-width: 0;
 }
+
+textarea:focus {
+    border: none;
+    outline: none;
+}

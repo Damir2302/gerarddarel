@@ -1,0 +1,29 @@
+extends ../includes/_page
+
+block main
+
+    #personal
+
+        .personal__wrapper
+
+            aside.personal__aside
+                nav.nav__aside
+                    .nav__aside-name Вася Пупкин
+                    ul.nav__aside-list
+                        li(class= personal ? 'active' : '')
+                            a(href=personal ? false : "personal.html") Профиль
+                                i.far.fa-user
+                        li(class= favorites ? 'active' : '')
+                            a(href=favorites ? false : "favorites.html") Избранное
+                                i.far.fa-star
+                        li(class= orders ? 'active' : '')
+                            a(href=orders ? false : "orders.html") История заказов
+                                i.far.fa-list-alt
+                        li(class= returns ? 'active' : '')
+                            a(href=returns ? false : "return.html") Возврат товара
+                                i.far.fa-undo-alt
+                        li
+                            a(href="#" rel="nofollow") Выход
+                                i.far.fa-sign-out-alt
+
+            block article

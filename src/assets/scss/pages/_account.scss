@@ -1,0 +1,163 @@
+#account {
+    margin-top: 75px;
+}
+
+#account h2 {
+    margin-top: 66px;
+    margin-bottom: 0;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    border: none;
+    display: none;
+
+    @include breakpoint(lg) {
+        margin-bottom: 30px;
+        display: block;
+        font-size: 34px;
+    }
+}
+
+#account h4 {
+    margin: 70px 0 30px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: normal;
+
+    @include breakpoint(lg) {
+        margin-bottom: 70px;
+        padding-left: 70px;
+        text-align: left;
+    }
+}
+
+.account__wrapper {
+
+    @include breakpoint(lg) {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        max-width: 1170px;
+    }
+}
+
+.login__block {
+
+    @include breakpoint(lg) {
+        max-width: 500px;
+        width: 100%;
+        border: 1px solid #ccc;
+    }
+}
+
+#account form {
+    text-align: center;
+}
+
+#account form div {
+    margin: 0 auto 30px;
+    position: relative;
+    max-width: 280px;
+
+    @include breakpoint(lg) {
+        margin-left: 70px;
+    }
+}
+
+#account form input {
+    padding: 0.7em 0.5em;
+    background-color: #fbfbf7;
+    display: inline-block;
+    width: 265px;
+    height: 21px;
+    font-size: 13px;
+    float: none;
+    outline: none;
+    box-sizing: content-box;
+    border: 1px solid #cbcbcb;
+}
+
+#account form span.error-message {
+    margin: -23px 0 0;
+    padding: 0;
+    position: absolute;
+    top: 63px;
+    left: 0;
+    display: none;
+    width: 254px;
+    font-size: 11px;
+    line-height: 2;
+    color: #f93c10;
+    text-align: left;
+    float: right;
+}
+
+#account form span.error-message.error {
+    display: inline-block!important;
+}
+
+.login__button {
+    margin: 0 auto 20px;
+    max-width: 280px;
+}
+
+.login__button button {
+
+    @include breakpoint(lg) {
+        margin-top: 40px;
+        max-width: 240px;
+    }
+}
+
+#account .forgotten-password {
+    display: block;
+    font-size: 11px;
+    line-height: 30px;
+    text-align: right;
+    text-decoration: underline;
+}
+
+.register__block {
+
+    @include breakpoint(lg) {
+        background: url('../images/525x524_Login-Desktop-AH21.jpg') 0px 0px no-repeat transparent;
+        width: 500px;
+        height: 470px;
+    }
+}
+
+.register__block h4,
+.register__block p {
+
+    @include breakpointMax(lg) {
+        display: none;
+    }
+}
+
+.register__block p {
+
+    @include breakpoint(lg) {
+        margin: 0 0 0 56px;
+        display: block;
+        height: 184px;
+        max-width: 300px;
+        line-height: 22px;
+        text-align: left;
+        text-transform: none;
+    }
+}
+
+.register__block a {
+    margin: 0 auto;
+    max-width: 280px;
+    text-align: center;
+
+    @include breakpoint(lg) {
+        margin-left: 56px;
+    }
+}

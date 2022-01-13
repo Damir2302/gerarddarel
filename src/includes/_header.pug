@@ -44,17 +44,32 @@ block header
                             a(href="javasscript.void(0)" title="Login")
                                 i.fal.fa-user
                             .login__content
-                                .close__content
+                                button.close__content
                                 .login__container
                                     .login__title Аккаунт
-                                form#login-form
-                                    input(type="email" placeholder="Ваш адрес электронной почты" required)
-                                    input(type="password" placeholder="Ваш пароль" required)
-                                    a(href="#") Забыли пароль?
-                                    button.login-btn Войти
-                                .register-sec
-                                    h3 Нет аккаунта?
-                                    a.register-link.button-style(href="/register.html") Зарегистрироваться
+                                    form#login-form
+                                        input(type="email" placeholder="Ваш адрес электронной почты" required)
+                                        input(type="password" placeholder="Ваш пароль" required)
+                                        a(href="#password-forgot" rel="nofollow") Забыли пароль?
+                                        button.login-btn Войти
+                                    .register-sec
+                                        h3 Нет аккаунта?
+                                        a.register-link.button-style(href="/register.html") Зарегистрироваться
+                                // LOGGED
+
+                                .logged__container
+                                    .logged__title Мой аккаунт
+                                    ul.logged__menu
+                                        li
+                                            a(href="personal.html") Профиль
+                                        li
+                                            a(href="favorites.html") Избранное
+                                        li
+                                            a(href="orders.html") История заказов
+                                        li
+                                            a(href="return.html") Возврат товара
+                                        li.logout-account
+                                            a(href="#" rel="nofollow") Выход
 
 
                         li.header__cart

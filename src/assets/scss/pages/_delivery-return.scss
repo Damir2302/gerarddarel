@@ -1,0 +1,35 @@
+.d-r__title {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 41px;
+    text-align: center;
+
+    @include breakpoint(md) {
+        margin-bottom: 60px;
+    }
+}
+
+.d-r__title::after {
+    content: " ";
+    margin: 0 auto;
+    background: #000;
+    display: block;
+    width: 3rem;
+    height: 1px;
+}
+
+.d-r__list {
+    margin: 0 auto 75px;
+    padding: 0 40px;
+    max-width: 720px;
+}
+
+.d-r__list li {
+    list-style-type: circle;
+}
+
+.d-r__list a {
+    display: inline-block;
+}

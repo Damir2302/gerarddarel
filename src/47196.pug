@@ -1,0 +1,96 @@
+---
+title: Мои заказы | Gerard Darel
+orders: true
+---
+
+extends components/_aside-profile
+
+block article
+
+    article.orders__wrapper
+
+        button.p-orders__back(onclick="window.history.back();")
+            span Назад
+
+        .p-order-detail__row
+            h2.p-order-detail__title №47196
+            .p-order-status(data-pending) Предзаказ, 28.12
+
+        .p-order-detail__row
+            ul.p-props
+                li.p-props__item
+                    span.p-props__title Получатель
+                    .p-props__content Вася Пупкин<br>+7 (953) 933-34-55
+                li.p-props__item
+                    span.p-props__title Доставка и оплата
+                    .p-props__content Курьером. <br> Оплата онлайн <br> 06.01.22 с 18:00 по 22:00
+            ul.p-props
+                li.p-props__item
+                    span.p-props__title Товаров
+                    span.p-props__content 3
+                li.p-props__item
+                    span.p-props__title Сумма
+                    span.p-props__content 58 300 ₽
+
+        .p-order-detail__row
+            ul.p-orders__list
+
+                li.p-orders__item
+                    .p-orders__image
+                        a(href="#")
+                            img(src="assets/images/Claudie_CFPRO01262-K007_H_1.jpg", alt="Заказ №47196")
+                    .p-orders__info
+                        .p-orders__row
+                            a(href="#") Платье из двух материалов
+                        .p-orders__row
+                            ul.p-props
+                                li.p-props__item
+                                    span.p-props__title Размер
+                                    span.p-props__content M
+                                li.p-props__item
+                                    span.p-props__title Количество
+                                    span.p-props__content 1
+                            ul.p-props
+                                li.p-props__item
+                                    span.p-props__title Стоимость
+                                    span.p-props__content 58 300 ₽
+
+                li.p-orders__item
+                    .p-orders__image
+                        a(href="#")
+                            img(src="assets/images/Claudie_CFPRO01262-K007_H_1.jpg", alt="Заказ №47196")
+                    .p-orders__info
+                        .p-orders__row
+                            a(href="#") Платье из двух материалов
+                        .p-orders__row
+                            ul.p-props
+                                li.p-props__item
+                                    span.p-props__title Размер
+                                    span.p-props__content M
+                                li.p-props__item
+                                    span.p-props__title Количество
+                                    span.p-props__content 1
+                            ul.p-props
+                                li.p-props__item
+                                    span.p-props__title Стоимость
+                                    span.p-props__content 58 300 ₽
+
+                li.p-orders__item
+                    .p-orders__image
+                        a(href="#")
+                            img(src="assets/images/Claudie_CFPRO01262-K007_H_1.jpg", alt="Заказ №47196")
+                    .p-orders__info
+                        .p-orders__row
+                            a(href="#") Платье из двух материалов
+                        .p-orders__row
+                            ul.p-props
+                                li.p-props__item
+                                    span.p-props__title Размер
+                                    span.p-props__content M
+                                li.p-props__item
+                                    span.p-props__title Количество
+                                    span.p-props__content 1
+                            ul.p-props
+                                li.p-props__item
+                                    span.p-props__title Стоимость
+                                    span.p-props__content 58 300 ₽

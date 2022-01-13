@@ -323,7 +323,7 @@ $(document).ready(function() {
     });
 
     // PHONE MASK
-    $('#input-phone').inputmask({"mask": "+7 (999) 99-99-99"});
+    $('#input-phone, input[type="tel"').inputmask({"mask": "+7 (999) 99-99-99"});
 
     // DELIVERY SELECT
     $('.delivery-date-select').on('click', function() {
@@ -340,4 +340,43 @@ $(document).ready(function() {
             $('.delivery-date-select').removeClass('active');
           }
     });
+
+    // FAQ
+    $('.s-faq__question').on('click', function() {
+        $(this).parent().toggleClass('answer-open');
+    });
+
+    // FAQ SCROLL TO TOP
+    $(window).scroll(function() {
+        if ($(window).scrollTop() > 300) {
+            $('.faq-scroll-to-top').addClass('show');
+        } else {
+            $('.faq-scroll-to-top').removeClass('show');
+        }
+        });
+
+    $('.faq-scroll-to-top').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0}, '300');
+    });
+
+    // CONTACT US FORM
+
+    $('.ctc__btn-submit').on('click', function(e) {
+        e.preventDefault();
+
+        $('.input-row input').each(function() {
+            if ($(this).val() == '') {
+                $(this).parent().addClass('error');
+            } else  {
+                $(this).parent().removeClass('error');
+            }
+        });
+
+        if ($('.input-row.error').length == 0) {
+            $('#contact-us-form').submit();
+        }
+
+    });
+
 });

@@ -1,0 +1,95 @@
+.fav__empty {
+    font-size: 14px;
+}
+
+.favorites__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.fav__item {
+    margin-bottom: 40px;
+    max-width: 45%;
+
+    @include breakpoint(md) {
+        max-width: 30%;
+    }
+}
+
+.fav__item-details h6 {
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.fav__item-details p {
+    font-size: 13px;
+}
+
+.fav__item-select {
+    position: relative;
+    display: flex;
+}
+
+.fav__item-select::after {
+    content: '\f078';
+    font-family: $icon;
+    font-weight: 300;
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+}
+
+.fav__item-select span {
+    font-size: 12px;
+}
+
+.fav__item-select select {
+    background: none;
+    border: none;
+    z-index: 2;
+}
+
+.f-error {
+    position: absolute;
+    bottom: -18px;
+    visibility: hidden;
+    color: red;
+
+    &.error {
+        visibility: visible;
+    }
+}
+
+.fav__item-details a.button-style {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.fav__item-details a.button-style span:first-child {
+    display: none;
+
+    @include breakpoint(lg) {
+        display: inline;
+    }
+}
+
+.fav__item-remove {
+    font-size: 13px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.fav__item-remove span:last-child {
+    display: none;
+
+    @include breakpoint(md) {
+        display: inline;
+    }
+}

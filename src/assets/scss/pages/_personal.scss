@@ -1,0 +1,124 @@
+.personal__profile form {
+    max-width: 565px;
+}
+
+.personal__profile > p {
+    margin: 18px 0;
+    max-width: 700px;
+    font-size: 14px;
+    letter-spacing: normal;
+    line-height: 26px;
+}
+
+.personal__profile span.notetext {
+    color: green;
+}
+
+.personal__profile span.errortext {
+    color: red;
+}
+
+.p-form__row {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    @include breakpoint(md) {
+        margin-bottom: 24px;
+        flex-direction: row;
+    }
+}
+
+.p-form__row > label {
+    margin-top: 0;
+    margin-bottom: 6px;
+    margin-right: 25px;
+    position: relative;
+    width: auto;
+    max-height: 35px;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: left;
+    letter-spacing: normal;
+    cursor: pointer;
+
+    @include breakpoint(md) {
+        min-width: 155px;
+    }
+}
+
+.p-form__row > label[data-required]:after {
+    content: '*';
+    position: absolute;
+    right: -8px;
+    top: -3px;
+    font-size: 12px;
+}
+
+.p-input {
+    position: relative;
+    width: 100%;
+    border: thin solid #dadada;
+    transition: 0.25s ease-out;
+}
+
+.p-input[data-error] {
+    border: thin solid red;
+    margin-bottom: 7px;
+}
+
+.p-input[data-error]:before {
+    content: attr(data-error);
+    position: absolute;
+    bottom: -23px;
+    left: 13px;
+    color: red;
+    white-space: nowrap;
+    font-size: 10px;
+    line-height: 18px;
+    letter-spacing: normal;
+    animation: fadeIn 0.15s ease-out;
+}
+
+.p-input[data-error]:after {
+    content: '×';
+    position: absolute;
+    right: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: red;
+    font-weight: 700;
+}
+
+.p-input input {
+    padding: 13px 14px;
+    background: #fff;
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: normal;
+    border: 0;
+    -webkit-appearance: none;
+}
+
+#datepicker {
+    padding: 13px 14px;
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    border: thin solid #dadada;
+}
+
+.personal__profile button {
+    margin-top: 30px;
+    height: 50px;
+    max-width: 360px;
+
+    @include breakpoint(md) {
+        margin-left: 180px;
+        max-width: 200px;
+    }
+}

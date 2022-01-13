@@ -1,0 +1,78 @@
+---
+title: Наши магазины | Gerard Darel
+---
+
+extends includes/_page
+
+block main
+
+    #shops
+        h1.s-title Наши магазины
+
+        .s-labels
+            button.s-label(data-tab="map" data-active="true")
+                i.fas.fa-map-marker-alt
+                | На карте
+            button.s-label(data-tab="list" data-active="false")
+                i.fas.fa-list
+                | Списком
+
+        #shops-map.s-list.s-item__map(data-tab='map' data-active='true')
+            span.s-item__map-placeholder Карта загружается…
+
+        .s-list.s-item__list(data-tab='list' data-active='false')
+            ul
+                li.s-item__address(data-active='false' data-map-coords-y='55.6609187' data-map-coords-x='37.8771852')
+                    p.s-store__name Outlet Village Белая Дача
+                    .s-store__info
+                        p.s-address
+                            | Новорязанское ш., 8, Котельники, Московская обл.
+                        p.s-phone
+                            | +7 (495) 105 75 66
+                        p.s-time
+                            | 10:00 – 22:00
+                    button.s-btn__map(type='button') На карте
+
+                li.s-item__address(data-active='false' data-map-coords-y='55.720413' data-map-coords-x='37.378782')
+                    p.s-store__name Outlet Village Белая Дача
+                    .s-store__info
+                        p.s-address
+                            | Новорязанское ш., 8, Котельники, Московская обл.
+                        p.s-phone
+                            | +7 (495) 105 75 66
+                        p.s-time
+                            | 10:00 – 22:00
+                    button.s-btn__map(type='button') На карте
+
+                li.s-item__address(data-active='false' data-map-coords-y='55.790464' data-map-coords-x='37.530409')
+                    p.s-store__name Outlet Village Белая Дача
+                    .s-store__info
+                        p.s-address
+                            | Новорязанское ш., 8, Котельники, Московская обл.
+                        p.s-phone
+                            | +7 (495) 105 75 66
+                        p.s-time
+                            | 10:00 – 22:00
+                    button.s-btn__map(type='button') На карте
+
+                li.s-item__address(data-active='false' data-map-coords-y='55.731713' data-map-coords-x='37.487353')
+                    p.s-store__name Outlet Village Белая Дача
+                    .s-store__info
+                        p.s-address
+                            | Новорязанское ш., 8, Котельники, Московская обл.
+                        p.s-phone
+                            | +7 (495) 105 75 66
+                        p.s-time
+                            | 10:00 – 22:00
+                    button.s-btn__map(type='button') На карте
+
+                li.s-item__address(data-active='false' data-map-coords-y='55.766212' data-map-coords-x='37.380875')
+                    p.s-store__name Outlet Village Белая Дача
+                    .s-store__info
+                        p.s-address
+                            | Новорязанское ш., 8, Котельники, Московская обл.
+                        p.s-phone
+                            | +7 (495) 105 75 66
+                        p.s-time
+                            | 10:00 – 22:00
+                    button.s-btn__map(type='button') На карте

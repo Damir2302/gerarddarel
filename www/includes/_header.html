@@ -27,17 +27,28 @@
           </li>
           <li class="header__login"><a href="javasscript.void(0)" title="Login"><i class="fal fa-user"></i></a>
             <div class="login__content">
-              <div class="close__content"></div>
+              <button class="close__content"></button>
               <div class="login__container">
                 <div class="login__title">Аккаунт</div>
+                <form id="login-form">
+                  <input type="email" placeholder="Ваш адрес электронной почты" required="required"/>
+                  <input type="password" placeholder="Ваш пароль" required="required"/><a href="#password-forgot" rel="nofollow">Забыли пароль?</a>
+                  <button class="login-btn">Войти</button>
+                </form>
+                <div class="register-sec">
+                  <h3>Нет аккаунта?</h3><a class="register-link button-style" href="/register.html">Зарегистрироваться</a>
+                </div>
               </div>
-              <form id="login-form">
-                <input type="email" placeholder="Ваш адрес электронной почты" required="required"/>
-                <input type="password" placeholder="Ваш пароль" required="required"/><a href="#">Забыли пароль?</a>
-                <button class="login-btn">Войти</button>
-              </form>
-              <div class="register-sec">
-                <h3>Нет аккаунта?</h3><a class="register-link button-style" href="/register.html">Зарегистрироваться</a>
+              <!-- LOGGED-->
+              <div class="logged__container">
+                <div class="logged__title">Мой аккаунт</div>
+                <ul class="logged__menu">
+                  <li><a href="personal.html">Профиль</a></li>
+                  <li><a href="favorites.html">Избранное</a></li>
+                  <li><a href="orders.html">История заказов</a></li>
+                  <li><a href="return.html">Возврат товара</a></li>
+                  <li class="logout-account"><a href="#" rel="nofollow">Выход</a></li>
+                </ul>
               </div>
             </div>
           </li>

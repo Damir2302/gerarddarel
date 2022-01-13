@@ -14,10 +14,22 @@
 @import 'components/footer';
 @import 'components/slider';
 @import 'components/breadcrumbs';
+@import 'components/aside-profile';
 
 @import 'pages/homepage';
 @import 'pages/catalog';
 @import 'pages/item';
 @import 'pages/cart';
+@import 'pages/personal';
+@import 'pages/favorites';
+@import 'pages/orders';
+@import 'pages/return';
+@import 'pages/account';
+@import 'pages/register';
+@import 'pages/delivery-return';
+@import 'pages/faq';
+@import 'pages/contact-us';
+@import 'pages/stores';
 
 @import 'popup/booking';
+@import 'popup/password';

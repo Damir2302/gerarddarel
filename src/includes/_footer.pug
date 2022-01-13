@@ -69,34 +69,32 @@ block footer
                         ul.menu__list
 
                             li.menu__item.has-sub-menu
-                                h4 Навигация
+                                h4 Категории
                                 ul.footer__submenu
                                     li
-                                        a(href="#") О бренде
+                                        a(href="#") Новая коллекция
                                     li
-                                        a(href="#") Магазины
+                                        a(href="#") Сумки
                                     li
-                                        a(href="#") Обратная связь
+                                        a(href="#") Акссесуары
                                     li
-                                        a(href="#") Консультация
+                                        a(href="#") Хаус
                                     li
-                                        a(href="#") Контакты
+                                        a(href="#") Лукбук FW21
 
                             li.menu__item.has-sub-menu
                                 h4 Информация
                                 ul.footer__submenu
                                     li
-                                        a(href="#") Доставка
+                                        a(href="account.html") Аккаунт
                                     li
-                                        a(href="#") Оплата
+                                        a(href="delivery-return.html") Возврат товара
                                     li
-                                        a(href="#") Условия обмена и возврата
+                                        a(href="faq.html") Часто задаваемые вопросы
                                     li
-                                        a(href="#") Оферта
+                                        a(href="stores.html") Наши магазины
                                     li
-                                        a(href="#") Политика конфиденциальности
-                                    li
-                                        a(href="#") Таблица размеров
+                                        a(href="contact-us.html") Связаться с нами
 
                             li.menu__item
                                 h4 Подписаться на наши новости
@@ -107,11 +105,30 @@ block footer
                                         button(type="submit")
                                             i.fal.fa-long-arrow-right
 
-                        .footer__socials
+                        .footer__right
+                            .footer__logo
+                                a(href="/")
+                                    img(src="assets/images/Logo_GERARD_DAREL_HD_2016.png", alt="GERARD DAREL")
+
+                            .footer__socials
                                 a(href="#")
                                     i.fab.fa-facebook-f
                                 a(href="#")
                                     i.fab.fa-instagram
+
+                    if !cartPage
+                        .footer__copyright
+                            p © 2022 Джерард Дарел в России
+
+                            ul
+                                li
+                                    a Политика конфиденциальности
+                                li
+                                    a Политика возврата
+                                li
+                                    a Условия использования
+                                li
+                                    a Cookies
 
             else
                 .footer__logo
@@ -123,9 +140,3 @@ block footer
                         i.fab.fa-facebook-f
                     a(href="#")
                         i.fab.fa-instagram
-
-                if !cartPage
-                    .footer__copyright
-                        p © 2021 Джерард Дарел в России
-                    .footer__cookies
-                        a(href="#") Настройка Cookies

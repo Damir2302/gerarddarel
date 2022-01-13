@@ -1,0 +1,74 @@
+#contact-us {
+    margin: 0 auto;
+    padding: 0 15px 100px;
+    max-width: 850px;
+}
+
+#contact-us form {
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.ctc__title {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 41px;
+    text-align: center;
+
+    @include breakpoint(md) {
+        margin-bottom: 60px;
+    }
+}
+
+.ctc__title::after {
+    content: " ";
+    margin: 0 auto;
+    background: #000;
+    display: block;
+    width: 3rem;
+    height: 1px;
+}
+
+.ctc__text {
+    margin-bottom: 50px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.ctc__text span {
+    display: block;
+}
+
+.ctc__text a {
+    display: inline-block;
+    text-decoration: underline;
+}
+
+.input-row {
+    margin: 20px 0;
+}
+
+.input-row input,
+.input-row textarea {
+    padding: 15px 25px;
+    width: 100%;
+    min-height: 32px;
+    border: 1px solid #bfbfbf;
+}
+
+.input-row textarea {
+    width: 100%;
+    height: 120px;
+}
+
+.input-row.error input,
+.input-row.error textarea {
+    border-color: red;
+}
+
+.ctc__btn-submit {
+    margin: 40px auto 20px;
+    padding: 18px 30px;
+}

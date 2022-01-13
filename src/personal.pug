@@ -1,0 +1,50 @@
+---
+title: Настройки профиля | Gerard Darel
+personal: true
+---
+
+extends components/_aside-profile
+
+block article
+
+    article.personal__profile
+        p
+            // После сохранения выводим что-то одно
+            span.notetext Данные успешно сохранены!
+            span.errortext Неправильный старый пароль
+        form(method="" action="" name="user-form")
+            .p-form__row
+                label(for="p-name" data-required) Ваше имя
+                .p-input
+                    input#p-name(type="text" name="name" value="Вася" max-length="50" placeholder="Введите ваше имя" data-error-message="Введите ваше имя" required)
+
+            .p-form__row
+                label(for="p-lastname" data-required) Ваша фамилия
+                .p-input
+                    input#p-lastname(type="text" name="lastname" value="Пупкин" max-length="50" placeholder="Введите вашу фамилию" data-error-message="Введите вашу фамилию" required)
+
+            .p-form__row
+                label(for="p-phone" data-required) Телефон
+                .p-input
+                    input#p-phone(type="tel" name="phone" value="+7 (953) 933-34-55" max-length="18" placeholder="+7 (xxx) xxx-xx-xx" data-error-message="Введите телефон" required)
+
+            .p-form__row
+                label(for="p-email" data-required) E-mail
+                .p-input
+                    input#p-email(type="email" name="email" value="user@mail.ru" max-length="50" placeholder="Ваша электронная почта" data-error-message="Введите email" required)
+
+            .p-form__row
+                label День рождения
+                input#datepicker(type="text", name="birthday" value="12/12/2021")
+
+            .p-form__row
+                label(for="p-password-old") Текущий пароль
+                .p-input
+                    input#p-password-old(type="password" name="old-password" max-length="255")
+
+            .p-form__row
+                label(for="p-password-new") Новый пароль
+                .p-input
+                    input#p-password-new(type="password" name="new-password" max-length="255")
+
+            button(type="submit") Сохранить

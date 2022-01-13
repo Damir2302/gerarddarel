@@ -178,7 +178,8 @@ function jsPlugins(cb) {
         pathTo.resolve('src', 'assets/js/plugins/swiper-bundle.min.js'),
         pathTo.resolve('src', 'assets/js/plugins/jquery.mousewheel.js'),
         pathTo.resolve('src', 'assets/js/plugins/jquery.jscrollpane.min.js'),
-        pathTo.resolve('src', 'assets/js/plugins/inputmask.min.js')
+        pathTo.resolve('src', 'assets/js/plugins/inputmask.min.js'),
+        pathTo.resolve('src', 'assets/js/plugins/jquery-ui.min.js')
 	])
     .pipe(plumber({
 		errorHandler: notify.onError("Error: <%= error.message %>")

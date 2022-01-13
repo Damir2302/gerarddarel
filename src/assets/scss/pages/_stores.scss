@@ -1,0 +1,149 @@
+#shops {
+    padding: 0 15px;
+}
+
+.s-title {
+    margin: 50px auto 20px;
+    max-width: 1200px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    @include breakpoint(lg) {
+        margin: 20px auto;
+    }
+}
+
+.s-labels {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 450px;
+
+    @include breakpoint(md) {
+        display: none;
+    }
+}
+
+.s-label {
+    margin-bottom: 30px;
+    padding: 0;
+    background: #fff;
+    max-width: 225px;
+    max-height: 28px;
+    font-size: 14px;
+    line-height: 26px;
+    color: #000;
+    text-transform: none;
+    border: thin solid #000;
+}
+
+.s-label[data-active='true'] {
+    background: #000;
+    color: #fff;
+}
+
+.s-label i {
+    margin-right: 5px;
+}
+
+.s-list {
+    display: none;
+
+    @include breakpoint(md) {
+        display: block;
+    }
+}
+
+.s-list[data-active="true"] {
+    display: block;
+}
+
+.s-item__map {
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    max-width: 1410px;
+
+    @include breakpoint(md) {
+        height: 400px;
+    }
+}
+
+.s-item__map-placeholder {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 12px;
+    line-height: 24px;
+    color: #9a9a9a;
+    text-align: center;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+
+////////////
+///MAP
+///////////
+
+.s-item__map > ymaps {
+    filter: grayscale(100%);
+    z-index: 2;
+}
+
+.s-store_title {
+    font-weight: bold;
+}
+
+.s-item__list {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.s-item__list > ul {
+    margin: 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.s-item__list > ul > li {
+    margin: 0 10px 25px;
+    padding: 0 10px 25px;
+    max-width: 225px;
+    border-bottom: 1px solid #ccc;
+
+    @include breakpoint(xl) {
+        max-width: 275px;
+    }
+}
+
+.s-item__list > ul > li:last-child {
+    border: none;
+
+    @include breakpoint(md) {
+        border-bottom: 1px solid #ccc;
+    }
+}
+
+.s-item__address {
+    text-align: center;
+}
+
+.s-store__name {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+///END MAP
+
+/////////////////////////////////
+
+.s-btn__map {
+    margin: 20px auto 0;
+    max-width: 200px;
+}

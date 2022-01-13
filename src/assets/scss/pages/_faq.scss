@@ -1,0 +1,147 @@
+#faq {
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1200px;
+}
+
+.faq__container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq__title {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 41px;
+    text-align: center;
+
+    @include breakpoint(md) {
+        margin-bottom: 60px;
+        font-size: 34px;
+    }
+}
+
+.faq__title::after {
+    content: " ";
+    margin: 0 auto;
+    background: #000;
+    display: block;
+    width: 3rem;
+    height: 1px;
+}
+
+.faq__aside {
+    display: none;
+
+    @include breakpoint(lg) {
+        margin-top: 15px;
+        display: block;
+    }
+}
+
+.faq__aside ul {
+    padding-left: 25px;
+}
+
+.faq__aside ul li {
+    list-style-type: disc;
+}
+
+.faq__aside ul li a {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.faq__content {
+
+    @include breakpoint(lg) {
+        max-width: 60%;
+    }
+}
+
+.s-faq__title {
+    display: flex;
+    align-items: center;
+}
+
+.s-faq__title img {
+    width: 65px;
+}
+
+.s-faq__title h4 {
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.s-faq__tab {
+    margin: 25px 0;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.s-faq__question {
+    margin-right: 15px;
+    padding: 0 25px 0 0;
+    position: relative;
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.s-faq__question::after {
+    content: "+";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    transition: all .35s;
+}
+
+.s-faq__tab.answer-open .s-faq__question::after {
+    transform: rotate(45deg);
+}
+
+.s-faq__answer {
+    margin-top: 15px;
+    height: auto;
+    max-height: 0;
+    transition: max-height .5s ease-in-out ;
+    overflow: hidden;
+}
+
+.s-faq__tab.answer-open  .s-faq__answer {
+    max-height: 1000px;
+}
+
+////////////////
+//SCROLL TO TOP
+///////////////
+
+.faq-scroll-to-top {
+    background: url(../images/scroll-to-top.svg) no-repeat 50% 50%;
+    position: fixed;
+    right: 2%;
+    bottom: 5%;
+    display: none;
+    width: 50px;
+    height: 45px;
+    transition: all .2s ease-in-out;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 98;
+
+    @include breakpoint(lg) {
+        display: block;
+    }
+}
+
+.faq-scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}

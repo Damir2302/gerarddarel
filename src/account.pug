@@ -1,0 +1,29 @@
+---
+title: Авторизация | Gerald Darel
+---
+
+extends includes/_page
+
+block main
+
+    #account
+
+        h2 Аккаунт
+        .account__wrapper
+            .login__block
+                h4 Авторизация
+                form#identification(method="post")
+                    div
+                        input(type="email" placeholder="Электронный адрес" required)
+                        span.error-message Некорректный адрес электронной почты.
+                    div
+                        input(type="password" placeholder="Пароль" required)
+                        span.error-message Введите пароль.
+                        a.forgotten-password(href="#password-forgot" rel="nofollow") Забыли пароль?
+                    .login__button
+                        button(type="submit") Войти
+            .register__block
+                h4 Нет зарегистрированы?
+                p Зарегистрируйтесь сейчас и получите эксклюзивные преимущества.<br>
+                 | Помимо получения наших информационных бюллетеней с предложениями и новостями, вы также сможете сохранять свои любимые статьи в списке желаний, отслеживать свои заказы и делать покупки быстрее.
+                a.button-style(href="/register.html") Зарегистрироваться

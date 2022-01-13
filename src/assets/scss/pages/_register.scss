@@ -1,0 +1,251 @@
+#register {
+    margin: 66px 0 0;
+    padding: 0 20px;
+
+    @include breakpoint(xl) {
+        margin: 35px 0 50px;
+    }
+}
+
+.register__title {
+    height: 49px;
+    font-size: 18px;
+    line-height: 49px;
+    font-weight: 700;
+    letter-spacing: .07em;
+    text-align: left;
+    color: #000;
+    text-transform: uppercase;
+
+    @include breakpoint(lg) {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
+
+.register__mandatory {
+    display: none;
+
+    @include breakpoint(md) {
+        margin-bottom: 30px;
+        display: block;
+        font-style: italic;
+        color: #7b7b7b;
+    }
+
+    @include breakpoint(lg) {
+        text-align: center;
+    }
+}
+
+#registrationForm {
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+#registrationForm .table-row {
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    line-height: normal;
+
+    @include breakpoint(md) {
+        max-width: 350px;
+    }
+
+    @include breakpoint(lg) {
+        margin: 0 auto 35px;
+    }
+}
+
+#registrationForm .table-row > label {
+    margin: 15px 0 5px;
+    display: block;
+}
+
+#registrationForm input[type="radio"] {
+    vertical-align: middle;
+}
+
+.customer-gender  {
+    margin-top: 5px;
+
+    @include breakpoint(md) {
+        margin: 0;
+        margin-right: 15px;
+    }
+}
+
+.customer-wrapper {
+
+    @include breakpoint(md) {
+        display: flex;
+        width: 100%;
+        max-width: 230px;
+    }
+}
+
+#registrationForm input:not(input[type="radio"], input[type="checkbox"]){
+    padding: 10px 10px;
+    width: 100%;
+
+    @include breakpoint(md) {
+        padding: 8px 10px;
+    }
+}
+
+#registrationForm input {
+    background: none transparent;
+    color: #4c4c4c;
+    border: 1px solid #cbcbcb;
+    vertical-align: middle;
+
+    @include breakpoint(md) {
+        max-width: 230px;
+    }
+}
+
+.table-container {
+    margin-bottom: 2px;
+
+    @include breakpoint(md) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.table-container > span {
+    display: none;
+
+    @include breakpoint(md) {
+        margin: 0;
+        display: inline-block;
+        width: 210px;
+        top: 0;
+        left: 103%;
+        position: absolute;
+        font-style: italic;
+        font-size: 10px;
+        line-height: 1em;
+        color: #868686;
+        text-transform: none;
+        float: right;
+    }
+}
+
+.table-row .required-indicator {
+    color: red;
+}
+
+.table-row .select-birthday {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+
+    @include breakpoint(md) {
+        width: 100%;
+        max-width: 230px;
+    }
+}
+
+.select-input {
+    position: relative;
+    width: 33%;
+}
+
+.select-input select {
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+.select-input::after {
+    content: "\f078";
+    padding: 0 6px 0 0;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    font-family: $icon;
+    font-size: 10px;
+}
+
+#registrationForm span.error-message,
+.error-message-password {
+    position: absolute;
+    display: none;
+    font-size: 10px;
+    color: red;
+    text-transform: none;
+
+    @include breakpoint(md) {
+        margin-left: 120px;
+    }
+}
+
+#registrationForm span.error-message.error,
+.error-message-password.error {
+    display: block!important;
+}
+
+.table-agreement {
+    margin-top: 20px;
+}
+
+#registrationForm .table-agreement .table-row {
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.table-agreement .reg-agreement {
+    margin-left: 5px;
+}
+
+.table-agreement .error-message {
+
+    @include breakpoint(md) {
+        margin-left: 18px!important;
+    }
+}
+
+.accountCreationText {
+    margin: 30px auto 0;
+    max-width: 700px;
+    text-align: center;
+    text-transform: none;
+}
+
+.accountCreationText a {
+    display: inline;
+}
+
+.button-row {
+
+    @include breakpoint(md) {
+        margin: 20px auto 0;
+        display: flex;
+        justify-content: space-between;
+        max-width: 500px;
+    }
+}
+
+.button-row a.button-style {
+    display: none;
+
+    @include breakpoint(md) {
+        background-color: #4c4c4c;
+        display: block;
+        max-width: 220px;
+        text-align: center;
+    }
+}
+
+.button-row button[value=confirm] {
+    margin: 20px auto 0;
+    max-width: 250px;
+
+    @include breakpoint(md) {
+        margin: 0;
+    }
+}

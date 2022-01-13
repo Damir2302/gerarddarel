@@ -1,0 +1,39 @@
+---
+title: Обратная связь | Gerard Darel
+---
+
+extends includes/_page
+
+block main
+
+    #contact-us
+
+        h1.ctc__title Обратная связь
+        .ctc__text
+            span По любому вопросу, пожалуйста, заполните форму ниже.
+            span Вы также можете связаться нами по телефону,
+            span с 10:00 до 18:00 (по московскому времени), с понедельника по пятницу, по телефону <a href="tel:88888888888">8 (888) 888-88-88</a>
+
+        form#contact-us-form
+            .input-row
+                input(type="text" name ="contact[name]" placeholder="Имя" required)
+
+            .input-row
+                input(type="text" name ="contact[lastname]" placeholder="Фамилия" required)
+
+            .input-row
+                input(type="email" name ="contact[email]" placeholder="E-mail" required)
+
+            .input-row
+                input(type="tel" name ="contact[phone]" placeholder="Номер телефона" required)
+
+            .input-row
+                input(type="text" name ="contact[subject]" placeholder="Тема обращения")
+
+            .input-row
+                input(type="number" name ="contact[order-number]" placeholder="Номер заказа" required)
+
+            .input-row
+                textarea(type="text" name ="contact[message]" placeholder="Сообщение" required)
+
+            button.ctc__btn-submit(type="submit") Отправить

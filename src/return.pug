@@ -1,0 +1,70 @@
+---
+title: Возврат товара | Gerard Darel
+returns: true
+---
+
+extends components/_aside-profile
+
+block article
+
+    article.return__wrapper
+        h2.p-return__title Возврат товара
+        .p-return
+            .p-return__text
+                p Claudie Pierlot предлагает бесплатный сервис возврата для всех покупателей. Вы можете вернуть товар,
+                  | сохранивший свой первоначальный вид, в течение 14 календарных дней
+                  | после доставки.
+                p Возврат товара можно оформить двумя способами:
+                ul
+                    li Позвоните нашей службе поддержки по телефонам +7 (999) 999-99-99 или 8 800 800-80-80 и продиктуйте все необходимые данные для возврата товара.
+                    li Заполните заявку на возврат в специальной форме на сайте ниже.
+
+            .p-return__form
+                form#return-form(method="" action="" name="return-form")
+
+                    .p-form__row
+                        label(for="r-order-number" data-required) Номер заказа
+                        .p-input
+                            input#r-order-number(type="number" name="order-number" max-length="50" data-error-message="Укажите номер заказа" required)
+
+                    .p-form__row
+                        label(for="r-city" data-required) Населённый пункт
+                        .p-input
+                            input#r-city(type="text" name="city" max-length="50" data-error-message="Укажите город" required)
+
+                    .p-form__row
+                        label(for="r-address" data-required) Адрес
+                        .p-input
+                            input#r-address(type="text" name="address" max-length="50" data-error-message="Укажите адрес" required)
+
+                    .p-form__row
+                        label(for="r-date" data-required) Удобная дата возврата
+                        .p-input
+                            input#r-date(type="text", name="date" data-error-message="Укажите дату возврата" required)
+
+                    .p-form__row
+                        label(for="r-name" data-required) Контактное лицо
+                        .p-input
+                            input#r-name(type="text" name="name" max-length="50" data-error-message="Укажите контактное лицо" required)
+
+                    .p-form__row
+                        label(for="r-phone" data-required) Телефон для связи
+                        .p-input
+                            input#r-phone(type="tel" name="phone" max-length="18" data-error-message="Укажите телефон" required)
+
+                    .p-form__row
+                        label(for="r-email" data-required) Эл. почта
+                        .p-input
+                            input#r-email(type="email" name="email" max-length="50" data-error-message="Укажите email" required)
+
+                    .p-form__row
+                        label(for="r-text") Комментарий
+                        .p-input
+                            input#r-text(type="text" name="comment")
+
+                    button(type="submit") Отправить
+
+                // SUCCESS
+                .p-form-n__success
+                    p Ваше сообщение отправлено
+                    p Спасибо за вашу заявку.<br>  Наш оператор свяжется с вами в ближайшее время
