@@ -15,86 +15,18 @@ block main
             // Breadcrumbs::Start
             .breacrumbs
                 .breadcrumbs__wrapper
-                        ol.breadcrumb
-                            li.breadcrumb__item
-                                a.breadcrumb__elem Главная
-                            li.breadcrumb__item
-                                span.breadcrumb__elem New In (210)
+                    ol.breadcrumb
+                        li.breadcrumb__item
+                            a.breadcrumb__elem Главная
+                        li.breadcrumb__item
+                            span.breadcrumb__elem New In (210)
             // Breadcrumbs::End
 
             // Filters::Start
             .filters
                 .filter__button--mobile Фильтр
-                .filters__wrapper
 
-                    .color__filter
-                        a.filter__btn.button-style Цвет
-                        .filter__color-container
-
-                            .filter__colors
-                                span.color-value.selected(style="background-color: rgb(229, 205, 170)")
-                                span.color-value.selected(style="background-color: black")
-                                span.color-value.selected(style="background-color: blue")
-                                span.color-value(style="background-color: rgb(88, 41, 0)")
-                                span.color-value(style="background-color: yellow")
-                                span.color-value(style="background-color: green")
-                                span.color-value(style="background-color: rgb(128, 128, 128)")
-                                span.color-value(style="background-color: brown")
-                                span.color-value(style="background-color: rgb(255, 172, 200)")
-                                span.color-value(style="background-color: rgb(255, 0, 0)")
-
-                    .size__filter
-                        a.filter__btn.button-style Талия
-                        .filter__size-container
-
-                            .filter__sizes
-
-                                .size-value
-                                    .size-checkbox.checked
-                                        span
-                                    span.size-label 34
-
-                                .size-value
-                                    .size-checkbox.checked
-                                        span
-                                    span.size-label 36
-
-                                .size-value
-                                    .size-checkbox.checked
-                                        span
-                                    span.size-label 38
-
-                                .size-value
-                                    .size-checkbox
-                                        span
-                                    span.size-label 40
-
-                                .size-value
-                                    .size-checkbox
-                                        span
-                                    span.size-label 42
-
-                                .size-value
-                                    .size-checkbox
-                                        span
-                                    span.size-label 44
-
-                                .size-value
-                                    .size-checkbox
-                                        span
-                                    span.size-label 46
-
-                                .size-value
-                                    .size-checkbox
-                                        span
-                                    span.size-label T2
-
-            // Filters::End
-
-            // Filters-mobile::Start
-            .filters--mobile
-
-                .filters-container
+                .filters-title
                     .filter-close
                     .filter-wrapper.has-filter
                         .filter-header
@@ -122,7 +54,7 @@ block main
                         .filter-footer
                             button Продолжить
 
-                .filters-mob-container.category
+                .filters-container.category
                     .filter-close
                     .filter-wrapper
                         .filter-header
@@ -169,7 +101,7 @@ block main
                         .filter-footer
                             button Продолжить
 
-                .filters-mob-container.color
+                .filters-container.color
                     .filter-close
                     .filter-wrapper.has-filter
                         .filter-header
@@ -211,7 +143,7 @@ block main
                         .filter-footer
                             button Продолжить
 
-                .filters-mob-container.size
+                .filters-container.size
                     .filter-close
                     .filter-wrapper.has-filter
                         .filter-header
@@ -220,32 +152,48 @@ block main
                         .filter-body
 
                             .filter-attr.selected
-                                span 34
+                                .size-checkbox
+                                    span
+                                span.size-label 34
 
                             .filter-attr.selected
-                                span 36
+                                .size-checkbox
+                                    span
+                                span.size-label 36
 
                             .filter-attr.selected
-                                span 38
+                                .size-checkbox
+                                    span
+                                span.size-label 38
 
                             .filter-attr
-                                span 40
+                                .size-checkbox
+                                    span
+                                span.size-label 40
 
                             .filter-attr
-                                span 42
+                                .size-checkbox
+                                    span
+                                span.size-label 42
 
                             .filter-attr
-                                span 44
+                                .size-checkbox
+                                    span
+                                span.size-label 44
 
                             .filter-attr
-                                span 46
+                                .size-checkbox
+                                    span
+                                span.size-label 46
 
                             .filter-attr
-                                span T2
+                                .size-checkbox
+                                    span
+                                span.size-label T2
 
                         .filter-footer
                             button Продолжить
-            // Filters-mobile::End
+            // Filters::End
 
             .sorting
 

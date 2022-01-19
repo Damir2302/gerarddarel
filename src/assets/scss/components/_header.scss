@@ -24,6 +24,16 @@ body.show-login {
     transform: rotate(45deg);
 }
 
+// With BITRIX Panel
+#bx-panel + #page #header {
+
+    @include breakpoint(lg) {
+        position: fixed;
+        width: 100%;
+        z-index: 99;
+    }
+}
+
 // Header
 
 .top-mobile-return {
@@ -33,7 +43,7 @@ body.show-login {
 #header {
     position: fixed;
     width: 100%;
-    height: auto;
+    height: 165px;
     z-index: 99;
 
     @include breakpoint(lg) {

@@ -85,11 +85,3 @@ button, .button-style {
         background: #343434;
     }
 }
-
-#main {
-    padding-top: 115px;
-
-    @include breakpoint(lg) {
-        padding-top: 165px;
-    }
-}
