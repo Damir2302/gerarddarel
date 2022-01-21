@@ -21812,6 +21812,10 @@ body.filter-mobile {
     }
 }
 
+.filter-attr.selected .color-value-mobile::after {
+    border: 2px solid rgba(0,0,0,0.85)
+}
+
 @media (min-width: 768px) {
     .color-label-mobile {
         display: none
@@ -21853,10 +21857,6 @@ body.filter-mobile {
         border-radius: 50%;
         -webkit-box-sizing: border-box;
         box-sizing: border-box
-    }
-
-    .color-value-mobile.selected::after {
-        border: 1px solid rgba(0,0,0,0.55)
     }
 
     .color-value-mobile:hover::after {

@@ -539,6 +539,10 @@ body.filter-mobile {
             right: 3px;
         }
     }
+
+    &.selected .color-value-mobile::after {
+        border: 2px solid rgba(0,0,0,.85);
+    }
 }
 
 .color-label-mobile {
@@ -579,10 +583,6 @@ body.filter-mobile {
             border: 1px solid rgba(0,0,0,.093);
             border-radius: 50%;
             box-sizing: border-box;
-        }
-
-        &.selected::after {
-            border: 1px solid rgba(0,0,0,.55);
         }
 
         &:hover::after {
