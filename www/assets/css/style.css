@@ -21329,7 +21329,7 @@ body.filter-mobile {
 
 @media (min-width: 768px) {
     .filters-container.active {
-        max-height: 70px
+        max-height: 150px
     }
 }
 
@@ -21341,7 +21341,9 @@ body.filter-mobile {
 
 @media (min-width: 768px) {
     .filters-container.category {
-        display: none
+        -webkit-transform: translateX(-150px);
+        -ms-transform: translateX(-150px);
+        transform: translateX(-150px)
     }
 }
 
@@ -21349,6 +21351,14 @@ body.filter-mobile {
     -webkit-transform: translate(0);
     -ms-transform: translate(0);
     transform: translate(0)
+}
+
+@media (min-width: 768px) {
+    .filters-container.category.active {
+        -webkit-transform: translateX(-150px);
+        -ms-transform: translateX(-150px);
+        transform: translateX(-150px)
+    }
 }
 
 .filters-container.color {
@@ -21408,6 +21418,65 @@ body.filter-mobile {
 }
 
 @media (min-width: 768px) {
+    .filters-container.category .filter-body {
+        padding: 9px 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        z-index: 9
+    }
+}
+
+@media (min-width: 768px) {
+    .filters-container.category .filter-attr {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 50%;
+        line-height: 25px;
+        text-overflow: ellipsis;
+        white-space: nowrap
+    }
+}
+
+.filters-container.category .filter-attr .cat-checkbox {
+    display: none
+}
+
+@media (min-width: 768px) {
+    .filters-container.category .filter-attr .cat-checkbox {
+        margin-right: 8px;
+        background-color: #d9d9d9;
+        position: relative;
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: pointer
+    }
+}
+
+.filters-container.category .filter-attr .cat-checkbox span {
+    background: #fff;
+    display: block;
+    padding: 3px;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    line-height: 22px;
+    -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.2)
+}
+
+@media (min-width: 768px) {
     .filters-container.color .filter-body {
         padding: 15px 20px;
         display: -webkit-box;
@@ -21453,17 +21522,23 @@ body.filter-mobile {
 }
 
 .filters-container.size .filter-attr .size-checkbox {
-    margin-right: 8px;
-    background-color: #d9d9d9;
-    position: relative;
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    cursor: pointer
+    display: none
+}
+
+@media (min-width: 768px) {
+    .filters-container.size .filter-attr .size-checkbox {
+        margin-right: 8px;
+        background-color: #d9d9d9;
+        position: relative;
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        cursor: pointer
+    }
 }
 
 .filters-container.size .filter-attr .size-checkbox span {
@@ -21597,7 +21672,7 @@ body.filter-mobile {
 @media (min-width: 768px) {
     .filter-cat {
         margin: 0 8px;
-        padding: 10px 20px;
+        padding: 10px 16px;
         background: none;
         display: inline;
         width: 100%;
@@ -21658,12 +21733,6 @@ body.filter-mobile {
 
 .filter-cat .dimmed span:last-child::after {
     content: ''
-}
-
-@media (min-width: 768px) {
-    .filter-cat[data-path='category'] {
-        display: none
-    }
 }
 
 @media (min-width: 768px) {

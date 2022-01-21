@@ -147,7 +147,7 @@ body.filter-mobile {
         transform: translateX(0);
 
         @include breakpoint(md) {
-            max-height: 70px;
+            max-height: 150px;
         }
     }
 }
@@ -158,12 +158,16 @@ body.filter-mobile {
         transform: translate(100%);
 
         @include breakpoint(md) {
-            display: none;
+            transform: translateX(-150px);
         }
     }
 
     &.category.active {
         transform: translate(0);
+
+        @include breakpoint(md) {
+            transform: translateX(-150px);
+        }
     }
 
     &.color {
@@ -197,6 +201,54 @@ body.filter-mobile {
             transform: translateX(-150px);
         }
     }
+}
+
+.filters-container.category .filter-body {
+
+    @include breakpoint(md) {
+        padding: 9px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        z-index: 9;
+    }
+}
+
+.filters-container.category .filter-attr {
+
+    @include breakpoint(md) {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        line-height: 25px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+.filters-container.category .filter-attr .cat-checkbox {
+    display: none;
+
+    @include breakpoint(md) {
+        margin-right: 8px;
+        background-color: #d9d9d9;
+        position: relative;
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        user-select: none;
+        cursor: pointer;
+    }
+}
+
+.filters-container.category .filter-attr .cat-checkbox span {
+    background: #fff;
+    display: block;
+    padding: 3px;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    line-height: 22px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
 }
 
 .filters-container.color .filter-body {
@@ -234,14 +286,18 @@ body.filter-mobile {
 }
 
 .filters-container.size .filter-attr .size-checkbox {
-    margin-right: 8px;
-    background-color: #d9d9d9;
-    position: relative;
-    display: inline-block;
-    width: 14px;
-    height: 14px;
-    user-select: none;
-    cursor: pointer;
+    display: none;
+
+    @include breakpoint(md) {
+        margin-right: 8px;
+        background-color: #d9d9d9;
+        position: relative;
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        user-select: none;
+        cursor: pointer;
+    }
 }
 
 .filters-container.size .filter-attr .size-checkbox span {
@@ -360,7 +416,7 @@ body.filter-mobile {
 
     @include breakpoint(md) {
         margin: 0 8px;
-        padding: 10px 20px;
+        padding: 10px 16px;
         background: none;
         display: inline;
         width: 100%;
@@ -413,13 +469,6 @@ body.filter-mobile {
 
     & .dimmed span:last-child::after {
         content: '';
-    }
-
-    &[data-path='category'] {
-
-        @include breakpoint(md) {
-            display: none;
-        }
     }
 
     &:hover {
