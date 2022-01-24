@@ -24,8 +24,8 @@ $swiperSelector.each(function(index) {
        }
       },
       navigation: {
-        nextEl: ".slider-button-next",
-        prevEl: ".slider-button-prev"
+        nextEl: ".slider-button-next-" + index,
+        prevEl: ".slider-button-prev-" + index
       },
       scrollbar: {
         el: ".slider-scrollbar",
@@ -43,6 +43,7 @@ $swiperSelector.each(function(index) {
     }
 
   });
+
 });
 
 function checkArrow() {
