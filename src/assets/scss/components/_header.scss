@@ -730,14 +730,14 @@ header {
         margin-top: 8px;
         display: block;
         max-width: 450px;
-        max-height: 230px;
-        overflow: hidden;
     }
 }
 
 .navbar__menu .submenu__image a {
     padding: 2px 0 6px;
     display: block;
+    max-height: 23rem;
+    overflow: hidden;
     line-height: normal;
 }
 

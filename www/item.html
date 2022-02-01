@@ -247,7 +247,7 @@
                   <li><a href="#">46</a></li>
                 </ul>
                 <div class="size-table">
-                  <div><i class="fal fa-female"></i><i class="far fa-female"></i><a>Таблица размеров</a></div>
+                  <div><i class="fal fa-female"></i><i class="far fa-female"></i><a class="js-link-popup" href="#popup-sizes">Таблица размеров</a></div>
                   <div><span>Переключить на <a>Int размер</a></span></div>
                 </div>
                 <div class="item__action">
@@ -1139,6 +1139,165 @@
         </div>
       </div>
     </div>
+    <!-- Sizes Popup-->
+    <div class="b-popup mod-table mfp-hide" id="popup-sizes">
+      <button class="btn-close" onClick="$.magnificPopup.close();"></button>
+      <div class="b-popup__content">
+        <section class="b-table-sizes">
+          <h2>Таблица размеров</h2>
+          <section>
+            <div class="table-header">
+              <div class="table-button table-clothes selected" data-type="clothes">Одежда</div>
+              <div class="table-button table-shoes" data-type="shoes">Обувь и аксессуары</div>
+            </div>
+            <div class="clothes table-content selected">
+              <div class="table">
+                <div class="col">
+                  <div class="cell"><span>INT</span></div>
+                  <div class="cell"><span>XS</span></div>
+                  <div class="cell"><span>S</span></div>
+                  <div class="cell"><span>M</span></div>
+                  <div class="cell"><span>L</span></div>
+                  <div class="cell"><span>XL</span></div>
+                </div>
+                <div class="col">
+                  <div class="cell"><span>FR</span></div>
+                  <div class="cell"><span>34</span></div>
+                  <div class="cell"><span>36</span></div>
+                  <div class="cell"><span>38</span></div>
+                  <div class="cell"><span>40</span></div>
+                  <div class="cell"><span>42</span></div>
+                </div>
+                <div class="col">
+                  <div class="cell"><span>Other</span></div>
+                  <div class="cell"><span>0</span></div>
+                  <div class="cell"><span>1</span></div>
+                  <div class="cell"><span>2</span></div>
+                  <div class="cell"><span>3</span></div>
+                  <div class="cell"><span>4</span></div>
+                </div>
+                <div class="col">
+                  <div class="cell"><span>Rus</span></div>
+                  <div class="cell"><span>38/40</span></div>
+                  <div class="cell"><span>40/42</span></div>
+                  <div class="cell"><span>44</span></div>
+                  <div class="cell"><span>44/46</span></div>
+                  <div class="cell"><span>46</span></div>
+                </div>
+                <div class="col">
+                  <div class="cell" style="flex-grow: 0"><span>U</span></div>
+                  <div class="cell" style="flex-grow: 1"><span>ONE SIZE</span></div>
+                </div>
+              </div>
+              <div class="table-title">Соотношение к размерам</div>
+              <div class="table">
+                <div class="col">
+                  <div class="cell"><span>Обхват груди, см</span></div>
+                  <div class="cell"><span>82</span></div>
+                  <div class="cell"><span>86</span></div>
+                  <div class="cell"><span>90</span></div>
+                  <div class="cell"><span>92</span></div>
+                  <div class="cell"><span>96</span></div>
+                </div>
+                <div class="col">
+                  <div class="cell"><span>Обхват талии, см</span></div>
+                  <div class="cell"><span>62</span></div>
+                  <div class="cell"><span>66</span></div>
+                  <div class="cell"><span>70</span></div>
+                  <div class="cell"><span>76</span></div>
+                  <div class="cell"><span>82</span></div>
+                </div>
+                <div class="col">
+                  <div class="cell"><span>Обхват бедер, см</span></div>
+                  <div class="cell"><span>90</span></div>
+                  <div class="cell"><span>94</span></div>
+                  <div class="cell"><span>98</span></div>
+                  <div class="cell"><span>104</span></div>
+                  <div class="cell"><span>110</span></div>
+                </div>
+                <div class="col">
+                  <div class="cell"><span>Длина по внутреннему шву, см</span></div>
+                  <div class="cell"><span>106</span></div>
+                  <div class="cell"><span>108</span></div>
+                  <div class="cell"><span>109</span></div>
+                  <div class="cell"><span>110</span></div>
+                  <div class="cell"><span>112</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="shoes table-content">
+              <div class="table">
+                <div class="col">
+                  <div class="cell" style="flex-grow: 0"><span>U</span></div>
+                  <div class="cell" style="flex-grow: 1"><span>ONE SIZE</span></div>
+                </div>
+              </div>
+              <div class="table-title">Обувь</div>
+              <div class="table">
+                <div class="col">
+                  <div class="cell"><span>FR</span></div>
+                  <div class="cell"><span>35</span></div>
+                  <div class="cell"><span>36</span></div>
+                  <div class="cell"><span>37</span></div>
+                  <div class="cell"><span>38</span></div>
+                  <div class="cell"><span>39</span></div>
+                  <div class="cell"><span>40</span></div>
+                  <div class="cell"><span>41</span></div>
+                </div>
+                <div class="col">
+                  <div class="cell"><span>Rus</span></div>
+                  <div class="cell"><span>35</span></div>
+                  <div class="cell"><span>36</span></div>
+                  <div class="cell"><span>37</span></div>
+                  <div class="cell"><span>38</span></div>
+                  <div class="cell"><span>39</span></div>
+                  <div class="cell"><span>40</span></div>
+                  <div class="cell"><span>41</span></div>
+                </div>
+                <div class="col">
+                  <div class="cell"><span>Длина стопы</span></div>
+                  <div class="cell"><span>21.1</span></div>
+                  <div class="cell"><span>22.9</span></div>
+                  <div class="cell"><span>23.7</span></div>
+                  <div class="cell"><span>24.6</span></div>
+                  <div class="cell"><span>25.2</span></div>
+                  <div class="cell"><span>25.8</span></div>
+                  <div class="cell"><span>27.1</span></div>
+                </div>
+                <div class="col">
+                  <div class="cell"><span>Длина стельки</span></div>
+                  <div class="cell"><span>22.8</span></div>
+                  <div class="cell"><span>23.5</span></div>
+                  <div class="cell"><span>24.1</span></div>
+                  <div class="cell"><span>24.8</span></div>
+                  <div class="cell"><span>25.4</span></div>
+                  <div class="cell"><span>26.3</span></div>
+                  <div class="cell"><span>27.6</span></div>
+                </div>
+              </div>
+              <div class="table-title">Ремни</div>
+              <div class="table">
+                <div class="col">
+                  <div class="cell"><span>INT</span></div>
+                  <div class="cell"><span>XS</span></div>
+                  <div class="cell"><span>S</span></div>
+                </div>
+                <div class="col">
+                  <div class="cell"><span>FR</span></div>
+                  <div class="cell"><span>1</span></div>
+                  <div class="cell"><span>2</span></div>
+                </div>
+                <div class="col">
+                  <div class="cell"><span>Длина, см</span></div>
+                  <div class="cell"><span>79</span></div>
+                  <div class="cell"><span>85</span></div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </div>
+    </div>
     <!-- Password Popup-->
     <div class="password-bg-layer"></div>
     <div class="password-container">
@@ -1167,6 +1326,8 @@
     <script src="assets/js/jquery.jscrollpane.min.js"></script>
     <script src="assets/js/inputmask.min.js"></script>
     <script src="assets/js/jquery-ui.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/popup-sizes.js"></script>
     <script src="assets/js/form.js"></script>
     <script src="assets/js/booking.js"></script>
     <script src="assets/js/password.js"></script>
