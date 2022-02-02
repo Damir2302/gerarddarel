@@ -23804,6 +23804,14 @@ body.cart-page .footer__socials a:last-child {
     border: 0
 }
 
+.cart-item-quantity input::-webkit-outer-spin-button,.cart-item-quantity input::-webkit-inner-spin-button {
+    -webkit-appearance: none
+}
+
+.cart-item-quantity input[type='number'] {
+    -moz-appearance: textfield
+}
+
 .cart-item-price {
     font-size: 12px;
     text-align: right
