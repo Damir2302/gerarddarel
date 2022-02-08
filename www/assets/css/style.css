@@ -17263,6 +17263,14 @@ button:hover,.button-style:hover {
     background: #343434
 }
 
+input[type='number']::-webkit-outer-spin-button,input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none
+}
+
+input[type='number'] {
+    -moz-appearance: textfield
+}
+
 .slick-slider {
     position: relative;
     display: block;
@@ -19997,7 +20005,7 @@ header {
 
 .cart__content {
     padding: 0 20px 20px;
-    height: 100%;
+    height: 70%;
     overflow-x: hidden
 }
 
@@ -23802,14 +23810,6 @@ body.cart-page .footer__socials a:last-child {
     font-size: 14px;
     text-align: center;
     border: 0
-}
-
-.cart-item-quantity input::-webkit-outer-spin-button,.cart-item-quantity input::-webkit-inner-spin-button {
-    -webkit-appearance: none
-}
-
-.cart-item-quantity input[type='number'] {
-    -moz-appearance: textfield
 }
 
 .cart-item-price {
