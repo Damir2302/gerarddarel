@@ -1108,8 +1108,7 @@ body.cart-page .footer__socials a {
 }
 
 .form-submit button {
-    margin-top: 30px;
-    background: #5fb881;
+    margin: 30px auto 0;
     width: 100%;
     max-width: 320px;
     max-height: 50px;
@@ -1121,7 +1120,6 @@ body.cart-page .footer__socials a {
     text-transform: none;
     color: #fff;
     border-radius: 5px;
-    border: thin solid #5fb881;
     box-sizing: border-box;
     transition: 0.3s;
 

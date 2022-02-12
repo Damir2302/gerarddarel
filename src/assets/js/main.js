@@ -63,7 +63,7 @@ $(document).ready(function() {
     });
 
     // SHOW LOGIN ONCLICK
-    $('.header__login > a').on('click', function(e) {
+    $('.header__login a').on('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
         $('body').removeAttr('class');
@@ -75,7 +75,7 @@ $(document).ready(function() {
     });
 
     // SHOW CART ONCLICK
-    $('.header__cart > a').on('click', function(e) {
+    $('.header__cart a').on('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
         if (!$('body').hasClass('item-page')) {
