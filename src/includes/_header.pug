@@ -34,9 +34,12 @@ block header
                     ul.header__info
 
                         li.header__search
-                            form#search-form
+                            a#searchBtn(href="javasscript.void(0)" title="Search")
+                                    i.fal.fa-search
+                            form#search-form(action="/search/")
                                 .search__wrap
-                                    input(type="search" placeholder="поиск" autocomplete="off" required)
+                                    a.search__close-icon(href="javasscript.void(0)" title="close")
+                                    input#searchInput(type="text" placeholder="Поиск" autocomplete="off" name="q" required)
                                     button(type="submit")
                                         i.fal.fa-search
 

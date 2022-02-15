@@ -19227,10 +19227,83 @@ header {
     }
 }
 
+.header__search.active::after {
+    content: '';
+    background: #fbfbf7;
+    position: absolute;
+    left: 0;
+    width: 35px;
+    height: 35px
+}
+
+@media (min-width: 1024px) {
+    .header__search.active::after {
+        content: none
+    }
+}
+
+#searchBtn {
+    font-size: 20px
+}
+
+@media (min-width: 1024px) {
+    #searchBtn {
+        display: none
+    }
+}
+
+#search-form {
+    position: fixed;
+    background: #fff;
+    top: 116px;
+    left: 0;
+    width: 100%;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
+    opacity: 0;
+    visibility: hidden
+}
+
+@media (min-width: 470px) {
+    #search-form {
+        top: 146px
+    }
+}
+
+@media (min-width: 1024px) {
+    #search-form {
+        position: unset;
+        background: unset;
+        width: unset;
+        opacity: 1;
+        visibility: visible
+    }
+}
+
+.header__search.active #search-form {
+    opacity: 1;
+    visibility: visible
+}
+
+.hide-top-header #search-form {
+    top: 76px
+}
+
+@media (min-width: 470px) {
+    .hide-top-header #search-form {
+        top: 106px
+    }
+}
+
 .header__search .search__wrap {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse
 }
 
 @media (min-width: 470px) {
@@ -19251,21 +19324,44 @@ header {
     }
 }
 
+@media (min-width: 1024px) {
+    .header__search .search__wrap {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row
+    }
+}
+
+.search__close-icon::after {
+    content: "\f00d";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 300;
+    position: absolute;
+    top: 12px;
+    right: 16px
+}
+
+@media (min-width: 1024px) {
+    .search__close-icon::after {
+        content: none
+    }
+}
+
 .header__search input {
     padding: 0 10px;
     background: none;
-    display: none;
     width: 100%;
+    font-size: 13px;
     outline: none;
-    border: none;
-    border-bottom: 1px solid #bdbdbd
+    border: none
 }
 
 @media (min-width: 1024px) {
     .header__search input {
-        display: block;
         width: unset;
-        max-width: 160px
+        max-width: 160px;
+        border-bottom: 1px solid #bdbdbd
     }
 }
 
@@ -19290,6 +19386,7 @@ header {
 }
 
 .header__search button {
+    margin: 0 20px;
     background: none;
     text-align: right;
     max-width: 20px;
@@ -19299,20 +19396,19 @@ header {
 
 @media (min-width: 470px) {
     .header__search button {
-        font-size: 24px
+        margin: 0 20px 0 0
     }
 }
 
 @media (min-width: 768px) {
     .header__search button {
-        text-align: unset;
-        max-width: unset;
-        font-size: 22px
+        margin: 0 20px
     }
 }
 
 @media (min-width: 1024px) {
     .header__search button {
+        margin: 0;
         font-size: 18px
     }
 }
@@ -19384,7 +19480,7 @@ header {
     padding-bottom: 15px;
     background-color: #fbfbf7;
     position: fixed;
-    top: 120px;
+    top: 115px;
     left: -100%;
     width: 100%;
     height: calc(100% - 51px);
@@ -19406,6 +19502,12 @@ header {
     transition: left 0s ease-out 0s, opacity .25s ease-out
 }
 
+@media (min-width: 470px) {
+    #navbar {
+        top: 145px
+    }
+}
+
 @media (min-width: 1024px) {
     #navbar {
         padding: 0;
@@ -19423,6 +19525,18 @@ header {
         -ms-transform: translateY(-50%);
         transform: translateY(-50%);
         z-index: 99
+    }
+}
+
+@media (max-width: 1023px) {
+    .hide-top-header #navbar {
+        top: 105px
+    }
+}
+
+@media (max-width: 469px) {
+    .hide-top-header #navbar {
+        top: 75px
     }
 }
 
@@ -19735,7 +19849,7 @@ header {
     opacity: 0
 }
 
-.navbar__menu.submenu-show .item__menu.active-link a {
+.navbar__menu.submenu-show .item__menu.active-link>a {
     background-color: #eeede7;
     height: 49px;
     opacity: 1;

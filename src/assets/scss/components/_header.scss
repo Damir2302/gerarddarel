@@ -331,8 +331,67 @@ header {
     }
 }
 
+.header__search.active::after {
+    content: '';
+    background: #fbfbf7;
+    position: absolute;
+    left: 0;
+    width: 35px;
+    height: 35px;
+
+    @include breakpoint(lg) {
+        content: none;
+    }
+}
+
+#searchBtn {
+    font-size: 20px;
+
+    @include breakpoint(lg) {
+        display: none;
+    }
+}
+
+#search-form {
+    position: fixed;
+    background: #fff;
+    top: 116px;
+    left: 0;
+    width: 100%;
+    transition: all .4s ease;
+    opacity: 0;
+    visibility: hidden;
+
+    @include breakpoint(xs) {
+        top: 146px;
+    }
+
+    @include breakpoint(lg) {
+        position: unset;
+        background: unset;
+        width: unset;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.header__search.active #search-form {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hide-top-header #search-form {
+    top: 76px;
+
+    @include breakpoint(xs) {
+        top: 106px;
+    }
+}
+
 .header__search .search__wrap {
+    position: relative;
     display: flex;
+    flex-direction: row-reverse;
 
     @include breakpoint(xs) {
         padding: 0 17px;
@@ -343,21 +402,37 @@ header {
         justify-content: space-between;
         align-items: center;
     }
+
+    @include breakpoint(lg) {
+        flex-direction: row;
+    }
+}
+
+.search__close-icon::after {
+    content: "\f00d";
+    font-family: $icon;
+    font-weight: 300;
+    position: absolute;
+    top: 12px;
+    right: 16px;
+
+    @include breakpoint(lg) {
+        content: none;
+    }
 }
 
 .header__search input {
     padding: 0 10px;
     background: none;
-    display: none;
     width: 100%;
+    font-size: 13px;
     outline: none;
     border: none;
-    border-bottom: 1px solid #bdbdbd;
 
     @include breakpoint(lg) {
-        display: block;
         width: unset;
         max-width: 160px;
+        border-bottom: 1px solid #bdbdbd;
     }
 }
 
@@ -366,6 +441,7 @@ header {
 }
 
 .header__search button {
+    margin: 0 20px;
     background: none;
     text-align: right;
     max-width: 20px;
@@ -373,16 +449,15 @@ header {
     color: #000;
 
     @include breakpoint(xs) {
-        font-size: 24px;
+        margin: 0 20px 0 0;
     }
 
     @include breakpoint(md) {
-        text-align: unset;
-        max-width: unset;
-        font-size: 22px;
+        margin: 0 20px;
     }
 
     @include breakpoint(lg) {
+        margin: 0;
         font-size: 18px;
     }
 }
@@ -442,7 +517,7 @@ header {
     padding-bottom: 15px;
     background-color: #fbfbf7;
     position: fixed;
-    top: 120px;
+    top: 115px;
     left: -100%;
     width: 100%;
     height: calc(100% - 51px);
@@ -459,6 +534,10 @@ header {
         transition: left 0s ease-out 0s, opacity .25s ease-out;
     }
 
+    @include breakpoint(xs) {
+        top: 145px;
+    }
+
     @include breakpoint(lg) {
         padding: 0;
         background: none;
@@ -472,6 +551,17 @@ header {
         overflow: initial;
         transform: translateY(-50%);
         z-index: 99;
+    }
+}
+
+.hide-top-header #navbar {
+
+    @include breakpointMax(lg) {
+        top: 105px;
+    }
+
+    @include breakpointMax(xs) {
+        top: 75px;
     }
 }
 
@@ -712,7 +802,7 @@ header {
     opacity: 0;
 }
 
-.navbar__menu.submenu-show .item__menu.active-link a {
+.navbar__menu.submenu-show .item__menu.active-link > a {
     background-color: #eeede7;
     height: 49px;
     opacity: 1;

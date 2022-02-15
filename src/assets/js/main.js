@@ -30,6 +30,19 @@ $(document).ready(function() {
         }
     });
 
+    // SEARCH BUTTON MOBILE
+    if ($(window).width() < 1023) {
+        $('#searchBtn').on('click', function(e) {
+            e.preventDefault();
+            $(this).parent().addClass('active');
+        });
+
+        $('.search__close-icon').on('click', function(e) {
+            e.preventDefault();
+            $('.header__search.active').removeClass('active');
+        })
+    }
+
     // OPEN SUBMENU
     $(window).on('resize', function() {
         if ($(window).width() < 1260) {

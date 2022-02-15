@@ -17,10 +17,10 @@
       <div class="header__logo header__logo--mobile"><a href="/"><img class="black" src="assets/images/Logo_GERARD_DAREL_HD_2016.png" alt="GERARD DAREL"/></a></div>
       <div class="header__right">
         <ul class="header__info">
-          <li class="header__search">
-            <form id="search-form">
-              <div class="search__wrap">
-                <input type="search" placeholder="поиск" autocomplete="off" required="required"/>
+          <li class="header__search"><a id="searchBtn" href="javasscript.void(0)" title="Search"><i class="fal fa-search"></i></a>
+            <form id="search-form" action="/search/">
+              <div class="search__wrap"><a class="search__close-icon" href="javasscript.void(0)" title="close"></a>
+                <input id="searchInput" type="text" placeholder="Поиск" autocomplete="off" name="q" required="required"/>
                 <button type="submit"><i class="fal fa-search"></i></button>
               </div>
             </form>
