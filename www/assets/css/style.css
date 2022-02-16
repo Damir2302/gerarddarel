@@ -21870,7 +21870,7 @@ body.filter-mobile {
         background: #fff;
         position: absolute;
         left: 0;
-        top: calc(100% + 15px);
+        top: calc(100% + 24px);
         width: calc(100% - 15px);
         min-width: 450px;
         max-height: 0;
@@ -21879,7 +21879,7 @@ body.filter-mobile {
         transform: translateX(-42%);
         -webkit-box-shadow: none;
         box-shadow: none;
-        overflow: hidden;
+        overflow-y: scroll;
         -webkit-transition: max-height 0.4s ease-in-out;
         transition: max-height 0.4s ease-in-out;
         z-index: 20
@@ -21896,6 +21896,19 @@ body.filter-mobile {
     .filters-container.active {
         max-height: 150px
     }
+}
+
+.filters-container::-webkit-scrollbar {
+    width: 5px
+}
+
+.filters-container::-webkit-scrollbar-thumb {
+    background: #d1d1d1;
+    border-radius: 5px
+}
+
+.filters-container::-webkit-scrollbar-track {
+    background: none
 }
 
 .filters-container.category {
@@ -22049,9 +22062,9 @@ body.filter-mobile {
         display: flex;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
         z-index: 9
     }
 }
@@ -22064,9 +22077,9 @@ body.filter-mobile {
         display: flex;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
         z-index: 9
     }
 }

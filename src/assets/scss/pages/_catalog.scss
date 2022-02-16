@@ -132,13 +132,13 @@ body.filter-mobile {
         background: #fff;
         position: absolute;
         left: 0;
-        top: calc(100% + 15px);
+        top: calc(100% + 24px);
         width: calc(100% - 15px);
         min-width: 450px;
         max-height: 0;
         transform: translateX(-42%);
         box-shadow: none;
-        overflow: hidden;
+        overflow-y: scroll;
         transition: max-height 0.4s ease-in-out;
         z-index: 20;
     }
@@ -150,6 +150,19 @@ body.filter-mobile {
             max-height: 150px;
         }
     }
+}
+
+.filters-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.filters-container::-webkit-scrollbar-thumb {
+    background: #d1d1d1;
+    border-radius: 5px;
+}
+
+.filters-container::-webkit-scrollbar-track {
+    background: none;
 }
 
 .filters-container {
@@ -257,7 +270,7 @@ body.filter-mobile {
         padding: 15px 20px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
         z-index: 9;
     }
 }
@@ -268,7 +281,7 @@ body.filter-mobile {
         padding: 9px 20px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: flex-start;
         z-index: 9;
     }
 }
