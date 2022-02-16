@@ -935,14 +935,16 @@ header {
 }
 
 .logged__menu li {
+    padding: 17px 0;
     width: 249px;
     border-top: 1px solid #d6dbde;
 }
 
 .logged__menu li a {
-    padding: 17px 0;
     position: relative;
+    width: 100%;
     font-size: 13px;
+    line-height: 39px;
 }
 
 .logged__menu li a::after {
@@ -950,7 +952,7 @@ header {
     font-family: $icon;
     position: absolute;
     right: 0;
-    top: 50%;
+    top: 8px;
     margin-top: -6px;
     font-size: 12px;
     color: #818181;

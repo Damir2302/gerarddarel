@@ -76,7 +76,7 @@ $(document).ready(function() {
     });
 
     // SHOW LOGIN ONCLICK
-    $('.header__login a').on('click', function(e) {
+    $('.header__login > a').on('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
         $('body').removeAttr('class');

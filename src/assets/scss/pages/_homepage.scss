@@ -133,6 +133,7 @@
     margin-bottom: 35px;
     position: relative;
     cursor: pointer;
+    overflow: hidden;
 
     @include breakpoint(md) {
         margin-bottom: 0;
@@ -140,29 +141,28 @@
 }
 
 .image__block {
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 100%;
+    background-position: center center;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     min-height: 300px;
     max-height: 670px;
-    transition: background-size 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 
     @include breakpoint(md) {
         display: block;
         width: calc(100vw / 2);
-        height: calc(100vw / 3);
+        height: 670px;
     }
 }
 
 .image__block:hover {
 
     @include breakpoint(xl) {
-        background-size: 110%;
+        transform: scale(1.05);
     }
 }
 

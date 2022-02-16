@@ -19994,14 +19994,16 @@ header {
 }
 
 .logged__menu li {
+    padding: 17px 0;
     width: 249px;
     border-top: 1px solid #d6dbde
 }
 
 .logged__menu li a {
-    padding: 17px 0;
     position: relative;
-    font-size: 13px
+    width: 100%;
+    font-size: 13px;
+    line-height: 39px
 }
 
 .logged__menu li a::after {
@@ -20009,7 +20011,7 @@ header {
     font-family: "Font Awesome 5 Pro";
     position: absolute;
     right: 0;
-    top: 50%;
+    top: 8px;
     margin-top: -6px;
     font-size: 12px;
     color: #818181
@@ -21398,7 +21400,8 @@ header {
 .styles__block {
     margin-bottom: 35px;
     position: relative;
-    cursor: pointer
+    cursor: pointer;
+    overflow: hidden
 }
 
 @media (min-width: 768px) {
@@ -21408,10 +21411,9 @@ header {
 }
 
 .image__block {
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: 100%;
+    background-position: center center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -21424,21 +21426,25 @@ header {
     width: 100%;
     min-height: 300px;
     max-height: 670px;
-    -webkit-transition: background-size 0.5s ease-in-out;
-    transition: background-size 0.5s ease-in-out
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    transition: -webkit-transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out
 }
 
 @media (min-width: 768px) {
     .image__block {
         display: block;
         width: calc(100vw / 2);
-        height: calc(100vw / 3)
+        height: 670px
     }
 }
 
 @media (min-width: 1260px) {
     .image__block:hover {
-        background-size: 110%
+        -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05)
     }
 }
 
