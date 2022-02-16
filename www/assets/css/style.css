@@ -20476,6 +20476,9 @@ header {
         flex-direction: row;
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
         row-gap: 50px
     }
 }
@@ -26125,7 +26128,19 @@ body.filter-mobile {
 }
 
 #shops {
-    padding: 0 15px
+    padding: 115px 15px 0
+}
+
+@media (min-width: 470px) {
+    #shops {
+        padding-top: 145px 15px 0
+    }
+}
+
+@media (min-width: 1024px) {
+    #shops {
+        padding-top: 40px 15px 0
+    }
 }
 
 .s-title {

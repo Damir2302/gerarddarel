@@ -89,6 +89,7 @@
     @include breakpoint(md) {
         flex-direction: row;
         flex-wrap: wrap;
+        align-items: flex-start;
         row-gap: 50px;
     }
 

@@ -1,5 +1,13 @@
 #shops {
-    padding: 0 15px;
+    padding: 115px 15px 0;
+
+    @include breakpoint(xs) {
+        padding-top: 145px 15px 0;
+    }
+
+    @include breakpoint(lg) {
+        padding-top: 40px 15px 0;
+    }
 }
 
 .s-title {
