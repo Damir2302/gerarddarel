@@ -23473,156 +23473,22 @@ body.filter-mobile {
     margin-top: 80px
 }
 
-body.cart-page .header__top,body.cart-page .header__locale,body.cart-page .header__menu-btn,body.cart-page .navbar__menu,body.cart-page .header__info {
-    display: none
-}
-
-body.cart-page .top-mobile-return {
-    position: absolute;
-    top: 28px;
-    left: 15px;
-    display: block;
-    width: 18px;
-    height: 18px;
-    border: thin solid #a0a0a0
+#cart {
+    margin: 0 auto;
+    padding-top: 115px;
+    max-width: 738px
 }
 
 @media (min-width: 470px) {
-    body.cart-page .top-mobile-return {
-        top: 42px
+    #cart {
+        padding-top: 145px
     }
 }
 
 @media (min-width: 768px) {
-    body.cart-page .top-mobile-return {
-        padding: 9px 20px;
-        top: 36px;
-        height: auto;
-        width: auto;
-        min-width: 92px
+    #cart {
+        padding-top: 0
     }
-}
-
-@media (min-width: 1024px) {
-    body.cart-page .top-mobile-return {
-        padding: 9px 30px;
-        top: 8px;
-        min-width: 220px
-    }
-}
-
-body.cart-page .top-mobile-return::after {
-    content: "";
-    padding: 3px;
-    display: inline-block;
-    position: absolute;
-    top: 5px;
-    right: 2px;
-    border: solid #a0a0a0;
-    border-width: 0 1px 1px 0;
-    -webkit-transform: rotate(135deg);
-    -ms-transform: rotate(135deg);
-    transform: rotate(135deg)
-}
-
-@media (min-width: 768px) {
-    body.cart-page .top-mobile-return::after {
-        top: 12px;
-        left: 10px;
-        right: unset
-    }
-}
-
-body.cart-page .top-mobile-return span {
-    display: none
-}
-
-@media (min-width: 768px) {
-    body.cart-page .top-mobile-return span {
-        display: initial
-    }
-}
-
-body.cart-page #header,body.cart-page header {
-    position: relative;
-    top: 0
-}
-
-body.cart-page #main {
-    padding: 0
-}
-
-body.cart-page #footer {
-    padding: 40px 0 50px;
-    border-top: thin solid #dadada
-}
-
-body.cart-page footer {
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    max-width: 1200px
-}
-
-@media (min-width: 768px) {
-    body.cart-page footer {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row
-    }
-}
-
-body.cart-page .footer__logo img {
-    max-width: 230px
-}
-
-@media (min-width: 768px) {
-    body.cart-page .footer__logo img {
-        max-width: 320px
-    }
-}
-
-body.cart-page .footer__socials {
-    margin: 32px 0 0;
-    padding: 0
-}
-
-@media (min-width: 768px) {
-    body.cart-page .footer__socials {
-        margin: 0;
-        padding-right: 20px
-    }
-}
-
-body.cart-page .footer__socials a {
-    font-size: 20px
-}
-
-body.cart-page .footer__socials a:last-child {
-    margin: 0
-}
-
-@media (min-width: 768px) {
-    body.cart-page .footer__socials a {
-        font-size: 36px
-    }
-}
-
-#cart {
-    margin: 0 auto;
-    max-width: 738px
 }
 
 .cart-features {
@@ -23631,12 +23497,19 @@ body.cart-page .footer__socials a:last-child {
 
 @media (min-width: 768px) {
     .cart-features {
+        padding-top: 145px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center
+    }
+}
+
+@media (min-width: 1024px) {
+    .cart-features {
+        padding-top: 40px
     }
 }
 
@@ -23676,7 +23549,7 @@ body.cart-page .footer__socials a:last-child {
 }
 
 #cart h1 {
-    margin: 40px 0;
+    margin: 20px 0 40px;
     font-weight: 400;
     font-size: 22px;
     line-height: 30px;
@@ -23685,15 +23558,13 @@ body.cart-page .footer__socials a:last-child {
 
 @media (min-width: 470px) {
     #cart h1 {
-        margin-top: 60px;
-        margin-bottom: 60px;
         font-size: 34px
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     #cart h1 {
-        margin-top: 40px
+        margin: 30px 0 60px
     }
 }
 
