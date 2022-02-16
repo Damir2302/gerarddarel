@@ -26133,13 +26133,13 @@ body.filter-mobile {
 
 @media (min-width: 470px) {
     #shops {
-        padding-top: 145px 15px 0
+        padding: 145px 15px 0
     }
 }
 
 @media (min-width: 1024px) {
     #shops {
-        padding-top: 40px 15px 0
+        padding: 30px 15px 0
     }
 }
 
