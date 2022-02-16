@@ -139,7 +139,11 @@
     }
 }
 
-[class*='image__block'] {
+.image__block {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -155,19 +159,7 @@
     }
 }
 
-.image__block-1 {
-    background: url('../images/img42.jpg') no-repeat;
-    background-position: bottom;
-    background-size: 100%;
-}
-
-.image__block-2 {
-    background: url('../images/img214.jpg') no-repeat;
-    background-position: bottom;
-    background-size: 100%;
-}
-
-.styles__block:hover [class*='image__block'] {
+.image__block:hover {
 
     @include breakpoint(xl) {
         background-size: 110%;
