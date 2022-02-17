@@ -64,7 +64,16 @@ $(document).ready(function() {
                 $(this).closest("li").toggleClass("active-link");
                 $(this).closest("ul").toggleClass("submenu-show");
             });
-        }
+    }
+
+    // NAVBAR MENU HOVER
+    $('.item__menu').on('mouseenter', function() {
+        $('#header').css('transform', 'unset');
+    });
+
+    $('.item__menu').on('mouseleave', function() {
+        $('#header').css('transform', '');
+    });
 
     // CLOSE MOBILE MENU WHEN RESIZING WINDOW
     $(window).on('resize', function() {

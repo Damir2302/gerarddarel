@@ -18832,8 +18832,6 @@ body.filter-opened,body.open-menu,body.show-cart,body.show-login {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0);
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
     z-index: 99
 }
 
@@ -18845,7 +18843,7 @@ body.filter-opened,body.open-menu,body.show-cart,body.show-login {
     }
 }
 
-.hide-top-header #header {
+.hide-top-header #header,.menu-layer #header {
     -webkit-transform: unset;
     -ms-transform: unset;
     transform: unset
@@ -19888,8 +19886,8 @@ header {
 }
 
 .navbar__menu .submenu__image img {
-    -o-object-fit: none;
-    object-fit: none
+    -o-object-fit: contain;
+    object-fit: contain
 }
 
 .navbar__extra {
