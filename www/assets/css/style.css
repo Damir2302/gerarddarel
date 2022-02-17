@@ -18821,14 +18821,6 @@ body.filter-opened,body.open-menu,body.show-cart,body.show-login {
     transform: rotate(45deg)
 }
 
-@media (min-width: 1024px) {
-    #bx-panel+#page #header {
-        position: fixed;
-        width: 100%;
-        z-index: 99
-    }
-}
-
 .top-mobile-return {
     display: none
 }
@@ -18837,6 +18829,11 @@ body.filter-opened,body.open-menu,body.show-cart,body.show-login {
     position: fixed;
     width: 100%;
     height: 165px;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
     z-index: 99
 }
 
@@ -18846,6 +18843,12 @@ body.filter-opened,body.open-menu,body.show-cart,body.show-login {
         width: auto;
         z-index: unset
     }
+}
+
+.hide-top-header #header {
+    -webkit-transform: unset;
+    -ms-transform: unset;
+    transform: unset
 }
 
 .header__top {
