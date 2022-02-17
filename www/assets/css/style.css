@@ -24079,7 +24079,7 @@ body.filter-mobile {
 @media (min-width: 768px) {
     .shipping-type>div {
         margin-right: -1px;
-        padding: 15px 20px;
+        padding: 15px 21px;
         width: 190px;
         min-height: 122px;
         border: thin solid rgba(0,0,0,0.35);
@@ -24170,6 +24170,12 @@ body.filter-mobile {
         -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
         transform: translateX(-50%)
+    }
+}
+
+@media (min-width: 768px) {
+    .prepaid-courier {
+        white-space: break-spaces
     }
 }
 

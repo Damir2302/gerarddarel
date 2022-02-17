@@ -599,7 +599,7 @@
 
     @include breakpoint(md) {
         margin-right: -1px;
-        padding: 15px 20px;
+        padding: 15px 21px;
         width: 190px;
         min-height: 122px;
         border: thin solid rgba(0, 0, 0, 0.35);
@@ -674,6 +674,13 @@
         top: unset;
         bottom: 0;
         transform: translateX(-50%);
+    }
+}
+
+.prepaid-courier {
+
+    @include breakpoint(md) {
+        white-space: break-spaces;
     }
 }
 
