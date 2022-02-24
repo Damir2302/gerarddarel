@@ -23049,6 +23049,24 @@ body.filter-mobile {
     }
 }
 
+.item__inner {
+    position: relative
+}
+
+@media (min-width: 1024px) {
+    .item__inner {
+        margin-top: 30px;
+        margin-left: 30px;
+        width: 62.7933%
+    }
+}
+
+@media (min-width: 1260px) {
+    .item__inner {
+        margin-left: 50px
+    }
+}
+
 .item__slider {
     max-height: 480px;
     overflow: hidden
@@ -23056,8 +23074,6 @@ body.filter-mobile {
 
 @media (min-width: 1024px) {
     .item__slider {
-        margin-top: 30px;
-        margin-left: 30px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -23066,14 +23082,7 @@ body.filter-mobile {
         flex-wrap: wrap;
         -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-        justify-content: space-between;
-        width: 62.7933%
-    }
-}
-
-@media (min-width: 1260px) {
-    .item__slider {
-        margin-left: 50px
+        justify-content: space-between
     }
 }
 
@@ -23098,6 +23107,53 @@ body.filter-mobile {
 
 .item__video video {
     width: 100%
+}
+
+.item__image picture {
+    display: inline-block;
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in
+}
+
+.item__zoom-in {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: calc(100% - 20px);
+    background: rgba(255,255,255,0.8);
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease
+}
+
+@media (min-width: 1024px) {
+    .item__zoom-in.show {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1)
+    }
+}
+
+.item__zoom-in_close {
+    background: none;
+    position: absolute;
+    width: 50px;
+    font-size: 24px;
+    color: #000;
+    -webkit-transition: none;
+    transition: none
+}
+
+.item__zoom-in_close:hover {
+    background: none
 }
 
 .item__info {
@@ -23150,6 +23206,16 @@ body.filter-mobile {
     .item__title {
         font-size: 25px
     }
+}
+
+.item__old-price {
+    margin-right: 10px;
+    color: #999;
+    text-decoration: line-through
+}
+
+.item__price {
+    font-size: 16px
 }
 
 .item__color {

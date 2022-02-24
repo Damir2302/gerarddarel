@@ -241,6 +241,33 @@ $(document).ready(function() {
         $(this).parent().parent().parent().removeClass('active');
     });
 
+    // ZOOM IMAGE
+    $('.item__image img').on('click', function() {
+        $('.item__zoom-in').addClass('show');
+        $('.item__zoom-in_img').attr('src', $(this).attr('src'));
+        window.scrollTo(0, 0);
+    });
+
+    $('.item__zoom-in_close').on('click', function(e) {
+        e.preventDefault();
+        $('.item__zoom-in').removeClass('show');
+
+        setTimeout(function() {
+            $('.item__zoom-in_img').attr('src', null);
+        }, 500);
+
+    });
+
+    $('.item__zoom-in').on('click', function(e) {
+        if (!$(e.target).closest('.item__zoom-in_img').length) {
+            $('.item__zoom-in').removeClass('show');
+
+            setTimeout(function() {
+                $('.item__zoom-in_img').attr('src', null);
+            }, 500);
+        }
+    });
+
     // SELECT PRODUCTS ATTRIBUTES
     $('.item__size-list li').on('click', function(e) {
         e.preventDefault();

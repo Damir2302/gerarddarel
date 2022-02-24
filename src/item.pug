@@ -26,31 +26,40 @@ block main
 
         .item__wrap
 
-            .item__slider
+            .item__inner
 
-                .item__image
-                    picture
-                        img(src="assets/images/item1.jpg", alt="image")
+                .item__slider
 
-                .item__image
-                    picture
-                        img(src="assets/images/item3.jpg", alt="image")
+                    .item__image
+                        picture
+                            img(src="assets/images/item1.jpg", alt="image")
 
-                .item__image
-                    picture
-                        img(src="assets/images/item3.jpg", alt="image")
+                    .item__image
+                        picture
+                            img(src="assets/images/item3.jpg", alt="image")
 
-                .item__image
-                    picture
-                        img(src="assets/images/item4.jpg", alt="image")
+                    .item__image
+                        picture
+                            img(src="assets/images/item3.jpg", alt="image")
 
-                .item__image
-                    picture
-                        img(src="assets/images/item5.jpg", alt="image")
+                    .item__image
+                        picture
+                            img(src="assets/images/item4.jpg", alt="image")
+
+                    .item__image
+                        picture
+                            img(src="assets/images/item5.jpg", alt="image")
+
+                .item__zoom-in
+                    button.item__zoom-in_close
+                        i.fal.fa-times
+
+                    img.item__zoom-in_img(src="", alt="img")
 
             .item__info
                 .info__wrapper
                     h1.item__title STEFANY - Пальто из шерсти альпаки
+                    span.item__old-price 80 200 ₽
                     span.item__price 66 900 ₽
 
                     span.item__color Цвет
