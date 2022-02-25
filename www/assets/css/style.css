@@ -26355,31 +26355,38 @@ body.filter-mobile {
     font-size: 12px
 }
 
-.s-item__list>ul>li {
+.s-item__address {
     margin: 0 10px 25px;
     padding: 0 10px 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     max-width: 225px;
+    text-align: center;
     border-bottom: 1px solid #ccc
 }
 
 @media (min-width: 1260px) {
-    .s-item__list>ul>li {
+    .s-item__address {
         max-width: 275px
     }
 }
 
-.s-item__list>ul>li:last-child {
+.s-item__address:last-child {
     border: none
 }
 
 @media (min-width: 768px) {
-    .s-item__list>ul>li:last-child {
+    .s-item__address:last-child {
         border-bottom: 1px solid #ccc
     }
-}
-
-.s-item__address {
-    text-align: center
 }
 
 .s-store__name {

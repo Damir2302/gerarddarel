@@ -119,10 +119,14 @@
     font-size: 12px;
 }
 
-.s-item__list > ul > li {
+.s-item__address {
     margin: 0 10px 25px;
     padding: 0 10px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     max-width: 225px;
+    text-align: center;
     border-bottom: 1px solid #ccc;
 
     @include breakpoint(xl) {
@@ -130,16 +134,12 @@
     }
 }
 
-.s-item__list > ul > li:last-child {
+.s-item__address:last-child {
     border: none;
 
     @include breakpoint(md) {
         border-bottom: 1px solid #ccc;
     }
-}
-
-.s-item__address {
-    text-align: center;
 }
 
 .s-store__name {
