@@ -39,9 +39,9 @@ body.show-login {
     z-index: 99;
 
     @include breakpoint(lg) {
-        position: static;
+        position: relative;
         width: auto;
-        z-index: unset;
+        z-index: 90;
     }
 }
 

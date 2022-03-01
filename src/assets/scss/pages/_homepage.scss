@@ -53,6 +53,7 @@
 }
 
 .hero__banner {
+    position: relative;
     height: 500px;
 
     @include breakpoint(md) {

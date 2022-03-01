@@ -66,15 +66,6 @@ $(document).ready(function() {
             });
     }
 
-    // NAVBAR MENU HOVER
-    $('.item__menu').on('mouseenter', function() {
-        $('#header').css('transform', 'unset');
-    });
-
-    $('.item__menu').on('mouseleave', function() {
-        $('#header').css('transform', '');
-    });
-
     // CLOSE MOBILE MENU WHEN RESIZING WINDOW
     $(window).on('resize', function() {
         if ($(this).width() >= 1260) {
@@ -369,8 +360,18 @@ $(document).ready(function() {
         }
     });
 
+    $('#input-email').on('blur', function() {
+        let checkEmail = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        if (checkEmail.test($(this).val()) == false) {
+            $(this).parent().attr('data-error', $(this).attr('data-error-message'));
+        } else {
+            $(this).parent().removeAttr('data-error');
+        }
+    });
+
     // PHONE MASK
-    $('#input-phone, input[type="tel"').inputmask({"mask": "+7 (999) 99-99-99"});
+    $('#input-phone, input[type="tel"]').inputmask({"mask": "+7 (999) 99-99-99"});
 
     // DELIVERY SELECT
     $('.delivery-date-select').on('click', function() {

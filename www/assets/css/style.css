@@ -18838,9 +18838,9 @@ body.filter-opened,body.open-menu,body.show-cart,body.show-login {
 
 @media (min-width: 1024px) {
     #header {
-        position: static;
+        position: relative;
         width: auto;
-        z-index: unset
+        z-index: 90
     }
 }
 
@@ -21293,6 +21293,7 @@ header {
 }
 
 .hero__banner {
+    position: relative;
     height: 500px
 }
 
