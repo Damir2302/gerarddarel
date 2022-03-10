@@ -56,6 +56,19 @@ body.filter-mobile {
 
 .filters {
     position: relative;
+
+    @include breakpoint(md) {
+        margin-left: auto;
+    }
+
+    @include breakpoint(lg) {
+        margin: 0;
+        position: absolute;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
 }
 
 .filter__button--mobile {
@@ -66,7 +79,7 @@ body.filter-mobile {
     letter-spacing: .08em;
     border: 1px solid #f1f1f1;
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         display: none;
     }
 }
@@ -80,7 +93,7 @@ body.filter-mobile {
 .selected__filters {
     display: none;
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         margin-top: 20px;
         padding: 0 3.5% 0;
         display: flex;
@@ -106,7 +119,7 @@ body.filter-mobile {
     transition: all ease-in-out .3s;
     z-index: 99;
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         all: unset;
     }
 
@@ -127,7 +140,7 @@ body.filter-mobile {
     transition: all ease-in-out .3s;
     z-index: 99;
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         all: unset;
         background: #fff;
         position: absolute;
@@ -146,7 +159,7 @@ body.filter-mobile {
     &.active {
         transform: translateX(0);
 
-        @include breakpoint(md) {
+        @include breakpoint(lg) {
             max-height: 150px;
         }
     }
@@ -170,7 +183,7 @@ body.filter-mobile {
     &.category {
         transform: translate(100%);
 
-        @include breakpoint(md) {
+        @include breakpoint(lg) {
             transform: translateX(-150px);
         }
     }
@@ -178,7 +191,7 @@ body.filter-mobile {
     &.category.active {
         transform: translate(0);
 
-        @include breakpoint(md) {
+        @include breakpoint(lg) {
             transform: translateX(-150px);
         }
     }
@@ -186,7 +199,7 @@ body.filter-mobile {
     &.color {
         transform: translate(100%);
 
-        @include breakpoint(md) {
+        @include breakpoint(lg) {
             transform: translateX(-150px);
         }
     }
@@ -194,7 +207,7 @@ body.filter-mobile {
     &.color.active {
         transform: translate(0);
 
-        @include breakpoint(md) {
+        @include breakpoint(lg) {
             transform: translateX(-150px);
         }
     }
@@ -202,7 +215,7 @@ body.filter-mobile {
     &.size {
         transform: translate(100%);
 
-        @include breakpoint(md) {
+        @include breakpoint(lg) {
             transform: translateX(-150px);
         }
     }
@@ -210,7 +223,7 @@ body.filter-mobile {
     &.size.active {
         transform: translate(0);
 
-        @include breakpoint(md) {
+        @include breakpoint(lg) {
             transform: translateX(-150px);
         }
     }
@@ -218,7 +231,7 @@ body.filter-mobile {
 
 .filters-container.category .filter-body {
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         padding: 9px 20px;
         display: flex;
         flex-wrap: wrap;
@@ -228,7 +241,7 @@ body.filter-mobile {
 
 .filters-container.category .filter-attr {
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         display: flex;
         align-items: center;
         width: 50%;
@@ -241,7 +254,7 @@ body.filter-mobile {
 .filters-container.category .filter-attr .cat-checkbox {
     display: none;
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         margin-right: 8px;
         background-color: #d9d9d9;
         position: relative;
@@ -266,7 +279,7 @@ body.filter-mobile {
 
 .filters-container.color .filter-body {
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         padding: 15px 20px;
         display: flex;
         flex-wrap: wrap;
@@ -277,7 +290,7 @@ body.filter-mobile {
 
 .filters-container.size .filter-body {
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         padding: 9px 20px;
         display: flex;
         flex-wrap: wrap;
@@ -288,7 +301,7 @@ body.filter-mobile {
 
 .filters-container.size .filter-attr {
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         display: flex;
         align-items: center;
         width: 25%;
@@ -301,7 +314,7 @@ body.filter-mobile {
 .filters-container.size .filter-attr .size-checkbox {
     display: none;
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         margin-right: 8px;
         background-color: #d9d9d9;
         position: relative;
@@ -336,7 +349,7 @@ body.filter-mobile {
     color: #fff;
     z-index: 99;
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         display: none;
     }
 }
@@ -349,7 +362,7 @@ body.filter-mobile {
     right: 0;
     bottom: 0;
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         all: unset;
     }
 }
@@ -366,7 +379,7 @@ body.filter-mobile {
     text-transform: uppercase;
     border-bottom: 1px solid #eee;
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         display: none;
     }
 }
@@ -394,7 +407,7 @@ body.filter-mobile {
     height: calc(100% - 131px);
     overflow-y: auto;
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         padding: 0;
         background-color: unset;
         overflow-y: unset;
@@ -427,7 +440,7 @@ body.filter-mobile {
     white-space: nowrap;
     overflow: hidden;
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         margin: 0 8px;
         padding: 10px 16px;
         background: none;
@@ -471,7 +484,7 @@ body.filter-mobile {
         white-space: nowrap;
         overflow: hidden;
 
-        @include breakpoint(md) {
+        @include breakpoint(lg) {
             display: none;
         }
     }
@@ -486,7 +499,7 @@ body.filter-mobile {
 
     &:hover {
 
-        @include breakpoint(md) {
+        @include breakpoint(lg) {
             background: #000;
             color: #fff;
         }
@@ -514,14 +527,14 @@ body.filter-mobile {
     overflow: hidden;
     border-bottom: 1px solid #eee;
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         all: unset;
     }
 
     &.selected {
         font-weight: 700;
 
-        @include breakpoint(md) {
+        @include breakpoint(lg) {
             font-weight: initial;
         }
     }
@@ -535,14 +548,14 @@ body.filter-mobile {
         width: 16px;
         height: 55px;
 
-        @include breakpoint(md) {
+        @include breakpoint(lg) {
             content: none;
         }
     }
 
     &.selected .size-checkbox::after {
 
-        @include breakpoint(md) {
+        @include breakpoint(lg) {
             content: '';
             background: #000;
             position: absolute;
@@ -560,7 +573,7 @@ body.filter-mobile {
 
 .color-label-mobile {
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         display: none;
     }
 }
@@ -573,7 +586,7 @@ body.filter-mobile {
     height: 30px;
     border-radius: 50%;
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         all: unset;
         margin: 9px 8px;
         padding: 3px;
@@ -617,7 +630,7 @@ body.filter-mobile {
     height: 80px;
     border-top: 1px solid #eee;
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
         display: none;
     }
 }

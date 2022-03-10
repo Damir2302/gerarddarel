@@ -21248,6 +21248,12 @@ header {
     }
 }
 
+@media (min-width: 1400px) {
+    .hero__container {
+        height: auto
+    }
+}
+
 .hero__container .slick-prev {
     left: 20px
 }
@@ -21303,10 +21309,34 @@ header {
     }
 }
 
+@media (min-width: 1400px) {
+    .hero__banner {
+        height: auto
+    }
+}
+
+.hero__banner.slick-slide {
+    margin: 115px 0 0
+}
+
+@media (min-width: 470px) {
+    .hero__banner.slick-slide {
+        margin: 145px 0 0
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero__banner.slick-slide {
+        margin: 0
+    }
+}
+
 .hero__banner img {
     height: 500px;
     -o-object-fit: cover;
-    object-fit: cover
+    object-fit: cover;
+    -o-object-position: top;
+    object-position: top
 }
 
 @media (min-width: 768px) {
@@ -21783,6 +21813,27 @@ body.filter-mobile {
     position: relative
 }
 
+@media (min-width: 768px) {
+    .filters {
+        margin-left: auto
+    }
+}
+
+@media (min-width: 1024px) {
+    .filters {
+        margin: 0;
+        position: absolute;
+        left: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 100%
+    }
+}
+
 .filter__button--mobile {
     padding: 5px 10px;
     display: inline-block;
@@ -21792,7 +21843,7 @@ body.filter-mobile {
     border: 1px solid #f1f1f1
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filter__button--mobile {
         display: none
     }
@@ -21808,7 +21859,7 @@ body.filter-mobile {
     display: none
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .selected__filters {
         margin-top: 20px;
         padding: 0 3.5% 0;
@@ -21841,7 +21892,7 @@ body.filter-mobile {
     z-index: 99
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filters-title {
         all: unset
     }
@@ -21869,7 +21920,7 @@ body.filter-mobile {
     z-index: 99
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filters-container {
         all: unset;
         background: #fff;
@@ -21897,7 +21948,7 @@ body.filter-mobile {
     transform: translateX(0)
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filters-container.active {
         max-height: 150px
     }
@@ -21922,7 +21973,7 @@ body.filter-mobile {
     transform: translate(100%)
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filters-container.category {
         -webkit-transform: translateX(-150px);
         -ms-transform: translateX(-150px);
@@ -21936,7 +21987,7 @@ body.filter-mobile {
     transform: translate(0)
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filters-container.category.active {
         -webkit-transform: translateX(-150px);
         -ms-transform: translateX(-150px);
@@ -21950,7 +22001,7 @@ body.filter-mobile {
     transform: translate(100%)
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filters-container.color {
         -webkit-transform: translateX(-150px);
         -ms-transform: translateX(-150px);
@@ -21964,7 +22015,7 @@ body.filter-mobile {
     transform: translate(0)
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filters-container.color.active {
         -webkit-transform: translateX(-150px);
         -ms-transform: translateX(-150px);
@@ -21978,7 +22029,7 @@ body.filter-mobile {
     transform: translate(100%)
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filters-container.size {
         -webkit-transform: translateX(-150px);
         -ms-transform: translateX(-150px);
@@ -21992,7 +22043,7 @@ body.filter-mobile {
     transform: translate(0)
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filters-container.size.active {
         -webkit-transform: translateX(-150px);
         -ms-transform: translateX(-150px);
@@ -22000,7 +22051,7 @@ body.filter-mobile {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filters-container.category .filter-body {
         padding: 9px 20px;
         display: -webkit-box;
@@ -22012,7 +22063,7 @@ body.filter-mobile {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filters-container.category .filter-attr {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -22031,7 +22082,7 @@ body.filter-mobile {
     display: none
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filters-container.category .filter-attr .cat-checkbox {
         margin-right: 8px;
         background-color: #d9d9d9;
@@ -22059,7 +22110,7 @@ body.filter-mobile {
     box-shadow: 0 0 0 1px rgba(0,0,0,0.2)
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filters-container.color .filter-body {
         padding: 15px 20px;
         display: -webkit-box;
@@ -22074,7 +22125,7 @@ body.filter-mobile {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filters-container.size .filter-body {
         padding: 9px 20px;
         display: -webkit-box;
@@ -22089,7 +22140,7 @@ body.filter-mobile {
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filters-container.size .filter-attr {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -22108,7 +22159,7 @@ body.filter-mobile {
     display: none
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filters-container.size .filter-attr .size-checkbox {
         margin-right: 8px;
         background-color: #d9d9d9;
@@ -22149,7 +22200,7 @@ body.filter-mobile {
     z-index: 99
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filter-close {
         display: none
     }
@@ -22164,7 +22215,7 @@ body.filter-mobile {
     bottom: 0
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filter-wrapper {
         all: unset
     }
@@ -22187,7 +22238,7 @@ body.filter-mobile {
     border-bottom: 1px solid #eee
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filter-header {
         display: none
     }
@@ -22217,7 +22268,7 @@ body.filter-mobile {
     overflow-y: auto
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filter-body {
         padding: 0;
         background-color: unset;
@@ -22252,7 +22303,7 @@ body.filter-mobile {
     overflow: hidden
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filter-cat {
         margin: 0 8px;
         padding: 10px 16px;
@@ -22304,7 +22355,7 @@ body.filter-mobile {
     overflow: hidden
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filter-cat .dimmed {
         display: none
     }
@@ -22318,7 +22369,7 @@ body.filter-mobile {
     content: ''
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filter-cat:hover {
         background: #000;
         color: #fff
@@ -22351,7 +22402,7 @@ body.filter-mobile {
     border-bottom: 1px solid #eee
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filter-attr {
         all: unset
     }
@@ -22361,7 +22412,7 @@ body.filter-mobile {
     font-weight: 700
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filter-attr.selected {
         font-weight: initial
     }
@@ -22377,13 +22428,13 @@ body.filter-mobile {
     height: 55px
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filter-attr.selected::after {
         content: none
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filter-attr.selected .size-checkbox::after {
         content: '';
         background: #000;
@@ -22399,7 +22450,7 @@ body.filter-mobile {
     border: 2px solid rgba(0,0,0,0.85)
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .color-label-mobile {
         display: none
     }
@@ -22414,7 +22465,7 @@ body.filter-mobile {
     border-radius: 50%
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .color-value-mobile {
         all: unset;
         margin: 9px 8px;
@@ -22467,7 +22518,7 @@ body.filter-mobile {
     border-top: 1px solid #eee
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .filter-footer {
         display: none
     }
