@@ -142,7 +142,6 @@ body.filter-mobile {
 
     @include breakpoint(lg) {
         all: unset;
-        background: #fff;
         position: absolute;
         left: 0;
         top: calc(100% + 24px);
@@ -184,7 +183,7 @@ body.filter-mobile {
         transform: translate(100%);
 
         @include breakpoint(lg) {
-            transform: translateX(-150px);
+            transform: translateX(0);
         }
     }
 
@@ -192,7 +191,7 @@ body.filter-mobile {
         transform: translate(0);
 
         @include breakpoint(lg) {
-            transform: translateX(-150px);
+            transform: translateX(0);
         }
     }
 
@@ -200,7 +199,7 @@ body.filter-mobile {
         transform: translate(100%);
 
         @include breakpoint(lg) {
-            transform: translateX(-150px);
+            transform: translateX(0);
         }
     }
 
@@ -208,7 +207,7 @@ body.filter-mobile {
         transform: translate(0);
 
         @include breakpoint(lg) {
-            transform: translateX(-150px);
+            transform: translateX(0);
         }
     }
 
@@ -216,16 +215,12 @@ body.filter-mobile {
         transform: translate(100%);
 
         @include breakpoint(lg) {
-            transform: translateX(-150px);
+            transform: translateX(0);
         }
     }
 
     &.size.active {
         transform: translate(0);
-
-        @include breakpoint(lg) {
-            transform: translateX(-150px);
-        }
     }
 }
 
@@ -408,8 +403,10 @@ body.filter-mobile {
     overflow-y: auto;
 
     @include breakpoint(lg) {
+        margin: 0 auto;
         padding: 0;
-        background-color: unset;
+        background-color: #fff;
+        max-width: 450px;
         overflow-y: unset;
     }
 }

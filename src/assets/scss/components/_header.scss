@@ -520,10 +520,10 @@ header {
     left: -100%;
     width: 100%;
     height: calc(100% - 51px);
-    max-width: 320px;
+    max-width: 100%;
     opacity: 0;
     transition: left 0s ease-out .25s,opacity .25s ease-out;
-    overflow: hidden;
+    overflow-y: scroll;
     z-index: 99;
     transform: translateY(0);
 
@@ -587,7 +587,7 @@ header {
     border-top: 1px solid #ebecec;
 
     @include breakpoint(lg) {
-        margin: 0 15px;
+        padding: 0 15px;
         position: static;
         display: inline-block;
         border: none;
@@ -607,6 +607,8 @@ header {
     @include breakpoint(lg) {
         content: "";
         margin-bottom: -27px;
+        position: absolute;
+        left: 0;
         display: block;
         background: 0 0;
         width: 100%;
@@ -649,7 +651,7 @@ header {
     }
 }
 
-.navbar__menu .item__menu::after {
+.navbar__menu .item__menu.has-submenu::after {
 
     @include breakpointMax(lg) {
         content: "\f054";
@@ -740,30 +742,51 @@ header {
 }
 
 .navbar__menu .submenu__expand-col {
-    margin: auto;
+    margin: 20px auto 0;
+    padding-left: 60px;
     max-width: 980px;
 
     @include breakpoint(lg) {
+        margin: auto;
+        padding: 0;
         display: flex;
         justify-content: center;
     }
 }
 
 .navbar__menu .submenu__col-list {
+    padding-bottom: 80px;
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
     flex: 1;
+
+    @include breakpoint(lg) {
+        flex-direction: row;
+    }
 }
 
-.navbar__menu .submenu__title {
-    display: none;
+.navbar__menu .submenu__item {
+    margin: 0 0 20px;
+
+    @include breakpoint(lg) {
+        margin: 0;
+    }
+}
+
+.navbar__menu .submenu__item-title {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #222;
+    opacity: 0.6;
+    text-transform: uppercase;
 
     @include breakpoint(lg) {
         margin-bottom: 18px;
-        display: inline-block;
         font-weight: 700;
         font-size: 12px;
-        text-transform: uppercase;
+        color: #000;
+        opacity: 0.7;
     }
 }
 
@@ -771,7 +794,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 50px;
+    height: 30px;
 
     @include breakpoint(lg) {
         display: list-item;
@@ -789,7 +812,6 @@ header {
 .navbar__menu h3 a {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .navbar__menu.submenu-show .item__menu {

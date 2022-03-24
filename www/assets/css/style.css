@@ -19488,11 +19488,11 @@ header {
     left: -100%;
     width: 100%;
     height: calc(100% - 51px);
-    max-width: 320px;
+    max-width: 100%;
     opacity: 0;
     -webkit-transition: left 0s ease-out .25s,opacity .25s ease-out;
     transition: left 0s ease-out .25s,opacity .25s ease-out;
-    overflow: hidden;
+    overflow-y: scroll;
     z-index: 99;
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
@@ -19571,7 +19571,7 @@ header {
 
 @media (min-width: 1024px) {
     .navbar__menu .item__menu {
-        margin: 0 15px;
+        padding: 0 15px;
         position: static;
         display: inline-block;
         border: none;
@@ -19591,6 +19591,8 @@ header {
     .navbar__menu .item__menu:hover::after {
         content: "";
         margin-bottom: -27px;
+        position: absolute;
+        left: 0;
         display: block;
         background: 0 0;
         width: 100%;
@@ -19642,7 +19644,7 @@ header {
 }
 
 @media (max-width: 1023px) {
-    .navbar__menu .item__menu::after {
+    .navbar__menu .item__menu.has-submenu::after {
         content: "\f054";
         position: absolute;
         top: 0;
@@ -19764,12 +19766,15 @@ header {
 }
 
 .navbar__menu .submenu__expand-col {
-    margin: auto;
+    margin: 20px auto 0;
+    padding-left: 60px;
     max-width: 980px
 }
 
 @media (min-width: 1024px) {
     .navbar__menu .submenu__expand-col {
+        margin: auto;
+        padding: 0;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -19780,27 +19785,55 @@ header {
 }
 
 .navbar__menu .submenu__col-list {
+    padding-bottom: 80px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: distribute;
     justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1
 }
 
-.navbar__menu .submenu__title {
-    display: none
+@media (min-width: 1024px) {
+    .navbar__menu .submenu__col-list {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row
+    }
+}
+
+.navbar__menu .submenu__item {
+    margin: 0 0 20px
 }
 
 @media (min-width: 1024px) {
-    .navbar__menu .submenu__title {
+    .navbar__menu .submenu__item {
+        margin: 0
+    }
+}
+
+.navbar__menu .submenu__item-title {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #222;
+    opacity: 0.6;
+    text-transform: uppercase
+}
+
+@media (min-width: 1024px) {
+    .navbar__menu .submenu__item-title {
         margin-bottom: 18px;
-        display: inline-block;
         font-weight: 700;
         font-size: 12px;
-        text-transform: uppercase
+        color: #000;
+        opacity: 0.7
     }
 }
 
@@ -19815,7 +19848,7 @@ header {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    height: 50px
+    height: 30px
 }
 
 @media (min-width: 1024px) {
@@ -19838,10 +19871,7 @@ header {
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center
+    align-items: center
 }
 
 .navbar__menu.submenu-show .item__menu {
@@ -21375,7 +21405,7 @@ header {
     font-family: 'Vollkorn', sans-serif;
     font-weight: 400;
     font-size: 28px;
-    line-height: 16px;
+    line-height: 48px;
     color: #fff
 }
 
@@ -21409,6 +21439,10 @@ header {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     transform: scale(1.1)
+}
+
+.hero__banner-subtitle {
+    color: #fff
 }
 
 .styles__cat {
@@ -21923,7 +21957,6 @@ body.filter-mobile {
 @media (min-width: 1024px) {
     .filters-container {
         all: unset;
-        background: #fff;
         position: absolute;
         left: 0;
         top: calc(100% + 24px);
@@ -21975,9 +22008,9 @@ body.filter-mobile {
 
 @media (min-width: 1024px) {
     .filters-container.category {
-        -webkit-transform: translateX(-150px);
-        -ms-transform: translateX(-150px);
-        transform: translateX(-150px)
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0)
     }
 }
 
@@ -21989,9 +22022,9 @@ body.filter-mobile {
 
 @media (min-width: 1024px) {
     .filters-container.category.active {
-        -webkit-transform: translateX(-150px);
-        -ms-transform: translateX(-150px);
-        transform: translateX(-150px)
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0)
     }
 }
 
@@ -22003,9 +22036,9 @@ body.filter-mobile {
 
 @media (min-width: 1024px) {
     .filters-container.color {
-        -webkit-transform: translateX(-150px);
-        -ms-transform: translateX(-150px);
-        transform: translateX(-150px)
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0)
     }
 }
 
@@ -22017,9 +22050,9 @@ body.filter-mobile {
 
 @media (min-width: 1024px) {
     .filters-container.color.active {
-        -webkit-transform: translateX(-150px);
-        -ms-transform: translateX(-150px);
-        transform: translateX(-150px)
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0)
     }
 }
 
@@ -22031,9 +22064,9 @@ body.filter-mobile {
 
 @media (min-width: 1024px) {
     .filters-container.size {
-        -webkit-transform: translateX(-150px);
-        -ms-transform: translateX(-150px);
-        transform: translateX(-150px)
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0)
     }
 }
 
@@ -22041,14 +22074,6 @@ body.filter-mobile {
     -webkit-transform: translate(0);
     -ms-transform: translate(0);
     transform: translate(0)
-}
-
-@media (min-width: 1024px) {
-    .filters-container.size.active {
-        -webkit-transform: translateX(-150px);
-        -ms-transform: translateX(-150px);
-        transform: translateX(-150px)
-    }
 }
 
 @media (min-width: 1024px) {
@@ -22270,8 +22295,10 @@ body.filter-mobile {
 
 @media (min-width: 1024px) {
     .filter-body {
+        margin: 0 auto;
         padding: 0;
-        background-color: unset;
+        background-color: #fff;
+        max-width: 450px;
         overflow-y: unset
     }
 }
