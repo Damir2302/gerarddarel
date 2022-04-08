@@ -553,6 +553,11 @@ header {
     }
 }
 
+#navbar::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
 .hide-top-header #navbar {
 
     @include breakpointMax(lg) {
