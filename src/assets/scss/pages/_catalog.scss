@@ -12,6 +12,7 @@ body.filter-mobile {
 
 #catalog .breacrumbs {
     display: none;
+    z-index: 1;
 
     @include breakpoint(md) {
         display: block;

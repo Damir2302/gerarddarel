@@ -21792,7 +21792,8 @@ body.filter-mobile {
 }
 
 #catalog .breacrumbs {
-    display: none
+    display: none;
+    z-index: 1
 }
 
 @media (min-width: 768px) {
