@@ -23601,7 +23601,7 @@ body.filter-mobile {
 }
 
 .item__accordion.opened>div {
-    max-height: 500px
+    max-height: 1000px
 }
 
 .item__accordion p {
