@@ -37,13 +37,10 @@
 }
 
 .account__wrapper {
-
-    @include breakpoint(lg) {
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        max-width: 1170px;
-    }
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    max-width: 1170px;
 }
 
 .login__block {
@@ -123,9 +120,11 @@
 }
 
 .register__block {
+    display: none;
 
     @include breakpoint(lg) {
         background: url('../images/525x524_Login-Desktop-AH21.jpg') 0px 0px no-repeat transparent;
+        display: block;
         width: 500px;
         height: 470px;
     }

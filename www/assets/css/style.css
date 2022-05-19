@@ -25606,17 +25606,15 @@ body.filter-mobile {
     }
 }
 
-@media (min-width: 1024px) {
-    .account__wrapper {
-        margin: 0 auto;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        max-width: 1170px
-    }
+.account__wrapper {
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    max-width: 1170px
 }
 
 @media (min-width: 1024px) {
@@ -25696,9 +25694,14 @@ body.filter-mobile {
     text-decoration: underline
 }
 
+.register__block {
+    display: none
+}
+
 @media (min-width: 1024px) {
     .register__block {
         background: url("../images/525x524_Login-Desktop-AH21.jpg") 0px 0px no-repeat transparent;
+        display: block;
         width: 500px;
         height: 470px
     }
@@ -26485,6 +26488,70 @@ body.filter-mobile {
 .s-btn__map {
     margin: 20px auto 0;
     max-width: 200px
+}
+
+@media (max-width: 1023px) {
+    #forgot-password {
+        margin-top: 95px
+    }
+}
+
+#forgot-password h3 {
+    margin-top: 66px;
+    margin-bottom: 30px;
+    display: block;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: normal
+}
+
+@media (min-width: 1024px) {
+    #forgot-password h3 {
+        font-size: 34px
+    }
+}
+
+#forgot-password form input {
+    padding: 0.7em 0.5em;
+    background-color: #fbfbf7;
+    display: inline-block;
+    width: 265px;
+    height: 21px;
+    font-size: 13px;
+    float: none;
+    outline: none;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    border: 1px solid #cbcbcb
+}
+
+#forgot-password form>div {
+    margin: 0 auto 10px;
+    position: relative;
+    max-width: 280px
+}
+
+#forgot-password input[type="submit"] {
+    margin-top: 30px;
+    padding: 10px 0;
+    background: #000;
+    display: block;
+    width: 100%;
+    height: auto;
+    font-family: open sans,sans-serif;
+    font-size: 13px;
+    line-height: normal;
+    letter-spacing: .06em;
+    color: #fff;
+    text-transform: uppercase;
+    -webkit-transition: all .25s ease-out;
+    transition: all .25s ease-out;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    cursor: pointer
 }
 
 @font-face {
