@@ -711,6 +711,7 @@ body.filter-mobile {
 .sorting {
     display: flex;
     align-items: center;
+    z-index: 1;
 }
 
 .sorting__wrapper {

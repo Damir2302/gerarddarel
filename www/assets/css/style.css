@@ -22650,7 +22650,8 @@ body.filter-mobile {
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center
+    align-items: center;
+    z-index: 1
 }
 
 .sorting__wrapper {
