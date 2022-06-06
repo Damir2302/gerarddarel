@@ -36,3 +36,356 @@
 @import 'popup/booking';
 @import 'popup/popup-sizes';
 @import 'popup/password';
+
+/// MAIN
+
+.l-1-banner {
+    padding: 0 75px;
+
+    @include breakpointMax(lg) {
+        margin: 115px 0 0;
+        padding: 0;
+    }
+}
+
+.l-1-banner img:first-child {
+
+    @include breakpointMax(lg) {
+        display: none;
+    }
+}
+
+.l-1-banner img:last-child {
+    display: none;
+
+    @include breakpointMax(lg) {
+        display: block;
+    }
+}
+
+.limiter {
+    margin: 0 auto;
+    padding: 0 40px;
+    max-width: 1450px;
+
+    @include breakpointMax(lg) {
+        padding: 0;
+        max-width: 680px;
+    }
+}
+
+.l-1-title {
+    margin: 80px 0 58px;
+    padding: 0 20px;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 51px;
+    color: #606060;
+    text-align: center;
+
+    @include breakpointMax(lg) {
+        margin: 40px 0 38px;
+        font-size: 32px;
+        line-height: 39px;
+    }
+}
+
+.l-1-text {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 800px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+
+    @include breakpointMax(lg) {
+        padding: 0 10px;
+    }
+}
+
+.l-1-button {
+    margin: 40px auto;
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    max-width: 120px;
+
+    @include breakpointMax(lg) {
+        margin: 20px auto 40px;
+    }
+}
+
+.l-1-image {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+
+    @include breakpointMax(lg) {
+        padding: 0;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+}
+
+.l-1-image--reverse {
+    flex-direction: row-reverse;
+
+    @include breakpointMax(lg) {
+        flex-direction: column;
+    }
+}
+
+.l-1-image--reverse .l-1-block__multiple {
+    flex-direction: row;
+    align-items: center;
+}
+
+.l-1-image--reverse .l-1-block {
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.l-1-image--reverse .l-1-block:last-child {
+
+    @include breakpointMax(lg) {
+        display: none;
+    }
+}
+
+.l-1-block {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+
+    @include breakpointMax(lg) {
+        flex-direction: column;
+        width: 50%;
+    }
+}
+
+.l-1-block__multiple {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+
+    @include breakpointMax(lg) {
+        padding: 0 10px;
+        flex-direction: row;
+        column-gap: 10px;
+    }
+}
+
+.l-1-info {
+    max-width: 300px;
+
+    @include breakpointMax(lg) {
+        margin: 10px 0 0;
+    }
+}
+
+.l-1-info p {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #606060;
+
+    @include breakpointMax(lg) {
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+
+.l-1-info span {
+    margin: 20px 0 0;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 185%;
+    color: #000000;
+
+    @include breakpointMax(lg) {
+        margin: 10px 0 20px;
+    }
+}
+
+.l-1-imageline {
+    padding: 40px 0;
+    display: flex;
+    justify-content:  center;
+    column-gap: 30px;
+
+    @include breakpointMax(lg) {
+        padding: 10px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+        grid-auto-flow: row;
+        grid-template-areas:
+            'A1 A1'
+            'A2 A2'
+            'A3 A4';
+        column-gap: 10px;
+    }
+}
+
+.l-1-imageline__block a {
+
+    @include breakpointMax(lg) {
+        width: 100%;
+    }
+}
+
+.l-1-imageline__block:nth-child(1) {
+
+    @include breakpointMax(lg) {
+        margin-left: 10px;
+        grid-area: A3;
+    }
+}
+
+.l-1-imageline__block:nth-child(2) {
+
+    @include breakpointMax(lg) {
+        grid-area: A1;
+    }
+}
+
+.l-1-imageline__block:nth-child(2) a {
+
+    @include breakpointMax(lg) {
+        width: 100%;
+    }
+}
+
+.l-1-imageline__block:nth-child(3) {
+
+    @include breakpointMax(lg) {
+        margin: 0 0 30px;
+        grid-area: A2;
+    }
+}
+
+.l-1-imageline__block:nth-child(4) {
+
+    @include breakpointMax(lg) {
+        margin-right: 10px;
+        grid-area: A4;
+    }
+}
+
+
+// SECOND IMAGELINE
+.l-1-imageline--second .l-1-imageline__block:nth-child(1) {
+
+    @include breakpointMax(lg) {
+        margin-left: 10px;
+        grid-area: A3;
+    }
+}
+
+.l-1-imageline--second .l-1-imageline__block:nth-child(2) {
+
+    @include breakpointMax(lg) {
+        margin-right: 10px;
+        grid-area: A4;
+    }
+}
+
+.l-1-imageline--second .l-1-imageline__block:nth-child(3) {
+
+    @include breakpointMax(lg) {
+        margin: 0;
+        grid-area: A1;
+    }
+}
+
+.l-1-imageline--second .l-1-imageline__block:nth-child(4) {
+
+    @include breakpointMax(lg) {
+        margin: 0 0 30px;
+        grid-area: A2;
+    }
+}
+
+// THIRD IMAGELINE
+.l-1-imageline--third {
+
+    @include breakpointMax(lg) {
+        display: block;
+    }
+}
+
+.l-1-imageline--third .l-1-imageline__block:nth-child(1) {
+
+    @include breakpointMax(lg) {
+        margin: 0;
+    }
+}
+
+.l-1-imageline--third .l-1-imageline__block:nth-child(3),
+.l-1-imageline--third .l-1-imageline__block:nth-child(4) {
+
+    @include breakpointMax(lg) {
+        display: none;
+    }
+}
+
+
+.l-1-imageline:last-child {
+    padding: 0 0 100px;
+}
+
+.l-1-imageline__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-basis: 25%;
+}
+
+.l-1-imageline__block p {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #606060;
+
+    @include breakpointMax(lg) {
+        padding: 10px 10px 0;
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+
+.l-1-imageline__block span {
+    margin: 20px 0 0;
+    font-size: 13px;
+    line-height: 24px;
+
+    @include breakpointMax(lg) {
+        margin: 10px 0 0;
+        padding: 0 10px;
+    }
+}
+
+.l-1-block a,
+.l-1-block__single,
+.l-1-imageline__block {
+    overflow: hidden;
+}
+
+.l-1-block img,
+.l-1-block__single img,
+.l-1-imageline__block img {
+    transition: all 0.4s ease;
+}
+
+.l-1-block a:hover img,
+.l-1-block__single:hover img,
+.l-1-imageline__block:hover img {
+    transform: scale(1.2);
+}
