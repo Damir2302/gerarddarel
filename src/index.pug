@@ -16,14 +16,25 @@ block main
                     .hero__slider
 
                         .hero__banner
-                            img(src="assets/images/Slider_Upclycling_1950x.jpg", alt="image")
+                            a.hero__link(href="#")
+                                picture
+                                    source(media="(max-width: 750px)" srcset="assets/images/Slider_Upclycling_1950x.jpg")
+                                    source(media="(max-width: 1024px)" srcset="assets/images/Slider_Upclycling_1950x.jpg")
+                                    source(media="(min-width: 1025px)" srcset="assets/images/Slider_Upclycling_1950x.jpg")
+                                    img(src="assets/images/Slider_Upclycling_1950x.jpg", alt="image")
                             .hero__action
                                 div
                                     h2 Апсайклинг
                                     a.button-style(href="#") Подробнее
 
                         .hero__banner
-                            img(src="assets/images/Slider_Maro_Gerard_Darel_18-10-210193.jpg", alt="image")
+                            a.hero__link(href="#")
+                                video.desktop(playsinline="" muted="" autoplay="" loop="")
+                                    source(src="assets/images/3175368442.mp4" type="video/mp4")
+                                video.tablet(playsinline="" muted="" autoplay="" loop="")
+                                    source(src="assets/images/3175368442.mp4" type="video/mp4")
+                                video.mobile(playsinline="" muted="" autoplay="" loop="")
+                                    source(src="assets/images/3175368442.mp4" type="video/mp4")
                             .hero__action
                                 div
                                     h2 Апсайклинг

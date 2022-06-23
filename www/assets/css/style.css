@@ -21336,6 +21336,17 @@ header {
     content: none
 }
 
+.hero__slider {
+    height: 500px;
+    overflow: hidden
+}
+
+@media (min-width: 768px) {
+    .hero__slider {
+        height: 600px
+    }
+}
+
 .hero__banner {
     position: relative;
     height: 500px
@@ -21344,12 +21355,6 @@ header {
 @media (min-width: 768px) {
     .hero__banner {
         height: 600px
-    }
-}
-
-@media (min-width: 1400px) {
-    .hero__banner {
-        height: auto
     }
 }
 
@@ -21369,17 +21374,60 @@ header {
     }
 }
 
+.hero__link {
+    height: 500px
+}
+
+@media (min-width: 768px) {
+    .hero__link {
+        height: 600px
+    }
+}
+
 .hero__banner img {
-    height: 500px;
+    height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
     -o-object-position: top;
     object-position: top
 }
 
+.hero__banner video {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
 @media (min-width: 768px) {
-    .hero__banner img {
-        height: 600px
+    .mobile {
+        display: none
+    }
+}
+
+.tablet {
+    display: none
+}
+
+@media (min-width: 768px) {
+    .tablet {
+        display: block
+    }
+}
+
+@media (min-width: 1260px) {
+    .tablet {
+        display: none
+    }
+}
+
+.desktop {
+    display: none
+}
+
+@media (min-width: 1260px) {
+    .desktop {
+        display: block
     }
 }
 
@@ -28261,26 +28309,8 @@ body.password-popup {
     }
 }
 
-.l-1-title {
-    margin: 80px 0 58px;
-    padding: 0 20px;
-    font-weight: 400;
-    font-size: 42px;
-    line-height: 51px;
-    color: #606060;
-    text-align: center
-}
-
-@media (max-width: 1023px) {
-    .l-1-title {
-        margin: 40px 0 38px;
-        font-size: 32px;
-        line-height: 39px
-    }
-}
-
 .l-1-text {
-    margin: 0 auto;
+    margin: 80px auto 58px;
     padding: 0 20px;
     max-width: 800px;
     font-weight: 400;
@@ -28292,6 +28322,7 @@ body.password-popup {
 
 @media (max-width: 1023px) {
     .l-1-text {
+        margin: 40px auto 38px;
         padding: 0 10px
     }
 }
